@@ -1,22 +1,23 @@
 # 🛠 Tools
 
-* Nmap
-* Hydra
-* Sqlmap
-* Wpscan
-* Nikto
-* John
+* Cewl
+* Crunch
+* Dirb
+* Hashcalc
 * Hashcat
+* Hydra
+* John the Ripper
 * Metasploit
-* Responder LLMNR
-* Wireshark or Tcpdump
-* Steghide
+* Nikto
+* Nmap
 * OpenStego
 * QuickStego
-* Dirb
+* Rainbow
+* Crack
+* Responder LLMNR
 * Searchsploit
-* Crunch
-* Cewl
+* Sqlmap
+* Steghide
 * Veracrypt
-* Hashcalc
-* Rainbow Crack
+* Wireshark or Tcpdump
+* Wpscan

@@ -1,5 +1,17 @@
 # Table of contents
 
 * [🛠 Tools](README.md)
+  * [Cewl](tools/cewl.md)
+  * [Cruch](tools/cruch.md)
+  * [Dirb](tools/dirb.md)
+  * [Hashcalc](tools/hashcalc.md)
+  * [😺 Hashcat](tools/hashcat.md)
+  * [🐉 Hydra](tools/hydra.md)
+  * [🥷 John the Ripper](tools/john-the-ripper.md)
+  * [Ⓜ Metasploit](tools/metasploit.md)
+  * [👽 Nikto](tools/nikto.md)
   * [👁 Nmap](tools/nmap.md)
-  * [🔑 Hydra](tools/hydra.md)
+  * [↗ Responder LLMNR](tools/responder-llmnr.md)
+  * [💉 SQLMap](tools/sqlmap.md)
+  * [🦈 Wireshark or Tcpdump](tools/wireshark-or-tcpdump.md)
+  * [🔍 WPScan](tools/wpscan.md)
