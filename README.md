@@ -1,5 +1,6 @@
 # 🛠 Tools
 
+* Burp Suite
 * Cewl
 * Crunch
 * Dirb

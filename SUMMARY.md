@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🛠 Tools](README.md)
+  * [🟧 Burp Suite](tools/burp-suite.md)
   * [Cewl](tools/cewl.md)
   * [Cruch](tools/cruch.md)
   * [Dirb](tools/dirb.md)
