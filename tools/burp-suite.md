@@ -93,3 +93,9 @@ We just chose to disable _logging_ for out of scope traffic, but the proxy will 
 <figure><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5d9e176315f8850e719252ed/room-content/dec63f8822c1fe3393d779e17052577b.png" alt=""><figcaption></figcaption></figure>
 
 With this option selected, the proxy will completely ignore anything that isn't in the scope, vastly cleaning up the traffic coming through Burp.
+
+In alternative to THM, another best solution to learn BurpSuite is [https://portswigger.net/web-security](https://portswigger.net/web-security)
+
+## Cheatsheet
+
+{% embed url="https://ns2.elhacker.net/cheat-sheet/Burp-Suite-Cheat-Sheet.pdf" %}
