@@ -4,6 +4,7 @@
 * Cewl
 * Crunch
 * Dirb
+* Gobuster
 * Hashcalc
 * Hashcat
 * Hydra
@@ -13,8 +14,7 @@
 * Nmap
 * OpenStego
 * QuickStego
-* Rainbow
-* Crack
+* RainbowCrack
 * Responder LLMNR
 * Searchsploit
 * Sqlmap
