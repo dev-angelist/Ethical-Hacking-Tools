@@ -14,36 +14,6 @@ Another tool provided by CeWL project is FAB (Files Already Bagged). FAB extract
 
 CeWL is useful in security tests and forensics investigations.&#x20;
 
-## Example of usage
-
-#### To spider a site and write all found words to a file
-
-`cewl -w`
-
-#### To spider a site and follow links to other sites
-
-`cewl -o`
-
-#### To spider a site using a given user-agent
-
-`cewl -u`
-
-#### To spider a site for a given depth and minimum word length
-
-`cewl -d -m`
-
-#### To spider a site and include a count for each word
-
-`cewl -c`
-
-#### To spider a site inluding meta data and separate the meta\_data words
-
-`cewl -a -meta_file`
-
-#### To spider a site and store email adresses in a separate file
-
-`cewl -e -email_file`
-
 ## Cheatsheet
 
 ```
@@ -88,9 +58,32 @@ OPTIONS:
     <url>: The site to spider.
 ```
 
+## Example of usage
 
+#### To spider a site and write all found words to a file
 
+`cewl -w`
 
+#### To spider a site and follow links to other sites
 
+`cewl -o`
 
+#### To spider a site using a given user-agent
 
+`cewl -u`
+
+#### To spider a site for a given depth and minimum word length
+
+`cewl -d -m`
+
+#### To spider a site and include a count for each word
+
+`cewl -c`
+
+#### To spider a site inluding meta data and separate the meta\_data words
+
+`cewl -a -meta_file`
+
+#### To spider a site and store email adresses in a separate file
+
+`cewl -e -email_file`
