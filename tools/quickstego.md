@@ -1,2 +1,2 @@
-# QuickStego
+# 🎨 QuickStego
 

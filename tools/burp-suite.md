@@ -1,5 +1,7 @@
 ---
-description: https://portswigger.net/burp https://tryhackme.com/room/burpsuitebasics
+description: >-
+  https://portswigger.net/burp https://www.kali.org/tools/burpsuite/
+  https://tryhackme.com/room/burpsuitebasics
 ---
 
 # 🟧 Burp Suite

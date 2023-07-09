@@ -1,2 +1,2 @@
-# Veracrypt
+# 🔑 Veracrypt
 

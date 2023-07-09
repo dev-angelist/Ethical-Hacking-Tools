@@ -1,5 +1,5 @@
 ---
-description: https://github.com/digininja/CeWL
+description: https://github.com/digininja/CeWL https://www.kali.org/tools/cewl/
 ---
 
 # 👨💻 Cewl
@@ -87,3 +87,9 @@ OPTIONS:
 #### To spider a site and store email adresses in a separate file
 
 `cewl -e -email_file`
+
+#### To spider Email Retrieval from a Website
+
+`cewl -n -e`
+
+Using a verbose flag (-v) is always a good solution.

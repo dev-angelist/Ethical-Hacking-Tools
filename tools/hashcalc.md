@@ -1,2 +1,2 @@
-# Hashcalc
+# 🔓 Hashcalc
 

@@ -1,2 +1,2 @@
-# Openstego
+# 🖼 Openstego
 

@@ -1,5 +1,5 @@
 ---
-description: https://en.kali.tools/?p=220 https://tryhackme.com/room/hydra
+description: https://www.kali.org/tools/hydra/ https://tryhackme.com/room/hydra
 ---
 
 # 🐉 Hydra
