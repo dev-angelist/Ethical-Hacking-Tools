@@ -26,13 +26,13 @@ nmap -p- -sC -sV -O -A -T4 -oA nmapOutputfile 10.10.X.X
 
 This cheat sheet was prepared by [https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/). You can also check out the cheatsheet. I've attached the file below👇🏻
 
-{% file src="broken-reference" %}
+{% embed url="https://www.stationx.net/nmap-cheat-sheet/" %}
 [https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/)
-{% endfile %}
+{% endembed %}
 
 #### Switches in nmap which you might need to know
 
-<table><thead><tr><th width="185.26939394008483" align="center">Switch</th><th width="568.4285714285713">Description</th></tr></thead><tbody><tr><td align="center">-sA</td><td>ACK scan</td></tr><tr><td align="center">-sF</td><td>FIN scan</td></tr><tr><td align="center">-sI</td><td>IDLE scan</td></tr><tr><td align="center">-sL</td><td>DNS scan (list scan)</td></tr><tr><td align="center">-sN</td><td>NULL scan</td></tr><tr><td align="center">-sO</td><td>Protocol scan (tests which IP protocols respond)</td></tr><tr><td align="center">-sP</td><td>Ping scan</td></tr><tr><td align="center">-sR</td><td>RPC scan</td></tr><tr><td align="center">-sS</td><td>SYN scan</td></tr><tr><td align="center">-sT</td><td>TCP connect scan</td></tr><tr><td align="center">-sW</td><td>Window scan</td></tr><tr><td align="center">-sX</td><td>XMAS scan</td></tr><tr><td align="center">-A</td><td>OS detection, version detection, script scanning and traceroute</td></tr><tr><td align="center">-PI</td><td>ICMP ping</td></tr><tr><td align="center">-Po</td><td>No ping</td></tr><tr><td align="center">-PS</td><td>SYN ping</td></tr><tr><td align="center">-PT</td><td>TCP ping</td></tr><tr><td align="center">-oA</td><td>output the results in 3 types of format(nmap, gnmap, xml)</td></tr><tr><td align="center">-oN</td><td>Normal output</td></tr><tr><td align="center">-oX</td><td>XML output</td></tr><tr><td align="center">-T0 through -T2</td><td>Serial scans. T0 is slowest</td></tr><tr><td align="center">-T3 through -T5</td><td>Parallel scans. T3 is slowest</td></tr></tbody></table>
+<table><thead><tr><th width="185.26939394008483" align="center">Switch</th><th width="568.4285714285713">Description</th></tr></thead><tbody><tr><td align="center">-sA</td><td>ACK scan</td></tr><tr><td align="center">-sF</td><td>FIN scan</td></tr><tr><td align="center">-sI</td><td>IDLE scan</td></tr><tr><td align="center">-sL</td><td>DNS scan (list scan)</td></tr><tr><td align="center">-sN</td><td>NULL scan</td></tr><tr><td align="center">-sO</td><td>Protocol scan (tests which IP protocols respond)</td></tr><tr><td align="center">-sP</td><td>Ping scan</td></tr><tr><td align="center">-sR</td><td>RPC scan</td></tr><tr><td align="center">-sS</td><td>SYN scan</td></tr><tr><td align="center">-sT</td><td>TCP connect scan</td></tr><tr><td align="center">-sW</td><td>Window scan</td></tr><tr><td align="center">-sX</td><td>XMAS scan</td></tr><tr><td align="center">-A</td><td>OS detection, version detection, script scanning and traceroute</td></tr><tr><td align="center">-PI</td><td>ICMP ping</td></tr><tr><td align="center">-Po</td><td>No ping</td></tr><tr><td align="center">-PS</td><td>SYN ping</td></tr><tr><td align="center">-PT</td><td>TCP ping</td></tr><tr><td align="center">-oA</td><td>output the results in 3 types of format(nmap, gnmap, xml)</td></tr><tr><td align="center">-oN</td><td>Normal output</td></tr><tr><td align="center">-oX</td><td>XML output</td></tr><tr><td align="center">-T0 through -T2</td><td>Serial scans. T0 is slowest</td></tr><tr><td align="center">-T3 through -T5</td><td>Parallel scans. T3 is slowest</td></tr><tr><td align="center">--min-rate</td><td>Minimum packet sent for second</td></tr></tbody></table>
 
 ### Port specific NSE scripts
 
@@ -57,6 +57,18 @@ nmap -sn 10.10.1.1-254 -vv -oA nmapHostsOutput
 ### Bypassing Firewall
 
 <table><thead><tr><th width="232.33333333333331">Switch</th><th width="242.5840801265156">Example</th><th>Description</th></tr></thead><tbody><tr><td>-f</td><td>nmap -f 10.10.10.10</td><td></td></tr><tr><td>-g</td><td>nmap -g 80 10.10.10.10</td><td>Port Manipulation</td></tr><tr><td>-mtu</td><td>nmap -mtu 8 10.10.10.10</td><td>Crunching down Packets to 8 Byte</td></tr><tr><td>-D RND</td><td>nmap -D RND:10 10.10.10.10</td><td>Perform Decoy Scan and Generates Random non-reserved IP</td></tr><tr><td></td><td></td><td></td></tr><tr><td>—data 0xdeadbeef</td><td>nmap 10.10.10.10 --data 0xdeadbeef</td><td></td></tr><tr><td>Send the binary data 0's and 1's</td><td></td><td></td></tr><tr><td>--data-string "Ph34r my l33t skills"</td><td>nmap 10.10.10.10 --data-string "Ph34r my l33t skills"</td><td></td></tr><tr><td>Send strings as payload</td><td></td><td></td></tr><tr><td>--data-length 5</td><td></td><td></td></tr><tr><td>nmap --data-length 5 10.10.10.10</td><td></td><td></td></tr><tr><td>--randomize-hosts</td><td>nmap --randomize-hosts 10.10.10.10</td><td></td></tr><tr><td>send request to a IP from Random non-reserved IP</td><td></td><td></td></tr><tr><td>--badsum</td><td>nmap --badsum 10.10.10.10</td><td>Sends Bad or Bongus TCP/USP Checksum</td></tr></tbody></table>
+
+To bypass firewall or monitoring system is suggests to use -T0 or -T1 flags.
+
+**`-T#`** - `nmap` **Timing templates** - optimize and speed up scanning (higher is faster)
+
+* `-T0` - _paranoid_ (possible IDS evasion, slow)
+* `-T1` - _sneaky_ (possible IDS evasion, slow)
+* `-T2` - _polite_ (less bandwidth and target machine resources, slow)
+* `-T3` - _normal_ (default scan)
+* `-T4` - _aggressive_ (reasonably fast, modern and reliable network)
+* `-T5` - _insane_ (extraordinarily fast network)
+* the lower the number the slower the scan
 
 ## Zenmap
 
