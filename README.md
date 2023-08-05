@@ -15,7 +15,7 @@
 * Metasploit
 * Md5 Calculator
 * Nikto
-* Nmap
+* [Nmap](tools/nmap.md)
 * OpenStego
 * QuickStego
 * RainbowCrack
