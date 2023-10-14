@@ -4,9 +4,9 @@ description: https://www.kali.org/tools/sqlmap/ https://tryhackme.com/room/sqlma
 
 # 💉 SQLMap
 
-## What is sqlmap?&#x20;
+## What is SQLMap?&#x20;
 
-sqlmap is an open source penetration testing tool developed by Bernardo Damele Assumpcao Guimaraes and Miroslav Stampar that automates the process of detecting and exploiting SQL injection flaws and taking over database servers. It comes with a powerful detection engine, many niche features for the ultimate penetration tester, and a broad range of switches lasting from database fingerprinting, fetching data from the database, to accessing the underlying file system and executing commands on the operating system via out-of-band connections.
+SQLMap is an open source penetration testing tool developed by Bernardo Damele Assumpcao Guimaraes and Miroslav Stampar that automates the process of detecting and exploiting SQL injection flaws and taking over database servers. It comes with a powerful detection engine, many niche features for the ultimate penetration tester, and a broad range of switches lasting from database fingerprinting, fetching data from the database, to accessing the underlying file system and executing commands on the operating system via out-of-band connections.
 
 ## Installing Sqlmap
 
@@ -665,3 +665,7 @@ sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" -D d
 ```bash
 sqlmap -u "http://10.10.10.10/file.php?id=1" --os-shell
 ```
+
+### Other References
+
+[https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap](https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap)
