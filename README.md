@@ -1,30 +1,30 @@
 # 🛠 Tools
 
-* Adb tool
-* Burp Suite
-* Cewl
-* Crunch
-* Dirb
-* Enum4linux
-* Gobuster
-* Hashcalc
-* Hashcat
-* Hping3
-* Hydra
-* John the Ripper
-* Metasploit
-* Md5 Calculator
-* Nikto
+* [Adb tool](tools/adb-tool.md)
+* [Burp Suite](tools/burp-suite.md)
+* [Cewl](tools/cewl.md)
+* [Crunch](tools/crunch.md)
+* [Dirb](tools/dirb.md)
+* [Enum4linux](tools/enum4linux.md)
+* [Gobuster](tools/gobuster.md)
+* [Hashcalc](tools/hashcalc.md)
+* [Hashcat](tools/hashcat.md)
+* [Hping3](tools/hping3.md)
+* [Hydra](tools/hydra.md)
+* [John the Ripper](tools/john-the-ripper.md)
+* [Metasploit](tools/metasploit.md)
+* [Md5 Calculator](tools/md5-calculator.md)
+* [Nikto](tools/nikto.md)
 * [Nmap](tools/nmap.md)
-* OpenStego
-* QuickStego
-* RainbowCrack
-* Responder LLMNR
-* Searchsploit
-* Snow
-* Sqlmap
-* Steghide
-* Stegimage
-* Veracrypt
-* Wireshark or Tcpdump
-* Wpscan
+* [OpenStego](tools/openstego.md)
+* [QuickStego](tools/quickstego.md)
+* [RainbowCrack](tools/rainbowcrack.md)
+* [Responder LLMNR](tools/responder-llmnr.md)
+* [Searchsploit](tools/searchsploit.md)
+* [Stego](tools/stego.md)
+* [Sqlmap](tools/sqlmap.md)
+* [Steghide](tools/steghide.md)
+* [Stegimage](tools/stegimage.md)
+* [Veracrypt](tools/veracrypt.md)
+* [Wireshark or Tcpdump](tools/wireshark-or-tcpdump.md)
+* [Wpscan](tools/wpscan.md)

