@@ -34,3 +34,7 @@ john --format=sha512crypt linux.hashes.txt --wordlist=/usr/share/wordlists/rocky
 john -wordlist /usr/share/wordlists/rockyou.txt crack.hash
 john -wordlist /usr/share/wordlists/rockyou.txt -users users.txt test.hash
 ```
+
+### Other References:
+
+* [Password Cracking With John The Ripper - RAR/ZIP & Linux Passwords](https://www.youtube.com/watch?v=XjVYl1Ts6XI) - HackerSploit
