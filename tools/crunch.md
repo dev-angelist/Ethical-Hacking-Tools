@@ -97,3 +97,6 @@ In the case of -p, the minimum size and the maximum size values are ignored by t
 
 The above command will give 2 permutations of “juve 123”.
 
+### Other References:
+
+[https://www.hackingarticles.in/a-detailed-guide-on-crunch/](https://www.hackingarticles.in/a-detailed-guide-on-crunch/)
