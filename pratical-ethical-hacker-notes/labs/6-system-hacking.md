@@ -14,7 +14,7 @@
   * run
   * \CEH-Tools
 * **Linux:**
-  * Home/Responder/logs/SMB-NTMLv2-SSP-\[IP].txt
+  * Home/Responder/logs/SMB-NTMLv2-SSP-**\<Target IP>**txt
   * sudo snap install john-the-ripper
   * passwd: \*\*\*\*
   * **sudo john /home/ubuntu/Responder/logs/SMB-NTLMv2-SSP-10.10.10.10.txt**
@@ -28,7 +28,7 @@
   * echo "Secret"->message.txt
   * Place->Network
   * Ctrl+L
-  * **smb://\[IP]**
+  * **smb://\<Target IP>**
   * Account & Password
   * copy and paste covert\_tcp.c
   * **cc -o covert\_tcp covert\_tcp.c**
@@ -38,7 +38,7 @@
   * mkdir Receive
   * cd Receive
   * File->Ctrl+L
-  * smb://\[IP]
+  * smb://**\<Target IP>**
   * copy and paste covert\_tcp.c
   * cc -o covert\_tcp covert\_tcp.c
   * **./covert\_tcp -dest 10.10.10.9 -source 10.10.10.13 -source\_port 9999 -dest\_port 8888 -server -file /home/ubuntu/Desktop/Receive/receive.txt**

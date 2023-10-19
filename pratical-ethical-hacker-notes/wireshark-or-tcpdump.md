@@ -4,6 +4,8 @@ description: https://www.kali.org/tools/wireshark/ https://www.kali.org/tools/tc
 
 # 🦈 Wireshark or Tcpdump
 
+## Wireshark
+
 ```bash
 wireshark -i eth1
 
@@ -28,6 +30,12 @@ tcp.flags.syn == 1 and tcp.flags.ack ==0
 # Broadcast filter
 eth.dst == ff:ff:ff:ff:ff:ff
 ```
+
+### Filters CheatSheet
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### TShark
 

@@ -4,10 +4,10 @@
 
 ### **Lab2 - Task1: Enumerate SNMP using snmp-check**
 
-* nmap -sU -p 161 \[IP]
-* **snmp-check \[IP]**
+* nmap -sU -p 161 **\<Target IP>**
+* **snmp-check \<Target IP>**
 
 #### **Addition**
 
-* nbtstat -a \[IP] (Windows)
+* nbtstat -a **\<Target IP>** (Windows)
 * nbtstat -c
