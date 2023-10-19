@@ -2,6 +2,12 @@
 
 ## Module 08 - Sniffing
 
+* `http.request.method == “POST”` -> Wireshark filter for filtering HTTP POST request&#x20;
+* Capture traffic from remote interface via wireshark
+  * Capture > Options > Manage Interfaces&#x20;
+  * Remote Interface > Add > Host &  Port (2002)
+  * Username & password > Start
+
 ### **Lab2 - Task1: Password Sniffing using Wireshark**
 
 * **Attacker**

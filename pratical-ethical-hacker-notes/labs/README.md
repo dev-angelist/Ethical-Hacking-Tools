@@ -1,6 +1,6 @@
-# 🔬 Labs
+# 🧪 Labs
 
-## Labs Walkthrough
+## Labs Walkthrough 🔭
 
 * [3 - Scanning Networks](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/\~/changes/23/pratical-ethical-hacker-notes/labs/3-scanning-networks)
 * [4 - Enumeration](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/\~/changes/23/pratical-ethical-hacker-notes/labs/4-enumeration)

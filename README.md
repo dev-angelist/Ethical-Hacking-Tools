@@ -1,6 +1,6 @@
 # 📓 Pratical Ethical Hacker Notes
 
-## 🔬 Labs
+## Labs 🔬
 
 * [3 - Scanning Networks](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/\~/changes/23/pratical-ethical-hacker-notes/labs/3-scanning-networks)
 * [4 - Enumeration](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/\~/changes/23/pratical-ethical-hacker-notes/labs/4-enumeration)
@@ -13,7 +13,7 @@
 * [17 - Hacking Mobile Platform](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/\~/changes/23/pratical-ethical-hacker-notes/labs/17-hacking-mobile)
 * [20 - Cryptography](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/\~/changes/23/pratical-ethical-hacker-notes/labs/20-cryptography)
 
-## Tools
+## Tools 🛠️
 
 * [Adb tool](pratical-ethical-hacker-notes/adb-tool.md)
 * [Burp Suite](pratical-ethical-hacker-notes/burp-suite.md)
@@ -44,3 +44,9 @@
 * [Veracrypt](pratical-ethical-hacker-notes/veracrypt.md)
 * [Wireshark or Tcpdump](pratical-ethical-hacker-notes/wireshark-or-tcpdump.md)
 * [Wpscan](pratical-ethical-hacker-notes/wpscan.md)
+
+## Other resources 🕸️
+
+{% embed url="https://www.stationx.net/hacking-tools-cheat-sheet/" %}
+
+{% embed url="https://github.com/CyberSecurityUP/Guide-CEH-Practical-Master" %}

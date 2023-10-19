@@ -1,9 +1,11 @@
 # Table of contents
 
 * [📓 Pratical Ethical Hacker Notes](README.md)
-  * [🔬 Labs](pratical-ethical-hacker-notes/labs/README.md)
+  * [🧪 Labs](pratical-ethical-hacker-notes/labs/README.md)
+    * [2 - Footprinting & Recon](pratical-ethical-hacker-notes/labs/2-footprinting-and-recon.md)
     * [3 - Scanning Networks](pratical-ethical-hacker-notes/labs/3-scanning-networks.md)
     * [4 - Enumeration](pratical-ethical-hacker-notes/labs/4-enumeration.md)
+    * [5 - Vulnerability Analysis](pratical-ethical-hacker-notes/labs/5-vulnerability-analysis.md)
     * [6 - System Hacking](pratical-ethical-hacker-notes/labs/6-system-hacking.md)
     * [8 - Sniffing](pratical-ethical-hacker-notes/labs/8-sniffing.md)
     * [10 - DoS](pratical-ethical-hacker-notes/labs/10-dos.md)
