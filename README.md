@@ -1,4 +1,4 @@
-# 📓 Pratical Ethical Hacker Notes
+# 📓 Practical Ethical Hacker Notes
 
 ## Labs 🔬
 
@@ -15,35 +15,44 @@
 
 ## Tools 🛠️
 
-* [Adb tool](pratical-ethical-hacker-notes/adb-tool.md)
-* [Burp Suite](pratical-ethical-hacker-notes/burp-suite.md)
-* [Cewl](pratical-ethical-hacker-notes/cewl.md)
-* [Crunch](pratical-ethical-hacker-notes/crunch.md)
-* [Dirb](pratical-ethical-hacker-notes/dirb.md)
-* [Enum4linux](pratical-ethical-hacker-notes/enum4linux.md)
-* [Gobuster](pratical-ethical-hacker-notes/gobuster.md)
-* [Hashcalc](pratical-ethical-hacker-notes/hashcalc.md)
-* [Hashcat](pratical-ethical-hacker-notes/hashcat.md)
-* [Hping3](pratical-ethical-hacker-notes/hping3.md)
-* [Hydra](pratical-ethical-hacker-notes/hydra.md)
-* [John the Ripper](pratical-ethical-hacker-notes/john-the-ripper.md)
-* [Metasploit](pratical-ethical-hacker-notes/metasploit.md)
-* [Md5 Calculator](pratical-ethical-hacker-notes/md5-calculator.md)
-* [Nikto](pratical-ethical-hacker-notes/nikto.md)
-* [Nmap](pratical-ethical-hacker-notes/nmap.md)
-* [OpenStego](pratical-ethical-hacker-notes/openstego.md)
-* [QuickStego](pratical-ethical-hacker-notes/quickstego.md)
-* [RainbowCrack](pratical-ethical-hacker-notes/rainbowcrack.md)
-* [Responder LLMNR](pratical-ethical-hacker-notes/responder-llmnr.md)
-* [Searchsploit](pratical-ethical-hacker-notes/searchsploit.md)
-* Snow
-* [Stego](pratical-ethical-hacker-notes/stego.md)
-* [Sqlmap](pratical-ethical-hacker-notes/sqlmap.md)
-* [Steghide](pratical-ethical-hacker-notes/steghide.md)
-* [Stegimage](pratical-ethical-hacker-notes/stegimage.md)
-* [Veracrypt](pratical-ethical-hacker-notes/veracrypt.md)
-* [Wireshark or Tcpdump](pratical-ethical-hacker-notes/wireshark-or-tcpdump.md)
-* [Wpscan](pratical-ethical-hacker-notes/wpscan.md)
+* [Adb tool](practical-ethical-hacker-notes/adb-tool.md)
+* [BCTextEncoder](practical-ethical-hacker-notes/bctextencoder.md)
+* [Burp Suite](practical-ethical-hacker-notes/burp-suite.md)
+* [Cewl](practical-ethical-hacker-notes/cewl.md)
+* [Crunch](practical-ethical-hacker-notes/crunch.md)
+* [Dirb](practical-ethical-hacker-notes/dirb.md)
+* [Enum4linux](practical-ethical-hacker-notes/enum4linux.md)
+* [Gobuster](practical-ethical-hacker-notes/gobuster.md)
+* [Hashcalc](practical-ethical-hacker-notes/hashcalc.md)
+* [Hashcat](practical-ethical-hacker-notes/hashcat.md)
+* [Hping3](practical-ethical-hacker-notes/hping3.md)
+* [Hydra](practical-ethical-hacker-notes/hydra.md)
+* [John the Ripper](practical-ethical-hacker-notes/john-the-ripper.md)
+* [Metasploit](practical-ethical-hacker-notes/metasploit.md)
+* [Md5 Calculator](practical-ethical-hacker-notes/md5-calculator.md)
+* [Nikto](practical-ethical-hacker-notes/nikto.md)
+* [Nmap](practical-ethical-hacker-notes/nmap.md)
+* [OpenStego](practical-ethical-hacker-notes/openstego.md)
+* [QuickStego](practical-ethical-hacker-notes/quickstego.md)
+* [RainbowCrack](practical-ethical-hacker-notes/rainbowcrack.md)
+* [Responder LLMNR](practical-ethical-hacker-notes/responder-llmnr.md)
+* [Searchsploit](practical-ethical-hacker-notes/searchsploit.md)
+* [Snow](practical-ethical-hacker-notes/snow.md)
+* [Stego](practical-ethical-hacker-notes/stego.md)
+* [Sqlmap](practical-ethical-hacker-notes/sqlmap.md)
+* [Steghide](practical-ethical-hacker-notes/steghide.md)
+* [Stegimage](practical-ethical-hacker-notes/stegimage.md)
+* [Veracrypt](practical-ethical-hacker-notes/veracrypt.md)
+* [Wireshark or Tcpdump](practical-ethical-hacker-notes/wireshark-or-tcpdump.md)
+* [Wpscan](practical-ethical-hacker-notes/wpscan.md)
+* [Zap](practical-ethical-hacker-notes/zap.md)
+
+## RoadMap
+
+* [Study Walkthrough](practical-ethical-hacker-notes/study-walkthrough/)
+* [Examples Questions](practical-ethical-hacker-notes/study-walkthrough/example-questions.md)
+
+
 
 ## Other resources 🕸️
 
