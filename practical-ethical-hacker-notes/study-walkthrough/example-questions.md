@@ -25,3 +25,53 @@
 * Connect to the Server remotely using the credentials give by RDP?
 * Find the executable's Entry point (Address)
 * Extract the information from the SDcard of the Android User?
+
+#### CEH Practical Exam Questions Examples:
+
+* Find the machines running MSSQL ?
+* Find the machines running Remote Desktop ?
+* Find DOS attacker ips from pcap file ?
+* Identify modifed text files , (hint : check integrity)
+* Crack MD5 Hashes.
+* Find attacker's username from machine?
+* Find contact details of Jenny ? (hint : dump the table using sqlmap)
+* Find username password ? (hint : Bruteforce using wpscan)
+* Use hydra to crack password
+* some question on Gui RATs tools
+* 4 5 problems on cryptography and steganography. Prepare all the Windows Gui tools from cryptography section. practice system exploitation using metasploit,
+
+Exam is pretty good, you can surf internet , open any documents pdfs you want , make sure you have stable internet connection, parrot os is extremely laggy .
+
+Tools : NMAP SQLMap Hydra Wireshark Veracrypt Hashcalc Dirb Steghide Searchsploit Hashcat John WPSCAN Metasploit
+
+
+
+[Sample Questions](https://github.com/0xParth/CEH-Practical-Guide/blob/main/README.md#sample-questions)
+
+1. Which username was tampered? ( You need to solving by comparing Hash values)
+2. Wordpress Username Enumeration!
+3. Retrieve Database names ( SQLi)
+4. How many machines are there? ( NMAP)
+5. Phone number of User X? ( Metasploit/Parameter Tampering)
+6. What is the hidden text in X.jpeg (STEGHIDE)
+7. Password crack for VCRYPT
+8. IP Address/ Version of Running windows Server.
+
+***
+
+[Some of the commands used by me](https://github.com/0xParth/CEH-Practical-Guide/blob/main/README.md#some-of-the-commands-used-by-me)
+
+1. hydra -l root -P passwords.txt \[-t 32] ftp \[ [https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/](https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/)]
+2. hydra -L usernames.txt -P pass.txt mysql
+3. hashcat.exe -m hash.txt rokyou.txt -O
+4. nmap -p443,80,53,135,8080,8888 -A -O -sV -sC -T4 -oN nmapOutput 10.10.10.10 \[[https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/)]
+5. wpscan --url [https://10.10.10.10/](https://10.10.10.10/) --enumerate u
+6. netdiscover -i eth0 \[ [https://www.100security.com.br/netdiscover](https://www.100security.com.br/netdiscover) ]
+7. john --format=raw-md5 password.txt \[ To change password to plain text ]
+
+
+
+
+
+
+
