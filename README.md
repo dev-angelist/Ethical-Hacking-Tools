@@ -54,6 +54,58 @@
 
 
 
+## Exam Details 📄🖊️ <a href="#ejpt-exam" id="ejpt-exam"></a>
+
+
+
+* Exam Title: Certified Ethical Hacker (Practical)
+* Number of Practical Challenges: 20
+* Exam Duration: 6 hours
+* Exam Infrastructure:  iLabs (browser-based)
+* Exam Format: iLabs Cyber Range
+* Passing Score: 70% (14 Questions out of 20)
+* Certificate validity: 3 years
+
+#### Course Content  <a href="#ember40" id="ember40"></a>
+
+1. Introduction to Ethical Hacking
+2. FootPrinting and Reconnaissance
+3. Scanning Networks
+4. Enumeration
+5. Vulnerability Analysis
+6. System Hacking
+7. Malware Threats
+8. Sniffing using Wireshark
+9. Social Engineering
+10. Denial-of-Service
+11. Session Hijacking
+12. Evading IDS, Firewalls, and Honeypots
+13. Hacking Web Servers
+14. Hacking Web Applications
+15. SQL Injection
+16. Hacking Wireless Networks
+17. Hacking Mobile Platforms
+18. IoT and OT Hacking
+19. Cloud Computing
+20. Cryptography
+
+#### **How to enroll for CEH Practical?**
+
+&#x20;Go to the EC-Council official website and read through everything you need to know [https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/](https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/)&#x20;
+
+Create Account: Create an account on EC-Council's Aspen portal.
+
+Purchase Voucher: Buy a CEH Practical exam voucher from the EC-Council or authorized centers.
+
+You can buy the voucher from the official store i.e. [https://store.eccouncil.org/product/ceh-practical-exam/](https://store.eccouncil.org/product/ceh-practical-exam/)&#x20;
+
+Or you can fill out the form from the official website and you will get the whole guide via call or text (I personally prefer this way as you can ask your doubts and they help us understand)
+
+Schedule Exam: Log in to Aspen, select an exam date, and schedule the exam.\
+
+
+##
+
 ## Other resources 🕸️
 
 {% embed url="https://www.stationx.net/hacking-tools-cheat-sheet/" %}

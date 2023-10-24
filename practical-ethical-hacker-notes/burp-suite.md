@@ -98,6 +98,29 @@ With this option selected, the proxy will completely ignore anything that isn't 
 
 In alternative to THM, another best solution to learn BurpSuite is [https://portswigger.net/web-security](https://portswigger.net/web-security)
 
+### **Bruteforce via Burp suite**
+
+* Set proxy for browser: 127.0.0.1:8080
+* Burpsuite
+* Type random credentials
+* capture the request, right click-\&gt;send to Intrucder
+* Intruder-\&gt;Positions
+* Clear $
+* Attack type: Cluster bomb
+* select account and password value, Add $
+* Payloads: Load wordlist file for set 1 and set 2
+* start attack
+* filter status==302
+* open the raw, get the credentials
+* recover proxy settings
+
+**Exploit Parameter Tampering and XSS Vulnerabilities in Web Applications**
+
+* Log in a website, change the parameter value (id )in the URL
+* Conduct a XSS attack: Submit script codes via text area
+
+
+
 ## Cheatsheet
 
 {% embed url="https://ns2.elhacker.net/cheat-sheet/Burp-Suite-Cheat-Sheet.pdf" %}

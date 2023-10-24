@@ -143,3 +143,7 @@ searchsploit 44553 -examine
 ### **Eliminate Unwanted Results**
 
 If you want to eliminate unwanted results from your search simply use ‘–exclude’. You can also remove multiple terms by separating the terms with a “|” (pipe). For example – searchsploit –exclude “PoC”.
+
+### Other Resource
+
+{% embed url="https://www.offensive-security.com/offsec/edb-searchsploit-update-2020/" %}

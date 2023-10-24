@@ -60,4 +60,19 @@ john crack.txt --wordlist=rockyou.txt --format=Raw-SHA256
 
 ### Other References:
 
-* [Password Cracking With John The Ripper - RAR/ZIP & Linux Passwords](https://www.youtube.com/watch?v=XjVYl1Ts6XI) - HackerSploit
+
+
+[Password Cracking With John The Ripper - RAR/ZIP & Linux Passwords](https://www.youtube.com/watch?v=XjVYl1Ts6XI) - Video Tutorial
+
+{% embed url="https://linuxconfig.org/password-cracking-with-john-the-ripper-on-linux" %}
+
+{% embed url="https://medium.com/@sc015020/how-to-crack-passwords-with-john-the-ripper-fdb98449ff1" %}
+
+{% embed url="https://www.varonis.com/blog/john-the-ripper/" %}
+
+
+
+
+
+
+

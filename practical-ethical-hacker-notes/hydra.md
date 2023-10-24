@@ -190,3 +190,16 @@ molly@ip-10-10-226-238:~$ cat flag2.txt
 THM{c8eeb0468febbadea859baeb33b2541b}
 
 </details>
+
+### Other References
+
+{% embed url="https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/" %}
+
+{% embed url="https://redteamtutorials.com/2018/10/25/hydra-brute-force-https/" %}
+
+{% embed url="https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-online-passwords-with-tamper-data-thc-hydra-0155374/" %}
+
+
+
+
+

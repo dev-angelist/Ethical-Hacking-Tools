@@ -105,7 +105,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 arpspoof -i eth1 -t <TARGET_IP> -r <HOST_IP>
 ```
 
-Others Notes
+#### Others Notes
 
 ```bash
 #To find DOS (SYN and ACK)
@@ -121,3 +121,50 @@ https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 #To find DOS (SYN and ACK) : tcp.flags.syn == 1  , tcp.flags.syn == 1 and tcp.flags.ack == 0
 #To find passwords : http.request.method == POST
 ```
+
+## **Password sniffing using Wireshark** <a href="#734c" id="734c"></a>
+
+**Attacker**
+
+* Stop capture
+* File-\&gt;Save as
+* Filter: http.request.method==POST
+* RDP log in Target
+* service
+* start Remote Packet Capture Protocol v.0 (experimental)
+* Log off Target
+* Wireshark-\&gt;Capture options-\&gt;Manage Interface-\&gt;Remote Interfaces
+* Add a remote host and its interface
+* Fill info
+
+### Additional Resources
+
+{% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/11-Bonus/TCPDump-Tutorial.md" %}
+TCPDUMP Tutorial
+{% endembed %}
+
+{% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/9-Denial-of-Service/3-Detecting-DoS-Traffic.md" %}
+Detecting DoS Attack traffic
+{% endembed %}
+
+{% embed url="https://www.varonis.com/blog/how-to-use-wireshark/" %}
+
+{% embed url="https://hackertarget.com/wireshark-tutorial-and-cheat-sheet/" %}
+
+{% embed url="https://www.lifewire.com/wireshark-tutorial-4143298" %}
+
+{% embed url="https://www.comparitech.com/net-admin/wireshark-cheat-sheet/" %}
+
+{% embed url="https://medium.com/hacker-toolbelt/wireshark-filters-cheat-sheet-eacdc438969chttps://github.com/security-cheatsheet/wireshark-cheatsheet" %}
+
+{% embed url="https://www.howtogeek.com/104278/how-to-use-wireshark-to-capture-filter-and-inspect-packets/" %}
+
+{% embed url="https://www.guru99.com/wireshark-passwords-sniffer.html" %}
+
+{% embed url="https://danielmiessler.com/study/tcpdump/" %}
+
+{% embed url="https://hackertarget.com/tcpdump-examples/" %}
+
+{% embed url="https://opensource.com/article/18/10/introduction-tcpdump" %}
+
+[https://www.youtube.com/watch?v=4\_7A8Ikp5Cc](https://www.varonis.com/blog/how-to-use-wireshark/https://hackertarget.com/wireshark-tutorial-and-cheat-sheet/https://www.lifewire.com/wireshark-tutorial-4143298https://www.comparitech.com/net-admin/wireshark-cheat-sheet/https://medium.com/hacker-toolbelt/wireshark-filters-cheat-sheet-eacdc438969chttps://github.com/security-cheatsheet/wireshark-cheatsheethttps://www.cellstream.com/resources/2013-09-10-11-55-21/cellstream-public-documents/wireshark-related/83-wireshark-display-filter-cheat-sheet/filehttps://www.howtogeek.com/104278/how-to-use-wireshark-to-capture-filter-and-inspect-packets/https://www.youtube.com/watch?v=4\_7A8Ikp5Cchttps://www.guru99.com/wireshark-passwords-sniffer.htmlhttps://danielmiessler.com/study/tcpdump/https://hackertarget.com/tcpdump-examples/https://opensource.com/article/18/10/introduction-tcpdump)

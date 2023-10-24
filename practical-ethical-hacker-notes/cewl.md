@@ -93,3 +93,8 @@ OPTIONS:
 `cewl -n -e`
 
 Using a verbose flag (-v) is always a good solution.
+
+### Other Resources:
+
+{% embed url="https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/" %}
+

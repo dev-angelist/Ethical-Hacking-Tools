@@ -85,3 +85,34 @@ Official Zenmap link
 * **Trust me!💪🏻** this would be the great life-changer of your exam.&#x20;
 * I know as a penetration tester working on the terminal is cool 😎 but in the heat of the moment, the browser-based VM would make you tense.
 {% endhint %}
+
+### Other Resources
+
+{% embed url="https://nmap.org/man/pt_BR/index.htmlhttps://nmap.org/docs.html" %}
+
+{% embed url="https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/" %}
+
+{% embed url="https://hackertarget.com/nmap-tutorial/" %}
+
+{% embed url="https://www.stationx.net/nmap-cheat-sheet/" %}
+
+{% embed url="https://www.100security.com.br/netdiscover" %}
+
+{% embed url="https://kalilinuxtutorials.com/netdiscover-scan-live-hosts-network/" %}
+
+{% embed url="https://www.stationx.net/nmap-cheat-sheet/" %}
+
+{% embed url="https://redteamtutorials.com/2018/10/14/nmap-cheatsheet/" %}
+
+{% embed url="https://resources.infosecinstitute.com/nmap-cheat-sheet/#gref" %}
+
+{% embed url="https://medium.com/@infosecsanyam/nmap-cheat-sheet-nmap-scanning-types-scanning-commands-nse-scripts-868a7bd7f692" %}
+
+{% embed url="https://resources.infosecinstitute.com/network-discovery-tool/#gref" %}
+
+[https://media.x-ra.de/doc/NmapCheatSheetv1.1.pdf](https://nmap.org/man/pt\_BR/index.htmlhttps://nmap.org/docs.htmlhttps://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/https://hackertarget.com/nmap-tutorial/https://www.stationx.net/nmap-cheat-sheet/https://media.x-ra.de/doc/NmapCheatSheetv1.1.pdfhttps://www.100security.com.br/netdiscoverhttps://kalilinuxtutorials.com/netdiscover-scan-live-hosts-network/https://www.youtube.com/watch?v=PS677owUk-chttps://www.stationx.net/nmap-cheat-sheet/https://redteamtutorials.com/2018/10/14/nmap-cheatsheet/https://resources.infosecinstitute.com/nmap-cheat-sheet/#grefhttps://medium.com/@infosecsanyam/nmap-cheat-sheet-nmap-scanning-types-scanning-commands-nse-scripts-868a7bd7f692https://resources.infosecinstitute.com/network-discovery-tool/#gref)
+
+[https://www.youtube.com/watch?v=PS677owUk-c](https://nmap.org/man/pt\_BR/index.htmlhttps://nmap.org/docs.htmlhttps://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/https://hackertarget.com/nmap-tutorial/https://www.stationx.net/nmap-cheat-sheet/https://media.x-ra.de/doc/NmapCheatSheetv1.1.pdfhttps://www.100security.com.br/netdiscoverhttps://kalilinuxtutorials.com/netdiscover-scan-live-hosts-network/https://www.youtube.com/watch?v=PS677owUk-chttps://www.stationx.net/nmap-cheat-sheet/https://redteamtutorials.com/2018/10/14/nmap-cheatsheet/https://resources.infosecinstitute.com/nmap-cheat-sheet/#grefhttps://medium.com/@infosecsanyam/nmap-cheat-sheet-nmap-scanning-types-scanning-commands-nse-scripts-868a7bd7f692https://resources.infosecinstitute.com/network-discovery-tool/#gref)
+
+
+
