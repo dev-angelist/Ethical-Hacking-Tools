@@ -4,7 +4,7 @@ description: https://www.kali.org/tools/john/
 
 # 🥷 John the Ripper
 
-Windows
+### Windows
 
 ```
 john --list=formats | grep NT
@@ -22,7 +22,7 @@ unshadow passwd shadow > unshadowed.txt
 john --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt
 ```
 
-Linux
+### Linux
 
 ```
 at /etc/shadow
@@ -34,6 +34,29 @@ john --format=sha512crypt linux.hashes.txt --wordlist=/usr/share/wordlists/rocky
 john -wordlist /usr/share/wordlists/rockyou.txt crack.hash
 john -wordlist /usr/share/wordlists/rockyou.txt -users users.txt test.hash
 ```
+
+
+
+<pre class="language-bash"><code class="lang-bash">#Single crack mode
+john --single --format=raw-sha1 crack.txt
+
+#Crack the password in file using wordlist
+john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.txt here contains the hashes)
+
+#Cracking service credentials like SSH
+1. First have to convert the hash file to JOHN format : ssh2john /home/text/.ssh/id_rsa > crack.txt (Now we need to crack this crack.txt file with John The Ripper)
+2. john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt
+
+#To crack ZIP
+1. zip2john file.zip > crack.txt
+2. john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt
+
+<strong>#Notes:
+</strong>–wordlist can be written as -w also
+john crack.txt --wordlist=rockyou.txt --format=Raw-SHA256
+</code></pre>
+
+
 
 ### Other References:
 

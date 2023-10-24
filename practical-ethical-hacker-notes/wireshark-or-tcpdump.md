@@ -105,3 +105,19 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 arpspoof -i eth1 -t <TARGET_IP> -r <HOST_IP>
 ```
 
+Others Notes
+
+```bash
+#To find DOS (SYN and ACK)
+tcp.flags.syn == 1  , tcp.flags.syn == 1 and tcp.flags.ack == 0
+
+#To find passwords
+http.request.method == POST
+
+#More reference
+https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
+
+#To find DOS: look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port(As per question)
+#To find DOS (SYN and ACK) : tcp.flags.syn == 1  , tcp.flags.syn == 1 and tcp.flags.ack == 0
+#To find passwords : http.request.method == POST
+```

