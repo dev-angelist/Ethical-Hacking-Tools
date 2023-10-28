@@ -148,13 +148,10 @@ Path Analyzer Pro performs network route tracing with performance test, DNS, Who
 
 Network route tracing can determine the intermediate nodes traversed towards the destination and can detect the complete route (path) from source to destination.
 
-Set Protocol -> ICMP
-
-Target -> \<Target\_IP>
-
-Port -> 65535
-
-Time to trace -> 3 min
+* Set Protocol -> ICMP
+* Target -> \<Target\_IP>
+* Port -> 65535
+* Time to trace -> 3 min
 
 Stop or wait finish, and see report, synopsis log stats and others output.
 
@@ -169,6 +166,8 @@ Recon-ng is a web reconnaissance fw with indipendent modules and db interaction 
 {% embed url="https://hackertarget.com/recon-ng-tutorial/" %}
 
 {% embed url="https://securitytrails.com/blog/recon-ng" %}
+
+{% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/1-Footprinting-and-Reconnaissance/3-Recon-ng.md" %}
 
 ### Footprinting a target using Maltego
 

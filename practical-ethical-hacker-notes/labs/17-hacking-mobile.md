@@ -2,7 +2,7 @@
 
 ## **Module 17 - Hacking Mobile Platforms**
 
-### **Lab 1-Task 4: Exploit the Android Platform through ADB using PhoneSploit**
+### **Exploit the Android Platform through ADB using PhoneSploit**
 
 * cd Phonesploit
 * python3 -m pip install colorama

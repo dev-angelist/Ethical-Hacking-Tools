@@ -14,6 +14,14 @@
 
 
 
+#### **Scanning entire Network**
+
+* **nmap -Pn -sS -A -vv  \<Target\_IP>/\<Subnet> -oA \<Filename>**
+  * **-Pn:** Disable ping
+  * **-sS**: SYN scan
+  * **-A**: Aggressive Scan
+  * **-oA**: Normal\_XML and Grepable format all at once
+  * **-vv**: Verbose
 * **nmap -sn -PR \<Target IP>**
   * **-sn:** Disable port scan
   * **-PR:** ARP ping scan
@@ -32,6 +40,10 @@
 * **nmap -sn -PO \<Target IP>**
   * **-PO:** IP Protocol Ping scan
 
+#### Convert Nmap XML file to HTML Report
+
+xsltproc \<nmap-output.xml> -o \<nmap-output.html>
+
 ### Perform Host Discovery using Angry IP Scanner
 
 
@@ -40,7 +52,7 @@
 
 
 
-
+{% embed url="https://angryip.org/download/#windows" %}
 
 ## Perform Port and Service Discovery
 
@@ -173,4 +185,15 @@ db_nmap -Pn -sS -A -oX Test 10.10.10.0/24
 hosts #display IP hosts
 use scanner/smb/smb_version
 show options #set RHOSTS, set THREADS 100
+```
+
+### Scanning SMB Version for OS Detection using Metaspolit
+
+```bash
+use scanner/smb/smb_version
+show options 
+set RHOSTS 10.10.10.8-16 
+set THREADS 100 
+run  
+hosts #Type hosts again and os_flavor will be visible
 ```

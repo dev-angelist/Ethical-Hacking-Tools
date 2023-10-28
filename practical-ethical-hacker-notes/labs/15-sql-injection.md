@@ -21,7 +21,7 @@
 * Execute cmd from login
   * `blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --`
 
-### **Lab1-Task2: Perform an SQL Injection Attack Against MSSQL to Extract Databases using sqlmap**
+### **Perform an SQL Injection Attack Against MSSQL to Extract Databases using sqlmap**
 
 * Login a website
 * Inspect element

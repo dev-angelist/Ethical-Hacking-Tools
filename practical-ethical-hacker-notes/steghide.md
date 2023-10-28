@@ -8,7 +8,17 @@ description: https://www.kali.org/tools/steghide/
 
 
 
+#### **Hide**
 
+* steghide embed -cf \[img file] -ef \[file to be hide]
+* steghide embed -cf 1.jpg -ef 1.txt
+* Enter password or skip
+
+#### **Extract**
+
+* steghide info 1.jpg
+* steghide extract -sf 1.jpg
+* Enter password if it does exist
 
 ### Additional Resources
 

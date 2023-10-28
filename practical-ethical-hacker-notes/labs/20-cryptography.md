@@ -2,11 +2,15 @@
 
 ## **Module 20 - Cryptography**
 
-### **Lab1-Task2: Calculate MD5 Hashes using MD5 Calculator**
+### **Calculate MD5 Hashes using MD5 Calculator**
 
-* Nothing special
 
-### **Lab4-Task1: Perform Disk Encryption using VeraCrypt**
+
+
+
+
+
+### **Perform Disk Encryption using VeraCrypt**
 
 * Click VeraCrypt
 * Create Volumn

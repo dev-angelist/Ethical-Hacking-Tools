@@ -22,7 +22,9 @@ ashcat -m 1000 -a 0 -o found.txt --remove crack.hash rockyou-10.txt
 
 ### Dictionary Attack
 
-<pre class="language-bash"><code class="lang-bash"><strong>hashcat -m 0 -a 0 -o cracked.txt target_hashes.txt /usr/share/wordlists/rockyou.txt
+<pre class="language-bash"><code class="lang-bash">#Crack MD5 passwords with a wordlist:
+hashcat hash.txt -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+<strong>hashcat -m 0 -a 0 -o cracked.txt target_hashes.txt /usr/share/wordlists/rockyou.txt
 </strong>  -m 0 designates the type of hash we are cracking (MD5);
   -a 0 designates a dictionary attack;
   -o cracked.txt is the output file for the cracked passwords;
@@ -47,5 +49,3 @@ ashcat -m 1000 -a 0 -o found.txt --remove crack.hash rockyou-10.txt
 ### Other References:
 
 * [Password cracking with Kali Linux and HashCat](https://www.youtube.com/watch?v=z4\_oqTZJqCo) - NetworkChuck
-
-\

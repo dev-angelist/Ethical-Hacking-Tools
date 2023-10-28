@@ -26,9 +26,14 @@
 * net use
 * net use \10.10.10.16\e ““\user:””
 * net use \10.10.10.16\e ““/user:””
-* NetBIOS Enumerator
 
-### **Enum4Linux Wins Enumeration :**
+#### NetBIOS Enumerator
+
+{% embed url="https://nbtenum.sourceforge.net/" %}
+
+### **Enum4Linux Wins Enumeration**&#x20;
+
+Enumerating information from Windows and Samba systems.
 
 * enum4linux -u martin -p apple -U \<Target\_IP>-> Users Enumeration
 * enum4linux -u martin -p apple -o \<Target\_IP> -> OS Enumeration
@@ -60,7 +65,27 @@
 
 
 
-###
+### Hyena
+
+Expand local workstation to view Users, Services, User Rights, Scheduled Jobs
+
+{% embed url="https://www.systemtools.com/hyena/download.htm" %}
+
+**Accessing Shared Files**
+
+```bash
+# List All Shared Resources
+net view  <IP>
+
+# Connect to Shared Resource
+net use
+net use \\10.10.10.1\e ""\user:""
+net use \\10.10.10.1\e ""/user:""
+```
+
+
+
+
 
 #### **Addition**
 
