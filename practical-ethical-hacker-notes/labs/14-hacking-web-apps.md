@@ -2,15 +2,20 @@
 
 ## **Module 14: Hacking Web Applications**
 
-* Wordpress
-  * wpscan --url http://10.10.10.12:8080 --enumerate u
-* WP password bruteforce
-  * msfconsole
-  * use auxiliary/scanner/http/wordpress\_login\_enum
-* RCE&#x20;
-  * ping 127.0.0.1 | hostname | net user
+#### Wordpress
 
-### **Lab2-Task1: Perform a Brute-force Attack using Burp Suite**
+* wpscan --url http://10.10.10.12:8080 --enumerate u
+
+#### WP password bruteforce
+
+* msfconsole
+* use auxiliary/scanner/http/wordpress\_login\_enum
+
+#### RCE&#x20;
+
+* ping 127.0.0.1 | hostname | net user
+
+### **Perform a Brute-force Attack using Burp Suite**
 
 * Set proxy for browser: 127.0.0.1:8080
 * Burpsuite
@@ -26,12 +31,12 @@
 * open the raw, get the credentials
 * recover proxy settings
 
-### **Lab2-Task3: Exploit Parameter Tampering and XSS Vulnerabilities in Web Applications**
+### **Exploit Parameter Tampering and XSS Vulnerabilities in Web Applications**
 
 * Log in a website, change the parameter value (id )in the URL
 * Conduct a XSS attack: Submit script codes via text area
 
-### **Lab2-Task5: Enumerate and Hack a Web Application using WPScan and Metasploit**
+### **Enumerate and Hack a Web Application using WPScan and Metasploit**
 
 * **wpscan --api-token hWt9qrMZFm7MKprTWcjdasowoQZ7yMccyPg8lsb8ads --url** [**http://10.10.10.16:8080/CEH**](http://10.10.10.16:8080/CEH) **--plugins-detection aggressive --enumerate u**
   * **--enumerate u: Specify the enumeration of users**
@@ -49,7 +54,7 @@
 * run
 * Find the credential
 
-### **Lab2-Task6: Exploit a Remote Command Execution Vulnerability to Compromise a Target Web Server (DVWA low level security)**
+### **Exploit a Remote Command Execution Vulnerability to Compromise a Target Web Server (DVWA low level security)**
 
 * If found command injection vulnerability in an input textfield
 * \| hostname
