@@ -10,6 +10,10 @@ description: https://www.kali.org/tools/steghide/
 
 #### **Hide**
 
+* steghide  embed  -ef  \<filename>  -cf  \<image>  -p  \<passphrase>
+
+or
+
 * steghide embed -cf \[img file] -ef \[file to be hide]
 * steghide embed -cf 1.jpg -ef 1.txt
 * Enter password or skip

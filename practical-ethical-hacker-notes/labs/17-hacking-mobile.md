@@ -50,6 +50,8 @@ sdcard/Download/secret.txt
 
 ## Generating and Executing Payloads for Android
 
+
+
 #### Setup Android
 
 * Open terminal, run `su`
@@ -82,3 +84,7 @@ sdcard/Download/secret.txt
 * pwd
 * cd sdcard
 * cd Download
+* pwd
+* cd sdcard
+* cd downloads
+* cat accnt-info.txt&#x20;

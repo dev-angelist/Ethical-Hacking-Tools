@@ -19,6 +19,10 @@
 
 ## SQLMap
 
+* Open the vulnerable website
+* Copy the cookie from the inspect element
+* Open the terminal and run SQLMap
+
 ### Basic Commands
 
 * SQLMAP Extract DBS
@@ -63,9 +67,19 @@
 * Get the OS Shell
 * TASKLIST
 
+Then, if we've SQL username and psw, we can use them to login and query db.
 
-
-
+```bash
+mysql -U qdpmadmin -h 192.168.1.8 -P passwod
+show databases;
+use qdpm;
+show tables' select * from users;
+show dtabases;
+use staff;
+show tables;
+select * from login;
+select * from user;
+```
 
 ### Additional Resources
 

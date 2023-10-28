@@ -296,6 +296,12 @@ shutdown #shutdown the victim machine
 
 {% embed url="https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/~/changes/38/practical-ethical-hacker-notes/quickstego" %}
 
+### Steganographic Decoder
+
+**Online steganography tool**
+
+{% embed url="https://futureboy.us/stegano/decinput.html" %}
+
 ### **Covert Channels using Covert\_TCP**
 
 Hiding traffic in IP4 headers to avoid detection.

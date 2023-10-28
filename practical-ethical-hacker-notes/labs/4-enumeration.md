@@ -121,6 +121,14 @@ Enum4linux is a tool for gathering information from Windows and Samba systems. S
 * run
 * hosts -> now exact os\_flavor information has been updated
 
+### **Nmap  SMB Scripts**
+
+* nmap --script smb-os-discovery.nse -p445 \<ip> -> Enumerate os, domain name,etc)
+* nmap --script smb-enum-users.nse -p445 \<ip>  -> Used to enumerate all users on remote Windows system using SAMR enumeration and LSA bruteforcing
+* nmap -p 445 --script=smb-enum-shares.nse, smb-enum-users.nse 10.10.19.21 -> SMB users and shares
+* smbclient //10.10.19.21/anonymous -> Accessing SMB shares
+* smbget -R smb://10.10.19.21/anonymous  -> Downloading SMB files
+
 ## **Active Directory LDAP Enumeration**
 
 ### ADExplorer
