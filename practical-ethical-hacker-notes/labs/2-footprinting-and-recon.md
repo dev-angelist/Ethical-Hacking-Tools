@@ -44,7 +44,11 @@ ping <Target_IP> -f -l 1500 # -f switch sets the Do Not Fragment bit on the ping
 #we can try to change value of TTL with flag -i and -n number of echo requests
 ```
 
-If we receive error "packet needs to be fragmented but DF set., we can decrease -l value (buffer size).
+Analyzing the output, if there're packets lost, we adjust the size or length of the packet, reducing -l value till to have 100% of packets sent!
+
+```bash
+ping <Target_IP> -f -l 1472
+```
 
 ### Gather information about website using Photon
 

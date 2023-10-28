@@ -125,9 +125,21 @@ HPing flood\
 
 ### Identify the target system's OS with Time-to-Live and TCP Win size using Wireshark
 
+Basically ping a machine from different operating systems and capture the packets from wireshark. we can check the ICMP packets, viewing the details of IPV4 packets and check the TTL \[ time to live] values.
 
+* Open Wireshark and start capture
+* Ping a target machine
+* Stop capture
+* Filter protocol ICMP
+* Check TTL value in the Network Layer (3) details.
 
-
+| Operating System | Default TTL Value (in Seconds) |
+| ---------------- | ------------------------------ |
+| Windows          | 128                            |
+| MacOS            | 64                             |
+| Linux            | 64                             |
+| Android/iOS      | 64                             |
+| FreeBSD          | 64                             |
 
 ### Perform OS Discovery using Nmap Script Engine (NSE)
 
