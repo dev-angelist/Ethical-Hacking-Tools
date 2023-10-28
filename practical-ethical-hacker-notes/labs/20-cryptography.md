@@ -2,13 +2,15 @@
 
 ## **Module 20 - Cryptography**
 
-###
+## Creating Self-Signed Certificate with Inetmgr
 
-
-
-
-
-
+* Open inetmgr
+* Click machine name and select Server Certificates
+* From actions select Create Self signed Certificate
+* Choose Name and Personal. Go to a Site, choose Bindings from the Action panel
+* Select Add
+* Select Https, IP 10.10.10.16, hostname www.goodshopping.com, select the certificate
+* Go the site and right click refresh one time.
 
 
 
@@ -61,6 +63,10 @@ MD5 Calculator
 
 ### **Perform Disk Encryption using VeraCrypt**
 
+Create Encrypted containers which can be mounted as Virtual Disks.
+
+#### Creation
+
 * Click VeraCrypt
 * Create Volumn
 * Create an encrypted file container
@@ -69,6 +75,9 @@ MD5 Calculator
 * Select NAT
 * Move the mouse randomly for some seconds, and click Format
 * Exit
+
+#### Mount Volume
+
 * Select a drive, select file, open, mount
 * Input password
 * Dismount

