@@ -2,6 +2,16 @@
 
 ## Module 10 - Denial-of-Service
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
+####
+
 ## **SYN Flooding**
 
 **SYN flooding** is a type of cyberattack that targets a server by overwhelming it with a flood of fake or incomplete connection requests (SYN packets). These requests are part of the 3-way handshake process used to establish a connection between a client and a server. In a SYN flood attack, the attacker sends a large number of SYN packets without completing the handshake, tying up the server's resources and preventing it from servicing legitimate connections.
@@ -67,6 +77,17 @@ Attackers may employ botnets or distributed networks of compromised devices to i
 * Click + to add target
 * Enter Target http://\<Target IP> -> Power = High -> Booster = GenericBoost.hoic
 * Click **FIRE TEH LAZER!** to launch attack
+
+## Detecting DoS Attack traffic <a href="#user-content-detecting-dos-attack-traffic" id="user-content-detecting-dos-attack-traffic"></a>
+
+KFSensor Free Trial: [http://www.keyfocus.net/kfsensor/](http://www.keyfocus.net/kfsensor/)\
+Wireshark: [https://www.wireshark.org/](https://www.wireshark.org/)
+
+{% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/9-Denial-of-Service/3-Detecting-DoS-Traffic.md" %}
+
+{% content-ref url="../wireshark-or-tcpdump.md" %}
+[wireshark-or-tcpdump.md](../wireshark-or-tcpdump.md)
+{% endcontent-ref %}
 
 #### **Other UDP-based applications and their ports**
 

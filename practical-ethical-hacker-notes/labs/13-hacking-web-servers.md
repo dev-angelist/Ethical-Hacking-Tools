@@ -2,6 +2,14 @@
 
 ## Module 13 - Hacking Web Servers
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
 ## Web Server Reconnaissance & Footprinting
 
 ### Skipfish – WebServer Recon

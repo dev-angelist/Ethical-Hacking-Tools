@@ -2,6 +2,14 @@
 
 ## **Module 19 - Cloud Computing**
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
 
 
 ### Using Owncloud&#x20;

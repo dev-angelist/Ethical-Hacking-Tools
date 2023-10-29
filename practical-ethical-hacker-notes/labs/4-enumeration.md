@@ -2,6 +2,14 @@
 
 ## Mod 04 - Enumeration
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
 #### Basic command
 
 * ping www.moviescope.com –f –l 1500 -> Frame size
@@ -155,11 +163,29 @@ net use \\10.10.10.1\e ""\user:""
 net use \\10.10.10.1\e ""/user:""
 ```
 
-
-
-
-
 #### **Addition**
 
 * nbtstat -a **\<Target IP>** (Windows)
 * nbtstat -c
+
+## Additional Resources
+
+{% embed url="https://null-byte.wonderhowto.com/how-to/enumerate-smb-with-enum4linux-smbclient-0198049/" %}
+
+{% embed url="https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/" %}
+
+{% embed url="https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html" %}
+
+{% embed url="https://medium.com/@arnavtripathy98/smb-enumeration-for-penetration-testing-e782a328bf1b" %}
+
+{% embed url="https://www.redsiege.com/blog/2020/04/user-enumeration-part-3-windows/" %}
+
+{% embed url="https://nmap.org/nsedoc/scripts/smb-enum-users.html" %}
+
+{% embed url="https://github.com/sensepost/UserEnum" %}
+
+{% embed url="https://book.hacktricks.xyz/network-services-pentesting/pentesting-dns" %}
+
+{% embed url="https://securitytrails.com/blog/dns-enumeration" %}
+
+{% embed url="https://medium.com/@klockw3rk/back-to-basics-dns-enumeration-446017957aa3" %}

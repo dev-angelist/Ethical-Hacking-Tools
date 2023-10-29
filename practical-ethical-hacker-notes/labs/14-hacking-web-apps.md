@@ -2,6 +2,14 @@
 
 ## **Module 14: Hacking Web Applications**
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
 #### Wordpress
 
 * wpscan --url http://10.10.10.12:8080 --enumerate u
@@ -31,6 +39,10 @@
 * open the raw, get the credentials
 * recover proxy settings
 
+{% content-ref url="../burp-suite.md" %}
+[burp-suite.md](../burp-suite.md)
+{% endcontent-ref %}
+
 ### **Exploit Parameter Tampering and XSS Vulnerabilities in Web Applications**
 
 * Log in a website, change the parameter value (id )in the URL
@@ -53,6 +65,10 @@
 * **set USERNAME admin**
 * run
 * Find the credential, and use URL http://\[IP Address of Windows Server 2012]:8080/CEH/wp-login.php to login.
+
+{% content-ref url="../wpscan.md" %}
+[wpscan.md](../wpscan.md)
+{% endcontent-ref %}
 
 ### **Exploit a Remote Command Execution Vulnerability to Compromise a Target Web Server (DVWA low level security)**
 
@@ -137,3 +153,28 @@ secondary">
 
 * Get victim to run it.
 
+## Additional Resources
+
+### Web Scanners
+
+{% embed url="https://geekflare.com/nikto-webserver-scanner/" %}
+
+{% embed url="https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan_wordpress_vulnerabilities_scan/" %}
+
+{% embed url="https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/" %}
+
+{% embed url="https://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/" %}
+
+#### YT videos
+
+[https://www.youtube.com/watch?v=K78YOmbuT48](https://blog.clusterweb.com.br/?p=1297https://hackertarget.com/nikto-tutorial/https://geekflare.com/nikto-webserver-scanner/https://www.youtube.com/watch?v=K78YOmbuT48https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan\_wordpress\_vulnerabilities\_scan/https://www.youtube.com/watch?v=SS991k5Alp0https://www.youtube.com/watch?v=MtyhOrBfG-Ehttps://www.youtube.com/watch?v=sQ4TtFdaiRAhttps://www.exploit-db.com/docs/english/45556-wordpress-penetration-testing-using-wpscan-and-metasploit.pdf?rsshttps://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/https://www.youtube.com/watch?v=BTGP5sZfJKYhttps://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/)[\
+\
+https://www.youtube.com/watch?v=SS991k5Alp0\
+\
+https://www.youtube.com/watch?v=MtyhOrBfG-E\
+\
+https://www.youtube.com/watch?v=sQ4TtFdaiRA\
+\
+https://www.youtube.com/watch?v=BTGP5sZfJKY\
+\
+](https://blog.clusterweb.com.br/?p=1297https://hackertarget.com/nikto-tutorial/https://geekflare.com/nikto-webserver-scanner/https://www.youtube.com/watch?v=K78YOmbuT48https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan\_wordpress\_vulnerabilities\_scan/https://www.youtube.com/watch?v=SS991k5Alp0https://www.youtube.com/watch?v=MtyhOrBfG-Ehttps://www.youtube.com/watch?v=sQ4TtFdaiRAhttps://www.exploit-db.com/docs/english/45556-wordpress-penetration-testing-using-wpscan-and-metasploit.pdf?rsshttps://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/https://www.youtube.com/watch?v=BTGP5sZfJKYhttps://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/)

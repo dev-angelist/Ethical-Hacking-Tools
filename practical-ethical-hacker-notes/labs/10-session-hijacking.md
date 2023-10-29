@@ -2,7 +2,13 @@
 
 ## Module 10 - Session Hijacking
 
+<details>
 
+<summary>EMPTY</summary>
+
+
+
+</details>
 
 
 

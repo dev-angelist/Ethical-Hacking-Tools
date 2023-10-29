@@ -250,7 +250,7 @@ shutdown #shutdown the victim machine
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>readme.txt</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>readme.txt</p></figcaption></figure>
 
 </div>
 
@@ -336,4 +336,73 @@ Hiding traffic in IP4 headers to avoid detection.
 
 * **./covert\_tcp -dest 10.10.10.9 -source 10.10.10.13 -source\_port 8888 -dest\_port 9999 -file /home/attacker/Desktop/send/message.txt**
 * Wireshark (message string being send in individual packet)
-*
+
+## Additional Resources
+
+### System Hacking
+
+{% embed url="https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/" %}
+
+{% embed url="https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/" %}
+
+{% embed url="https://blog.rapid7.com/2017/03/21/combining-responder-and-psexec-for-internal-penetration-tests/" %}
+
+{% embed url="https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/" %}
+
+{% embed url="https://medium.com/@hninja049/how-to-easy-find-exploits-with-searchsploit-on-linux-4ce0b82c82fd" %}
+
+{% embed url="https://www.offensive-security.com/offsec/edb-searchsploit-update-2020/" %}
+
+
+
+{% embed url="https://www.hackingloops.com/maintaining-access-metasploit/" %}
+
+{% embed url="https://resources.infosecinstitute.com/information-gathering-using-metasploit/" %}
+
+{% embed url="https://null-byte.wonderhowto.com/how-to/exploit-eternalblue-windows-server-with-metasploit-0195413/" %}
+
+{% embed url="https://attack.mitre.org/techniques/T1557/001/" %}
+
+{% embed url="https://www.sternsecurity.com/blog/local-network-attacks-llmnr-and-nbt-ns-poisoning" %}
+
+{% embed url="https://medium.com/@subhammisra45/llmnr-poisoning-and-relay-5477949b7bef" %}
+
+{% embed url="https://www.hackingarticles.in/get-reverse-shell-via-windows-one-liner/" %}
+
+[https://www.youtube.com/watch?v=joT8NxlXxVY](https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/https://blog.rapid7.com/2017/03/21/combining-responder-and-psexec-for-internal-penetration-tests/https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/https://medium.com/@hninja049/how-to-easy-find-exploits-with-searchsploit-on-linux-4ce0b82c82fdhttps://www.offensive-security.com/offsec/edb-searchsploit-update-2020/https://www.youtube.com/watch?v=29GlfaH5qCMhttps://www.hackingloops.com/maintaining-access-metasploit/https://resources.infosecinstitute.com/information-gathering-using-metasploit/https://www.youtube.com/watch?v=s6rwS7UuMt8https://null-byte.wonderhowto.com/how-to/exploit-eternalblue-windows-server-with-metasploit-0195413/https://www.youtube.com/watch?v=joT8NxlXxVYhttps://attack.mitre.org/techniques/T1557/001/https://www.youtube.com/watch?v=0TBCzaBklcEhttps://www.youtube.com/watch?v=FfoQFKhWUr0https://www.youtube.com/watch?v=Fg2gvk0qgjMhttps://www.youtube.com/watch?v=rjRDsXp\_MNkhttps://www.sternsecurity.com/blog/local-network-attacks-llmnr-and-nbt-ns-poisoninghttps://medium.com/@subhammisra45/llmnr-poisoning-and-relay-5477949b7befhttps://www.hackingarticles.in/get-reverse-shell-via-windows-one-liner/)
+
+[https://www.youtube.com/watch?v=29GlfaH5qCM](https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/https://blog.rapid7.com/2017/03/21/combining-responder-and-psexec-for-internal-penetration-tests/https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/https://medium.com/@hninja049/how-to-easy-find-exploits-with-searchsploit-on-linux-4ce0b82c82fdhttps://www.offensive-security.com/offsec/edb-searchsploit-update-2020/https://www.youtube.com/watch?v=29GlfaH5qCMhttps://www.hackingloops.com/maintaining-access-metasploit/https://resources.infosecinstitute.com/information-gathering-using-metasploit/https://www.youtube.com/watch?v=s6rwS7UuMt8https://null-byte.wonderhowto.com/how-to/exploit-eternalblue-windows-server-with-metasploit-0195413/https://www.youtube.com/watch?v=joT8NxlXxVYhttps://attack.mitre.org/techniques/T1557/001/https://www.youtube.com/watch?v=0TBCzaBklcEhttps://www.youtube.com/watch?v=FfoQFKhWUr0https://www.youtube.com/watch?v=Fg2gvk0qgjMhttps://www.youtube.com/watch?v=rjRDsXp\_MNkhttps://www.sternsecurity.com/blog/local-network-attacks-llmnr-and-nbt-ns-poisoninghttps://medium.com/@subhammisra45/llmnr-poisoning-and-relay-5477949b7befhttps://www.hackingarticles.in/get-reverse-shell-via-windows-one-liner/)[\
+\
+](https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/https://blog.rapid7.com/2017/03/21/combining-responder-and-psexec-for-internal-penetration-tests/https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/https://medium.com/@hninja049/how-to-easy-find-exploits-with-searchsploit-on-linux-4ce0b82c82fdhttps://www.offensive-security.com/offsec/edb-searchsploit-update-2020/https://www.youtube.com/watch?v=29GlfaH5qCMhttps://www.hackingloops.com/maintaining-access-metasploit/https://resources.infosecinstitute.com/information-gathering-using-metasploit/https://www.youtube.com/watch?v=s6rwS7UuMt8https://null-byte.wonderhowto.com/how-to/exploit-eternalblue-windows-server-with-metasploit-0195413/https://www.youtube.com/watch?v=joT8NxlXxVYhttps://attack.mitre.org/techniques/T1557/001/https://www.youtube.com/watch?v=0TBCzaBklcEhttps://www.youtube.com/watch?v=FfoQFKhWUr0https://www.youtube.com/watch?v=Fg2gvk0qgjMhttps://www.youtube.com/watch?v=rjRDsXp\_MNkhttps://www.sternsecurity.com/blog/local-network-attacks-llmnr-and-nbt-ns-poisoninghttps://medium.com/@subhammisra45/llmnr-poisoning-and-relay-5477949b7befhttps://www.hackingarticles.in/get-reverse-shell-via-windows-one-liner/)[https://www.youtube.com/watch?v=s6rwS7UuMt8](https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/https://blog.rapid7.com/2017/03/21/combining-responder-and-psexec-for-internal-penetration-tests/https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/https://medium.com/@hninja049/how-to-easy-find-exploits-with-searchsploit-on-linux-4ce0b82c82fdhttps://www.offensive-security.com/offsec/edb-searchsploit-update-2020/https://www.youtube.com/watch?v=29GlfaH5qCMhttps://www.hackingloops.com/maintaining-access-metasploit/https://resources.infosecinstitute.com/information-gathering-using-metasploit/https://www.youtube.com/watch?v=s6rwS7UuMt8https://null-byte.wonderhowto.com/how-to/exploit-eternalblue-windows-server-with-metasploit-0195413/https://www.youtube.com/watch?v=joT8NxlXxVYhttps://attack.mitre.org/techniques/T1557/001/https://www.youtube.com/watch?v=0TBCzaBklcEhttps://www.youtube.com/watch?v=FfoQFKhWUr0https://www.youtube.com/watch?v=Fg2gvk0qgjMhttps://www.youtube.com/watch?v=rjRDsXp\_MNkhttps://www.sternsecurity.com/blog/local-network-attacks-llmnr-and-nbt-ns-poisoninghttps://medium.com/@subhammisra45/llmnr-poisoning-and-relay-5477949b7befhttps://www.hackingarticles.in/get-reverse-shell-via-windows-one-liner/)[\
+\
+https://www.youtube.com/watch?v=0TBCzaBklcE\
+\
+https://www.youtube.com/watch?v=FfoQFKhWUr0\
+\
+https://www.youtube.com/watch?v=Fg2gvk0qgjM\
+\
+https://www.youtube.com/watch?v=rjRDsXp\_MNk](https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/https://www.ivoidwarranties.tech/posts/pentesting-tuts/responder/cheatsheet/https://blog.rapid7.com/2017/03/21/combining-responder-and-psexec-for-internal-penetration-tests/https://www.4armed.com/blog/llmnr-nbtns-poisoning-using-responder/https://medium.com/@hninja049/how-to-easy-find-exploits-with-searchsploit-on-linux-4ce0b82c82fdhttps://www.offensive-security.com/offsec/edb-searchsploit-update-2020/https://www.youtube.com/watch?v=29GlfaH5qCMhttps://www.hackingloops.com/maintaining-access-metasploit/https://resources.infosecinstitute.com/information-gathering-using-metasploit/https://www.youtube.com/watch?v=s6rwS7UuMt8https://null-byte.wonderhowto.com/how-to/exploit-eternalblue-windows-server-with-metasploit-0195413/https://www.youtube.com/watch?v=joT8NxlXxVYhttps://attack.mitre.org/techniques/T1557/001/https://www.youtube.com/watch?v=0TBCzaBklcEhttps://www.youtube.com/watch?v=FfoQFKhWUr0https://www.youtube.com/watch?v=Fg2gvk0qgjMhttps://www.youtube.com/watch?v=rjRDsXp\_MNkhttps://www.sternsecurity.com/blog/local-network-attacks-llmnr-and-nbt-ns-poisoninghttps://medium.com/@subhammisra45/llmnr-poisoning-and-relay-5477949b7befhttps://www.hackingarticles.in/get-reverse-shell-via-windows-one-liner/)&#x20;
+
+### Steganography
+
+{% embed url="https://resources.infosecinstitute.com/steganography-and-tools-to-perform-steganography/#gref" %}
+
+{% embed url="https://flylib.com/books/en/1.36.1/steganography.html" %}
+
+{% embed url="https://blog.eccouncil.org/what-is-steganography-and-what-are-its-popular-techniques/" %}
+
+{% embed url="https://www.edureka.co/blog/steganography-tutorial" %}
+
+{% embed url="https://www.tutorialspoint.com/image-based-steganography-using-python" %}
+
+{% embed url="https://medium.com/@KamranSaifullah/da-vinci-stenography-challenge-solution-90122a59822" %}
+
+{% embed url="https://medium.com/@chrisdare/steganography-in-computer-forensics-6d6e87d85c0a" %}
+
+{% embed url="https://www.telegraph.co.uk/culture/art/art-news/8197896/Mona-Lisa-painting-contains-hidden-code.html" %}
+
+{% embed url="https://medium.com/write-ups-hackthebox/tagged/steganography" %}
+
+{% embed url="http://moinkhans.blogspot.com/2015/06/steghide-beginners-tutorial.html" %}
+
+{% embed url="https://www.2daygeek.com/easy-way-hide-information-inside-image-and-sound-objects/" %}

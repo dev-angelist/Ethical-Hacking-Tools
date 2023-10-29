@@ -2,6 +2,14 @@
 
 ## Module 02 - Footprinting and Reconnaissance
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
 ## Perform Footprinting through Search Engines
 
 {% embed url="https://www.stationx.net/google-dorks-cheat-sheet/" %}

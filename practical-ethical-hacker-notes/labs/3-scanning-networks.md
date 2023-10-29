@@ -2,6 +2,16 @@
 
 ## Module 03 - Scanning Networks
 
+<details>
+
+<summary>EMPTY</summary>
+
+
+
+</details>
+
+
+
 ### Perform Host Discovery
 
 ### Perform Host Discovery using Nmap
@@ -55,6 +65,70 @@ xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 {% embed url="https://angryip.org/download/#windows" %}
 
 ## Perform Port and Service Discovery
+
+**Ports** are used to identify a single **network process**, to make sure the transport layer know what the destination process is.
+
+* **`<IP>:<Port>`** pair identifies a process on a network. For example: `192.168.13.2:80`
+* **1024 well-known ports** are used for the most common services: 0-1023. They are assigned by IANA in [this registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
+* A **`daemon`** is a program that runs a service. Its configuration can be changed, so the service listening port can be changed in order to make recognition harder.
+* Server-Client applications know which port to use because the TCP/UDP header contains two fields for the source/destination ports.
+
+#### **Common ports**
+
+|      Port     |        Service        |
+| :-----------: | :-------------------: |
+|       21      |          FTP          |
+|       22      |          SSH          |
+|       23      |         Telnet        |
+|       25      |          SMTP         |
+|       80      |          HTTP         |
+|      110      |          POP3         |
+| 137, 138, 139 |        NetBIOS        |
+|      143      |          IMAP         |
+|      443      | HTTPS (HTTP over SSL) |
+|   1433-1434   |  Microsoft Sql Server |
+|      3306     |         MySQL         |
+|      3389     | RDP (Terminal Server) |
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+> 💻 Check _listening ports_ and TCP connections on a host with the commands below:
+
+|                                                                              Command                                                                              | Operating System |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------: |
+| <p><strong><code>netstat -tunp</code></strong><br><strong><code>netstat -tulpn</code></strong> (listening ports too)<br><strong><code>ss -tnl</code></strong></p> |       Linux      |
+|                                                                         **`netstat -ano`**                                                                        |      Windows     |
+|                         <p><strong><code>netstat -p tcp -p udp</code></strong><br><strong><code>lsof -n -i4TCP -i4UDP</code></strong></p>                         | \*nix / Mac OS X |
+
+**Linux**
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+**Windows**
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+* [TCPView](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview) tool from Microsoft Sysinternals shows detailed listings of all TCP and UDP connections.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Perform Port and Service Discovery using MegaPing
 
@@ -209,3 +283,35 @@ set THREADS 100
 run  
 hosts #Type hosts again and os_flavor will be visible
 ```
+
+## Additional Resources
+
+### Web Scanners
+
+{% embed url="https://blog.clusterweb.com.br/?p=1297" %}
+
+{% embed url="https://hackertarget.com/nikto-tutorial/" %}
+
+{% embed url="https://geekflare.com/nikto-webserver-scanner/" %}
+
+{% embed url="https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan_wordpress_vulnerabilities_scan/" %}
+
+{% embed url="https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/" %}
+
+{% embed url="https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86" %}
+
+{% embed url="https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/" %}
+
+#### YT videos
+
+[https://www.youtube.com/watch?v=K78YOmbuT48](https://blog.clusterweb.com.br/?p=1297https://hackertarget.com/nikto-tutorial/https://geekflare.com/nikto-webserver-scanner/https://www.youtube.com/watch?v=K78YOmbuT48https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan\_wordpress\_vulnerabilities\_scan/https://www.youtube.com/watch?v=SS991k5Alp0https://www.youtube.com/watch?v=MtyhOrBfG-Ehttps://www.youtube.com/watch?v=sQ4TtFdaiRAhttps://www.exploit-db.com/docs/english/45556-wordpress-penetration-testing-using-wpscan-and-metasploit.pdf?rsshttps://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/https://www.youtube.com/watch?v=BTGP5sZfJKYhttps://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/)[\
+\
+https://www.youtube.com/watch?v=SS991k5Alp0\
+\
+https://www.youtube.com/watch?v=MtyhOrBfG-E\
+\
+https://www.youtube.com/watch?v=sQ4TtFdaiRA\
+\
+https://www.youtube.com/watch?v=BTGP5sZfJKY\
+\
+](https://blog.clusterweb.com.br/?p=1297https://hackertarget.com/nikto-tutorial/https://geekflare.com/nikto-webserver-scanner/https://www.youtube.com/watch?v=K78YOmbuT48https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan\_wordpress\_vulnerabilities\_scan/https://www.youtube.com/watch?v=SS991k5Alp0https://www.youtube.com/watch?v=MtyhOrBfG-Ehttps://www.youtube.com/watch?v=sQ4TtFdaiRAhttps://www.exploit-db.com/docs/english/45556-wordpress-penetration-testing-using-wpscan-and-metasploit.pdf?rsshttps://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/https://www.youtube.com/watch?v=BTGP5sZfJKYhttps://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/)
