@@ -46,6 +46,8 @@ hashcat hash.txt -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 #hash -m [file]
 ```
 
-### Other References:
+## Other Resources
 
-* [Password cracking with Kali Linux and HashCat](https://www.youtube.com/watch?v=z4\_oqTZJqCo) - NetworkChuck
+[Password cracking with Kali Linux and HashCat](https://www.youtube.com/watch?v=z4\_oqTZJqCo)
+
+{% embed url="https://hashcat.net/wiki/doku.php?id=example_hashes" %}

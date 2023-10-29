@@ -142,10 +142,6 @@ xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 
 ### Explore Various Network Scanning Techniques using Nmap
 
-
-
-
-
 * **nmap -sT -v \<Target IP>**
   * **-sT:** TCP connect/full open scan
   * **-v:** Verbose output
@@ -170,13 +166,24 @@ xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 * **nmap -A -v \<Target IP>**
   * **-A:** Aggressive scan
 
+**Other Nmap useful flags**
+
+* \-sN: null scan
+* \-sC: enable script scanning
+* \-T: enable timing options
+* \-o: output options
+* \-O: enable OS detection
+* \--script: specifies a script
+* \-f: fragment packets
+* \-g or --source-port: source port manipulation
+* \-mtu: Maximum Transmission Unit
+* \-p: port(s) to scan
+* \-D: decoy scan
+* \-D RND: generates random & non-reserved IPs
+* \-d: increase debugging level
+
 ### Explore Various Network Scanning Techniques using Hping3
 
-
-
-
-
-\
 `hping3 --scan 1-3000 -S 10.10.10.10`\
 \--scan parameter defines the port range to scan and –S represents SYN flag.
 

@@ -149,3 +149,30 @@ VeraCrypt Step by step tutorial
 {% content-ref url="../veracrypt.md" %}
 [veracrypt.md](../veracrypt.md)
 {% endcontent-ref %}
+
+## Check if file is modified
+
+We can do this comparing file hashes.
+
+#### Windows
+
+* **Get-FileHash** is the built-in PowerShell cmdlet that can be used to generate a hash value, allowing you to verify against the reference hash.
+
+```bash
+Get-FileHash <Location> -A SHA256 (SHA-1/256/384/512/MD5)
+(Get-FileHash <Location> -A SHA256 ).hash -eq "<hash value>" #will return true or false
+```
+
+{% embed url="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.3" %}
+
+* **WinMD5Free:** A simple and free utility that allows you to calculate and compare MD5 checksums in Windows. You can drag and drop files into the program to generate and compare checksums.
+* **FCIV (Microsoft File Checksum Integrity Verifier):** A command-line utility provided by Microsoft that allows you to compute and verify hash values for files. You can use it to create checksums and compare them.
+* **HashMyFiles:** A free utility from NirSoft that provides a graphical user interface for calculating and comparing file hashes. It allows you to compare the hashes of multiple files at once.
+* **File Checksum Tool:** A user-friendly tool that can calculate and compare checksums for various hash algorithms like MD5, SHA-1, and SHA-256. It provides an easy way to verify file integrity.
+
+#### Linux
+
+* **sha256sum (or md5sum, sha1sum):** These are built-in Linux commands for calculating the hash (SHA-256, MD5, SHA-1) of a file. You can use them in the terminal to calculate and compare checksums.
+* **GtkHash:** A graphical tool for Linux that supports various hash algorithms and provides a user-friendly interface for calculating and comparing file hashes. It integrates well with the Linux desktop environment.
+* **RapidCRC:** While primarily designed for Windows, there is a Linux version available. It's a user-friendly tool that supports a variety of checksum algorithms and is particularly useful for comparing and verifying large sets of files.
+* **Hashdeep:** A command-line tool for hashing files in Linux and Windows. It can create hash sets for multiple files and directories, and it's useful for verifying file integrity.

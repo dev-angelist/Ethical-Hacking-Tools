@@ -83,6 +83,36 @@ Attackers may employ botnets or distributed networks of compromised devices to i
 KFSensor Free Trial: [http://www.keyfocus.net/kfsensor/](http://www.keyfocus.net/kfsensor/)\
 Wireshark: [https://www.wireshark.org/](https://www.wireshark.org/)
 
+To find DOS (SYN and ACK) :&#x20;
+
+`tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0`
+
+To find passwords :&#x20;
+
+`http.request.method == POST`
+
+To find DOS -> Look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port if need.
+
+To find Wireshark DOS attack:
+
+* statistic -> IPv4 statistic -> source and destination address
+
+Or
+
+* View Flood attack on victim via Wireshark | use filter tcp.port=21
+
+#### Another method
+
+Find the dos attacker ip using Wireshark
+
+Statistic -> conversion
+
+identified ip , which has flooding server with SYN request.
+
+Or&#x20;
+
+get the statistics of ipv4&#x20;
+
 {% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/9-Denial-of-Service/3-Detecting-DoS-Traffic.md" %}
 
 {% content-ref url="../wireshark-or-tcpdump.md" %}

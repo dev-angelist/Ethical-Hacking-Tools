@@ -93,6 +93,11 @@ After downloading all, we can press Browse Mirrored Website to see website dumpe
 
 [https://www.youtube.com/watch?v=5Y7rJ\_iBaGE](https://www.youtube.com/watch?v=5Y7rJ\_iBaGE)
 
+**Other Email Tracking Tools**
+
+* Infoga
+* Mailtrack
+
 ## Perform Whois Footprinting
 
 ### Perform Whois Lookup using DomainTools
@@ -101,21 +106,24 @@ DomainTools website permits to perform Whois lookup on a website URL.
 
 {% embed url="https://whois.domaintools.com/" %}
 
-In addition, there're whois lookup tools such as: SmartWhois and Batch IP Converter to extract additional target informations.
+**Other Tools**
+
+* SmartWhois
+* Batch IP Converter
 
 ## Perform DNS Footprinting
 
 ### Gather DNS information using nslookup command line utility and online tool
 
-Nslookup is a network administration command-line utility, generally used for querying the DNS to obtain a domain name or IP address mapping or for any other specific DNS record. The utility is available both as a command-line utility and web app.
+**Nslookup** is a network administration command-line utility, generally used for querying the DNS to obtain a domain name or IP address mapping or for any other specific DNS record. The utility is available both as a command-line utility and web app.
 
 It's possible to do nslookup to query for the IP address of given domain setting type=a and take a CNAME lookup directly against the domain's authoritative name server and lists the CNAME record for a domain.
 
 ```bash
 nslookup
-set type=a
+set type=a #Configure nslookup to query for IP address of the domain
 <Target_IP>
-set type=cname
+set type=cname #List the CNAME records for a domain
 <Target_IP>
 ```
 
@@ -147,7 +155,7 @@ Traceroutes the network configuration information on the target domain
 
 ```bash
 tracert <Target_IP>
-tracert -h 5 <Target_IP> #maximum 5 hops allowed
+tracert -h 5 <Target_IP> #-h number of hops allowed
 ```
 
 There's an additional  online tool called SolarWinds.
@@ -174,6 +182,13 @@ If we want, there's an option to export result in .csv file format.
 ### Footprinting a target using Recon-ng
 
 Recon-ng is a web reconnaissance fw with indipendent modules and db interaction that provides an environment in which open-source web-based reconnaissance can be conducted.
+
+* marketplace install all -> install all modules
+* modules search -> displays all modules
+* workspaces create -> create a new workspace
+* workspaces list -> list your available workspaces
+* db insert domains -> add a domain to the database to search
+* modules load brute -> view all modules related to brute forcing
 
 {% embed url="https://hackertarget.com/recon-ng-tutorial/" %}
 

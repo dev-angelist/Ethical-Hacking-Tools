@@ -31,11 +31,29 @@ adb pull sdcard/log.txt /home/mmurphy/Desktop
 * C:\platform-tools -> from android to pc
 * android location -> \<pc location>
 
+### Basic command
 
+adb tcpip 5555
 
+adb connect \<ip-address>:5555
 
+adb shell
 
+## For finding perticular file
 
+```perl
+adb shell ls -R | grep filename
+```
+
+## For pulling file from server to local computer
+
+```lua
+adb pull /sdcard/log.txt %USERPROFILE%\Desktop\
+```
+
+for disconnecting device:
+
+adb disconnect
 
 ### Connect to Android through ADB and access files via shell
 

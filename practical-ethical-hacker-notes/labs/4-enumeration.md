@@ -86,12 +86,13 @@ set RHOSTS and exploit
 ### **Enumerate SNMP using snmp-check**
 
 * nmap -sU -p 161 \<Target IP>
-* snmp-check \<Target IP>
+* snmp-check \<Target IP> -> Enumerates SNMP devices, displaying the output in a simple and reader-friendly format.
 
 ### **NetBIOS Enumeration (139) :**&#x20;
 
-* nbtstat –A \<Target\_IP>
-* net use
+* nbtstat –a \<Target\_IP> -> Displays the NetBIOS name table of a remote machine
+* nbtstat –c \<Target\_IP> -> Lists the contents of the NetBIOS name cache of the remote machine
+* net use -> Connects or disconnects a computer from a shared resource
 * net use \10.10.10.16\e ““\user:””
 * net use \10.10.10.16\e ““/user:””
 
@@ -141,7 +142,7 @@ Enum4linux is a tool for gathering information from Windows and Samba systems. S
 
 ### ADExplorer
 
-Active Directory Explorer (AD Explorer) is a robust tool for viewing and editing Active Directory (AD). With it, you can effortlessly navigate the AD database, bookmark preferred locations, inspect object properties and attributes without opening dialog boxes, modify permissions, examine an object's schema, and perform complex, saveable searches.
+**Active Directory Explorer (AD Explorer)** is a robust tool for viewing and editing Active Directory (AD). With it, you can effortlessly navigate the AD database, bookmark preferred locations, inspect object properties and attributes without opening dialog boxes, modify permissions, examine an object's schema, and perform complex, saveable searches.
 
 {% embed url="https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer" %}
 
@@ -150,6 +151,15 @@ Active Directory Explorer (AD Explorer) is a robust tool for viewing and editing
 Hyena offers comprehensive Active Directory (AD) reporting, featuring built-in tools for customizable queries, filtering, object property management, advanced attribute handling, and numerous other AD administration capabilities.
 
 {% embed url="https://www.systemtools.com/hyena/download.htm" %}
+
+**Other LDAP enumeration tools**
+
+* Softerra
+* LDAP Administrator
+* LDAP Admin Tool
+* LDAP Account Manager
+* LDAP Search
+* JXplorer
 
 **Accessing Shared Files**
 
@@ -162,11 +172,6 @@ net use
 net use \\10.10.10.1\e ""\user:""
 net use \\10.10.10.1\e ""/user:""
 ```
-
-#### **Addition**
-
-* nbtstat -a **\<Target IP>** (Windows)
-* nbtstat -c
 
 ## Additional Resources
 
