@@ -4,9 +4,17 @@
 
 <details>
 
-<summary>EMPTY</summary>
+<summary>What does Scanning Network mean?</summary>
 
+**Scanning a network** is a crucial phase in the process of information gathering and vulnerability assessment within the field of cybersecurity. It involves actively probing a network or a system to identify open ports, services, and potential vulnerabilities. Network scanning provides valuable insights into the target's configuration and security posture and helps both security professionals and malicious actors to understand the potential attack surface.
 
+Here are the key components and objectives of network scanning:
+
+1. **Port Scanning:** Port scanning is a fundamental part of network scanning. It involves systematically checking each network port on a target system to determine which ports are open and which services are running on those ports. Open ports can be entry points for attackers, and identifying them is crucial for security assessment.
+2. **Service Identification:** After determining which ports are open, network scanners attempt to identify the services or applications running on these ports. This information is essential because different services may have different vulnerabilities, and knowing the exact services in use helps in vulnerability assessment.
+3. **Operating System Detection:** Some network scanning tools can also attempt to detect the operating system of the target host based on various characteristics, such as the way it responds to network requests. This information helps attackers or security professionals tailor their attack or assessment strategies.
+4. **Vulnerability Assessment:** Once open ports, services, and the target's operating system are identified, security professionals can use this information to assess potential vulnerabilities. They may then use this data to patch or secure the system or network against known weaknesses.
+5. **Enumeration:** Network scanning can also involve active enumeration, where attackers or security professionals gather additional information about the target network or system, such as usernames, shares, or other resources that may be exposed or accessible.
 
 </details>
 

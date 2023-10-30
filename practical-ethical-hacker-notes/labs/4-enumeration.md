@@ -4,30 +4,39 @@
 
 <details>
 
-<summary>EMPTY</summary>
+<summary>What is the Enumeration phase?</summary>
 
+**Enumeration** is a critical phase in the process of information gathering and vulnerability assessment in the field of cybersecurity. It involves actively probing a target system or network to gather specific and detailed information about the system, its resources, and its configuration. Enumeration typically occurs after network scanning and serves the purpose of providing an in-depth understanding of the target.
 
+Here are the key aspects of enumeration:
+
+1. **User Enumeration:** One common aspect of enumeration is the identification of valid usernames on a system. This can be particularly valuable for attackers because knowing valid usernames can be a step toward unauthorized access. For security professionals, it's essential for understanding potential points of entry for attackers.
+2. **Network Shares and Resources:** Enumeration can uncover shared resources on a network, such as shared folders, printers, and other network-accessible resources. Knowing what is shared and who has access to these resources is vital for both security professionals and attackers.
+3. **Group Memberships:** Enumeration can reveal the memberships of users in various groups on the target system or network. Understanding group memberships can provide insights into the level of access and privileges users have.
+4. **System Information:** Enumeration may yield details about the target system, such as the operating system version, hardware specifications, software versions, and other system-specific information. This information can be valuable for assessing vulnerabilities and potential attack vectors.
+5. **Service Information:** It involves gathering detailed information about the services running on the target system, including version numbers, configurations, and potential vulnerabilities associated with these services.
+6. **Port Information:** Enumeration can provide more information about open ports and services beyond what was discovered during network scanning. This additional information can be useful for understanding potential attack vectors.
 
 </details>
 
 #### Basic command
 
-* ping www.moviescope.com –f –l 1500 -> Frame size
-* tracert www.moviescope.com -> Determining hop count
+* `ping www.moviescope.com –f –l 1500` -> Frame size
+* `tracert www.moviescope.com` -> Determining hop count
 
 ### Ping Sweep
 
-Ping Sweep is a network scanning technique used to determine which IP addresses in a range are active or responsive. It involves sending Internet Control Message Protocol (ICMP) echo requests (ping) to a range of IP addresses and then analyzing the responses. When a target IP address responds to the ping request, it indicates that a host is active and reachable.
+**Ping Sweep** is a network scanning technique used to determine which IP addresses in a range are active or responsive. It involves sending Internet Control Message Protocol (ICMP) echo requests (ping) to a range of IP addresses and then analyzing the responses. When a target IP address responds to the ping request, it indicates that a host is active and reachable.
 
 #### Nmap
 
-* nmap -sP \<Target\_IP>/\<Subnet>
+* `nmap -sP <Target_IP>/<Subnet>`
 
 #### Bash
 
 We can se the 'ping' command on a given subnet range to check host statuses. The goal is to produce a clean output, focusing solely on the IP addresses, by filtering out unnecessary information.
 
-* ping -c 3 \<Target\_IP>
+* `ping -c 3 <Target_IP>`
 
 Grabbing only IP addresses:
 

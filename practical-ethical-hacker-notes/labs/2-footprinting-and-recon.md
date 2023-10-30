@@ -4,9 +4,26 @@
 
 <details>
 
-<summary>EMPTY</summary>
+<summary>What are Footprinting and Reconnaissance?</summary>
 
+**Footprinting** and **Reconnaissance** are two essential phases in the field of cybersecurity and information gathering that are typically conducted by ethical hackers, security professionals, or threat actors to gather information about a target organization or system. These activities are crucial for understanding the target's vulnerabilities and potential attack vectors.
 
+**Footprinting**: Footprinting is the initial phase of the information-gathering process. It involves collecting data and information about a target system or organization, often using passive techniques that don't involve direct interaction with the target. The goal of footprinting is to create a comprehensive profile of the target, including its network structure, infrastructure, domain names, IP addresses, employee names, email addresses, and more. This information can be obtained from public sources, such as websites, social media, and public records. Footprinting techniques can include:
+
+* DNS (Domain Name System) enumeration: Gathering information about domain names and their associated IP addresses.
+* WHOIS lookups: Identifying the owner and contact information for a domain.
+* Search engine queries: Using search engines to find information about the target.
+* Social engineering: Gaining information through interactions with individuals associated with the target organization.
+* Network scanning: Identifying open ports and services running on the target's network.
+
+**Reconnaissance**: Reconnaissance is the second phase of information gathering and can be considered an extension of footprinting. During reconnaissance, more active techniques may be used to gather additional information about the target. The primary purpose of reconnaissance is to discover vulnerabilities and potential entry points for an attack. Reconnaissance techniques can include:
+
+* Port scanning: Identifying open ports, services, and vulnerabilities.
+* Network mapping: Creating a map of the target's network infrastructure.
+* Vulnerability scanning: Identifying known security weaknesses in systems and software.
+* Banner grabbing: Collecting information from banners or headers of services running on the target systems.
+* Social engineering: Using psychological manipulation to extract information from individuals within the target organization.
+* Active enumeration: Actively probing the target's systems and network for more detailed information.
 
 </details>
 

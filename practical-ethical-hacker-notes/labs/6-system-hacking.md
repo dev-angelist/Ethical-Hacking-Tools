@@ -302,9 +302,11 @@ shutdown #shutdown the victim machine
 
 {% embed url="https://futureboy.us/stegano/decinput.html" %}
 
-### **Covert Channels using Covert\_TCP**
+## **Covert Channels using Covert\_TCP**
 
 Hiding traffic in IP4 headers to avoid detection.
+
+* cc -o covert\_tcp covert\_tcp.c -> Compile the Code
 
 #### **Attacker:**
 
@@ -317,7 +319,7 @@ Hiding traffic in IP4 headers to avoid detection.
 * **smb://\<Target IP>**
 * Account & Password
 * copy and paste covert\_tcp.c
-* **cc -o covert\_tcp covert\_tcp.c**
+* `cc -o covert_tcp covert_tcp.c` **-**> Compile the Code
 
 #### **Target:**
 
@@ -325,17 +327,19 @@ Hiding traffic in IP4 headers to avoid detection.
 * cd Desktop
 * mkdir Receive
 * cd Receive
-* File->Ctrl+L
+* File -> Ctrl+L
 * smb://**\<Target IP>**
 * copy and paste covert\_tcp.c
 * cc -o covert\_tcp covert\_tcp.c
-* **./covert\_tcp -dest 10.10.10.9 -source 10.10.10.13 -source\_port 9999 -dest\_port 8888 -server -file /home/ubuntu/Desktop/Receive/receive.txt**
+* `./covert_tcp -dest 10.10.10.9 -source 10.10.10.13 -source_port 9999 -dest_port 8888 -server -file /home/ubuntu/Desktop/Receive/receive.txt`
 * **Tcpdump captures no packets**
 
 #### **Attacker**
 
-* **./covert\_tcp -dest 10.10.10.9 -source 10.10.10.13 -source\_port 8888 -dest\_port 9999 -file /home/attacker/Desktop/send/message.txt**
+* `./covert_tcp -dest 10.10.10.9 -source 10.10.10.13 -source_port 8888 -dest_port 9999 -file /home/attacker/Desktop/send/message.txt` -**>** # Create A Message file that need to be transferred
 * Wireshark (message string being send in individual packet)
+
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Wireshark</p></figcaption></figure>
 
 ## Additional Resources
 
