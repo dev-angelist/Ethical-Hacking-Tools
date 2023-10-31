@@ -95,7 +95,7 @@ To find DOS -> Look for Red and Black packets with around 1-2 simple packets in 
 
 To find Wireshark DOS attack:
 
-* statistic -> IPv4 statistic -> source and destination address
+* statistic -> IPv4 statistic -> source and destination address&#x20;
 
 Or
 
@@ -111,7 +111,7 @@ identified ip , which has flooding server with SYN request.
 
 Or&#x20;
 
-get the statistics of ipv4&#x20;
+get the statistics of ipv4 -> we can see that Packets B -> A are null, because the're not reply pack.
 
 {% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/9-Denial-of-Service/3-Detecting-DoS-Traffic.md" %}
 

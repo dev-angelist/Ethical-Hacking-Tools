@@ -4,14 +4,17 @@
 
 ### Hide any data within a cover file like Images <a href="#user-content-openstego--hide-any-data-within-a-cover-file-like-images" id="user-content-openstego--hide-any-data-within-a-cover-file-like-images"></a>
 
-[\
-](https://camo.githubusercontent.com/8641aa98136e888b3b172e264d2b195e1e19817cfb14978e14bb8243f582750f/68747470733a2f2f7777772e6f70656e737465676f2e636f6d2f696d6167652f73637265656e73686f742f30312e706e67)
+#### Hide data
+
+Select message file and cover file to hide data and click on hide
 
 <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
+#### Extract hidden data
+
+To see the hidden message, click on extract data, select the image file and click extract
+
 <figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-
 
 ### Additional Resources
 

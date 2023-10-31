@@ -37,13 +37,14 @@ Protocols such as the tried and true TCP/IP were never designed with security in
 
 </details>
 
-
+## Analysing HTTP Traffic
 
 * `http.request.method == “POST”` -> Wireshark filter for filtering HTTP POST request&#x20;
 * Capture traffic from remote interface via wireshark
   * Capture > Options > Manage Interfaces&#x20;
   * Remote Interface > Add > Host &  Port (2002)
   * Username & password > Start
+* We can see credentials in clear going to HTML Form URL Econded.
 
 ### **Lab2 - Task1: Password Sniffing using Wireshark**
 

@@ -237,11 +237,13 @@ shutdown #shutdown the victim machine
 
 ### Hiding file in NTFS stream
 
+The NTFS file system includes support for alternate data streams. A file stream is a sequence of bytes that contains data about a file, such as keywords or the identity of the user who created the file. Think of a data stream as a file within a file — a hidden file residing within a legitimate one. Each stream has its own disk space allocation, its own actual size (bytes in use) and its own file locks.
+
 * Copy calc.exe from system32 dir.
 * Make c:\magic folder.
 * Copy calc.exe inside it, and create a text file readme.txt
-* Type type `c:\magic\calc.exe > c:\magic\readme.txt:calc.exe`
-* Type `mklink backdoor.exe readme.txt:calc.exe`
+* Type `c:\magic\calc.exe > c:\magic\readme.txt:calc.exe`
+* Type `mklink backdoor.exe readme.txt:calc.exe` -> create a link to the ADS file to create backdoor
 * Execute backdoor.exe
 
 ### Hiding Data Using White Space Steganography
@@ -261,6 +263,8 @@ shutdown #shutdown the victim machine
 
 ## Image Steganography
 
+**Image Steganography** is the process of hiding information which can be text, image or video inside a cover image. The secret information is hidden in a way that it not visible to the human eyes.
+
 ### OpenStego
 
 #### Hide Data
@@ -278,7 +282,9 @@ shutdown #shutdown the victim machine
 * Give the password
 * Click Extract Data
 
-{% embed url="https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/~/changes/38/practical-ethical-hacker-notes/openstego" %}
+{% content-ref url="../openstego.md" %}
+[openstego.md](../openstego.md)
+{% endcontent-ref %}
 
 ### QuickStego
 
@@ -294,7 +300,9 @@ shutdown #shutdown the victim machine
 * Select the open image option to open the modified image
 * Hidden text will be displayed in right side bar
 
-{% embed url="https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/~/changes/38/practical-ethical-hacker-notes/quickstego" %}
+{% content-ref url="../quickstego.md" %}
+[quickstego.md](../quickstego.md)
+{% endcontent-ref %}
 
 ### Steganographic Decoder
 
@@ -306,7 +314,13 @@ shutdown #shutdown the victim machine
 
 Hiding traffic in IP4 headers to avoid detection.
 
-* cc -o covert\_tcp covert\_tcp.c -> Compile the Code
+We need to download and compile the tool on both machine (attacker and target):
+
+```bash
+wget https://raw.githubusercontent.com/cudeso/security‐ tools/master/networktools/covert/covert_tcp.c
+sudo apt install gcc
+cc ‐o covert_tcp covert_tcp.c
+```
 
 #### **Attacker:**
 
