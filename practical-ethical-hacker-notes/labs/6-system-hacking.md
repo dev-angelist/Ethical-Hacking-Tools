@@ -250,7 +250,7 @@ shutdown #shutdown the victim machine
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>readme.txt</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>readme.txt</p></figcaption></figure>
 
 </div>
 

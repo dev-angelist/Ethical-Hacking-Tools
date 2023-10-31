@@ -152,7 +152,7 @@ VeraCrypt Step by step tutorial
 
 ## Check if file is modified
 
-We can do this comparing file hashes.
+**Hashing** is used for **integrity** checking. You can check if some file has been modified by **comparing** the hash values
 
 #### Windows
 

@@ -26,7 +26,7 @@ Here's a basic textual explanation:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/">https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><a href="https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/">https://spanning.com/blog/sql-injection-attacks-web-based-application-security-part-4/</a></p></figcaption></figure>
 
 </div>
 
