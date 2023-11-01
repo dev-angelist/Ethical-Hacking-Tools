@@ -143,7 +143,123 @@ hashcat PhoneSploit Metasploit
 
 Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego
 
+## Udemy <a href="#effd" id="effd"></a>
+
+Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account: opening cmd and using: net user command. (port 3389)
+
+
+
+Can you decrypt the file and provide the contents of "flag1.txt" as the answer?
+
+Connect to ftp using cmd: ftp IP  get file1.txt, after this: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
+
+
+
+SNOW
+
+
+
+Identify psw associated with the User ID "sarah" and resolve the issue to allow her to access her account again.
+
+wpscan --url http://192.168.1.10:8080/CEH -u sarah -P passwdlist.txt
+
+or
+
+```bash
+msfconsole -q
+use auxiliary/scanner/http/wordpress_login_enum
+show options
+set PASS_FILE /home/attacker/Desktop/Wordlist/password.txt
+set RHOSTS <Target_IP>
+set RPORT 8080
+set TARGETURI http://10.10.10.10:8080/
+set USERNAME admin
+```
+
+
+
+A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10:8080/DVWA. The file is located at the following path: C:\wamp64\www\DVWA\hackable\uploads\Secret-Hash.txt. Your task is to crack the MD5 hash present in the file and reveal the original message. You can access the file by logging into DVWA using the provided credentials: superuser::superman. Hint: you can decrypt the hash using the following link: https://hashes.com/en/decrypt/hash.
+
+Got to the site, login, go to the url uploads/Secret-hash.txt and decrypt the hash using hashes.com
+
+
+
+A file named "Secret.txt" that has been concealed within the Server 2019 machine is located at the following path: C:\Users\Dell\Documents\Confidential.
+
+You will need to use a backdoor installed in the server to access the file. (it's a fake news)
+
+Your objective is to find the secret number hidden inside the file and provide it as your answer.
+
+User credentials of RDP you find in the previous answer (of rdp) to login.
+
+Browse to the mentioned path C:\Users\Dell\Documents\Confidential
+
+Open "Secret.txt" file and copy the number inside.
+
+
+
+Crack the FTP credentials to obtain the file "flag.txt" available on the FTP server and enter the content in the file as the answer.
+
+hydra -L /home/attacker/Desktop/CEH\_TOOLS/Wordlists/Username.txt -P /home/attacker/Desktop/CEH\_TOOLS/Wordlists/Password.txt ftp://10.10.10.10
+
+hydra -l user -P passlist.txt ftp://10.10.10.10 (if username is given)
+
+get flag.txt
+
+
+
+A site has SQLi vulnerability, the cookie information is stored in a text file in the Documents folder of the EH-2 machine. Use the SQL DSSS attack method to capture the session link. Determine the contact number of Maria associated twith a website.
+
+SQLi video
+
+We bypass auth, then use IDOR to find Maria's number
+
+
+
+OWASP ZAP  to indentify and exploit the SQLi vulnerability to determine which HTTP method poses the highest risk to the website
+
+
+
+BCTextEcndoer
+
+
+
+Finding FQDN (FQDN = Hostname + Domain) an example can be: mail.example.com mail (hostname), example.com (domain)
+
+In windows, if we go into advanced system settings and system properties, we've full computer name and workgroup name, if we've workgroup name it means that we've not a centralized Domain Controller, then the full computer name consists of just the computer name without domain name.
+
+While, in another scenario, if we see System control panel, at computer name, domain and worgroup settings we see a more long full computer name because we've Domain Controller associated.
+
+We can find FQDN using nmap of domain controller in a subnet:
+
+nmap -p389 -sV -iL \<target\_list> -> if we've more targets IP
+
+or nmap -p389 -sV \<target\_IP>
+
+port 389 regarding LDAP service: protocol used for accessing and maintaining directory info such as user account within a network. We can associated it functionality as a phonebook or address book that helps you to search, retrieve and update info in that directory.&#x20;
+
+Running nmap command we'll retrieve info about Domain and Host name:
+
+Domain: pentester.team Service Info: Host: DC;
+
+then FQDN = DC.pentester.team
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \
- <a href="#effd" id="effd"></a>
--------------------------------
+
 
