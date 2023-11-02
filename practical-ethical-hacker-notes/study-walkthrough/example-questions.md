@@ -66,8 +66,6 @@
 7. Password crack for VCRYPT
 8. IP Address/ Version of Running windows Server.
 
-***
-
 #### Some of the commands used by me <a href="#user-content-some-of-the-commands-used-by-me" id="user-content-some-of-the-commands-used-by-me"></a>
 
 1. hydra -l root -P passwords.txt \[-t 32] ftp \[ [https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/](https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/)]
@@ -246,20 +244,30 @@ then FQDN = DC.pentester.team
 
 
 
+### Tips <a href="#91e1" id="91e1"></a>
+
+_1) First finish linux based questions like nmap etc and save those in the desktop folder, believe me you will look into the nmap scans over and over again._\
+_2) Watch the ilab videos from youtube and reffer CEH practical Lab manual._\
+_3) Everything will be asked from the ilab videos nothing will be out of sylabus._\
+_4) Be Cool._
+
+The Username and Password file will be present in the parrot machine it will help you to crack the ftp and wordpress related questions.
+
+Don’t be nervous, you are going to pass the exam with no doubt. Patience is really needed for the exam because the parrot machine is outdated and its very slow.
 
 
 
+**Exam Experience:**
 
+I know this is the most awaited part. The exam is watched over by a person called a proctor. They use GoToMeeting, a program that sees and hears you through your computer. They'll also record what's on your screen during the whole exam. After your identity is verified, your exam starts.
 
+The exam is on a website called iLab. You don't need to worry about taking pictures of your virtual machines (VMs).
 
+You'll get two Operating systems to test things on. One is Parrot OS, and the other is Windows 7. No more Kali this time.&#x20;
 
+**You can DO** use the internet for the exam. You can look things up, take notes on your computer, watch videos, and read blogs. **But DON”T** write notes by hand, talk to people, or make calls.
 
+Your exam computers won't have regular internet access. You need to use your web browser to access the internet.
 
-
-
-
-
-
-\
-
-
+* Start with the scanning part (NMAP Scan), since the scanning part takes some time, I moved on to other hacking questions.
+* Scan all ports on IPs because default scripts might not catch smart configurations.

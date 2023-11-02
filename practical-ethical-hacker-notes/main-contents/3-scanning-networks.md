@@ -20,17 +20,9 @@ Here are the key components and objectives of network scanning:
 
 
 
-### Perform Host Discovery
+## Perform Host Discovery
 
 ### Perform Host Discovery using Nmap
-
-
-
-
-
-
-
-
 
 #### **Scanning entire Network**
 
@@ -63,12 +55,6 @@ Here are the key components and objectives of network scanning:
 xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 
 ### Perform Host Discovery using Angry IP Scanner
-
-
-
-
-
-
 
 {% embed url="https://angryip.org/download/#windows" %}
 
@@ -123,30 +109,6 @@ xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 * [TCPView](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview) tool from Microsoft Sysinternals shows detailed listings of all TCP and UDP connections.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Perform Port and Service Discovery using MegaPing
-
-
-
-
-
-
-
-
 
 ### Explore Various Network Scanning Techniques using Nmap
 
@@ -243,36 +205,6 @@ Basically ping a machine from different operating systems and capture the packet
 * **nmap –script smb-os-discovery.nse \<Target IP>**
   * **-–script:** Specify the customized script
   * **smb-os-discovery.nse:** Determine the OS, computer name, domain, workgroup, and current time over the SMB protocol (Port 445 or 139)
-
-## Scan beyond IDS and Firewall
-
-### Scan beyond IDS/Firewall using various Evasion Techniques
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Ex 2 - Collecting information about a target website using Firebug
-
-Firebug integrates with Firefox providing a lot of development tools to edit, debug and monitor CSS, HTML and JavaScript live in any web page.
-
-###
-
-
 
 ## Perform Network Scanning using Various Scanning Tools
 

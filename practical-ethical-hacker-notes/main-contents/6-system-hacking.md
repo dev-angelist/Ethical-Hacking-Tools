@@ -2,10 +2,6 @@
 
 ## Module 06 - System Hacking
 
-
-
-
-
 ### Dump and Crack SAM (Security Account Manager) hashes
 
 Windows stores passwords in LM and NTLM hash format | NTLM New Technology LAN Manager.
@@ -17,8 +13,6 @@ Need admin access to dump SAM.
 ```bash
 wmic useraccount get name,sid | displays usernames and their SIDs
 ```
-
-
 
 ### LLMNR / NBT-NS Spoofing
 
@@ -34,10 +28,6 @@ responder -I eth0
 # To crack that hash, use JohntheRipper
 john SMB<filename>
 ```
-
-###
-
-###
 
 ### **NTLM Hash crack**
 
