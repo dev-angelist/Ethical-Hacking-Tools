@@ -48,9 +48,27 @@ cd Download
 sdcard/Download/secret.txt
 ```
 
+### Check entropy and hash of elf file using ADB Tool
+
+<pre class="language-bash"><code class="lang-bash">#Perform deep scan of the elf files and obtain the last 4 digits of SHA 384 hash of the file with highest entropy value
+<strong>
+</strong><strong>adb connect 192.168.0.4:5555 # Connection Establish Steps
+</strong>adb shell  
+
+#1. check elf file with highest entropy
+ls sdcard/scan #check if there're .elf files
+sudo adb pull /sdcard/scan #download entire dir including .elf files
+ent -h #ent tool options, if we haven't it: apt install ent
+ent first_file.elf #Entropy value 3.28412 bits, it has highest value of entropy.
+ent second_file.elf #Entropy value 1.15679 bits
+
+#2. check the last 4 digits of SHA 384
+sha384sum --help
+sha384sum first_file.elf
+#select only the last 4 digits of hash.
+</code></pre>
+
 ## Generating and Executing Payloads for Android
-
-
 
 #### Setup Android
 
