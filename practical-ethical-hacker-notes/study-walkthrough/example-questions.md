@@ -38,7 +38,7 @@
 * Use hydra to crack password
 * some question on Gui RATs tools
 * 4 5 problems on cryptography and steganography. Prepare all the Windows Gui tools from cryptography section. practice system exploitation using metasploit,
-* If you get any questions related to netbios, SMB use metasploit.
+*
 
 **Others exam questions:**
 
@@ -66,15 +66,7 @@
 7. Password crack for VCRYPT
 8. IP Address/ Version of Running windows Server.
 
-#### Some of the commands used by me <a href="#user-content-some-of-the-commands-used-by-me" id="user-content-some-of-the-commands-used-by-me"></a>
 
-1. hydra -l root -P passwords.txt \[-t 32] ftp \[ [https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/](https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/)]
-2. hydra -L usernames.txt -P pass.txt mysql
-3. hashcat.exe -m hash.txt rokyou.txt -O
-4. nmap -p443,80,53,135,8080,8888 -A -O -sV -sC -T4 -oN nmapOutput 10.10.10.10 \[[https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/)]
-5. wpscan --url [https://10.10.10.10/](https://10.10.10.10/) --enumerate u
-6. netdiscover -i eth0 \[ [https://www.100security.com.br/netdiscover](https://www.100security.com.br/netdiscover) ]
-7. john --format=raw-md5 password.txt \[ To change password to plain text ]
 
 ### Domande - tools
 
@@ -153,7 +145,16 @@ Connect to ftp using cmd: ftp IP  get file1.txt, after this: open CrypTool progr
 
 
 
-SNOW
+Identify IoT Message using capture.cap
+
+* filter message on wireshark with 'MQTT' filter
+* clicking on MQ Telemetry Transport Protocol -> Header Flags -> Message
+
+
+
+If you get any questions related to netbios, SMB use metasploit.
+
+
 
 
 
@@ -196,51 +197,19 @@ Open "Secret.txt" file and copy the number inside.
 
 
 
-Crack the FTP credentials to obtain the file "flag.txt" available on the FTP server and enter the content in the file as the answer.
 
-hydra -L /home/attacker/Desktop/CEH\_TOOLS/Wordlists/Username.txt -P /home/attacker/Desktop/CEH\_TOOLS/Wordlists/Password.txt ftp://10.10.10.10
-
-hydra -l user -P passlist.txt ftp://10.10.10.10 (if username is given)
-
-get flag.txt
 
 
 
 A site has SQLi vulnerability, the cookie information is stored in a text file in the Documents folder of the EH-2 machine. Use the SQL DSSS attack method to capture the session link. Determine the contact number of Maria associated twith a website.
 
-SQLi video
-
 We bypass auth, then use IDOR to find Maria's number
-
-
-
-OWASP ZAP  to indentify and exploit the SQLi vulnerability to determine which HTTP method poses the highest risk to the website
 
 
 
 BCTextEcndoer
 
 
-
-Finding FQDN (FQDN = Hostname + Domain) an example can be: mail.example.com mail (hostname), example.com (domain)
-
-In windows, if we go into advanced system settings and system properties, we've full computer name and workgroup name, if we've workgroup name it means that we've not a centralized Domain Controller, then the full computer name consists of just the computer name without domain name.
-
-While, in another scenario, if we see System control panel, at computer name, domain and worgroup settings we see a more long full computer name because we've Domain Controller associated.
-
-We can find FQDN using nmap of domain controller in a subnet:
-
-nmap -p389 -sV -iL \<target\_list> -> if we've more targets IP
-
-or nmap -p389 -sV \<target\_IP>
-
-port 389 regarding LDAP service: protocol used for accessing and maintaining directory info such as user account within a network. We can associated it functionality as a phonebook or address book that helps you to search, retrieve and update info in that directory.&#x20;
-
-Running nmap command we'll retrieve info about Domain and Host name:
-
-Domain: pentester.team Service Info: Host: DC;
-
-then FQDN = DC.pentester.team
 
 
 

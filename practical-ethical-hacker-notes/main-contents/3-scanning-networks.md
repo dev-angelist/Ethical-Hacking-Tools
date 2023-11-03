@@ -18,9 +18,20 @@ Here are the key components and objectives of network scanning:
 
 </details>
 
-
-
 ## Perform Host Discovery
+
+### Perform Host Discovery using Netdiscover
+
+**Netdiscover** is a tool used to inspect your network ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks.
+
+* `netdiscover -i eth0`&#x20;
+* `netdiscover -i eth0 -P -r 192.168.1.0/24`
+
+> \-i : network interface (eth0)
+>
+> \-P : Show results
+>
+> \-r : Range (192.168.1.0/24)
 
 ### Perform Host Discovery using Nmap
 
