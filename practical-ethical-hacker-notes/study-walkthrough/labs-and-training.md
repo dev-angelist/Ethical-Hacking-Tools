@@ -1,5 +1,17 @@
 # 🧪 Labs and Training
 
+## Tools Used da Technology Hacks
+
+**Linux:**
+
+Netdiscover, Nmap, Hydra, John the ripper, Wpscan, Sqlmap, ADB, Hashcat PhoneSploit Metasploit.
+
+**Windows:**
+
+Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
+
+## Notes/Exercises
+
 * What is the IP of the Windows X machine?
 * Find the IP address of the machine which is running the RDP?
 * What is the version of the Linux Kernel?
@@ -13,7 +25,6 @@
 * What is the password hidden in the .jpeg file?
 * Rogue AP suspect, crack your password using capture.cap
 * Discovery RAT in Network and acess computer to recovery secret.txt
-* Identify IoT Message using capture.cap
 * Find the attacker IP address who has launched the DOS attack?
 * Identify FQDN of Domain Controller
 * Find the username/password from the pcap file, which is in plain text?
@@ -25,9 +36,6 @@
 * Connect to the Server remotely using the credentials give by RDP?
 * Find the executable's Entry point (Address)
 * Extract the information from the SDcard of the Android User?
-
-#### CEH Practical Exam Questions Examples:
-
 * Find the machines running MSSQL ?
 * Find DOS attacker ips from pcap file ?
 * Identify modifed text files , (hint : check integrity)
@@ -36,13 +44,6 @@
 * Find contact details of Jenny ? (hint : dump the table using sqlmap)
 * Find username password ? (hint : Bruteforce using wpscan)
 * Use hydra to crack password
-* some question on Gui RATs tools
-* 4 5 problems on cryptography and steganography. Prepare all the Windows Gui tools from cryptography section. practice system exploitation using metasploit,
-
-
-
-**Others exam questions:**
-
 * How many machines are active? Use netdiscover
 * Which machine has FTP Server open? Use nmap
 * Find 2 secret files using FTP? brute force FTP username and psw.
@@ -57,139 +58,81 @@
 * Find secret hidden int he image/file? Usen openstego/snow
 * Find a secret file in Android? Use ADB
 * Send data to another machine (firewall blocked)? Use Covert TCP.
+* Which username was tampered? ( You need to solving by comparing Hash values)
+* Wordpress Username Enumeration!
+* Retrieve Database names ( SQLi)
+* How many machines are there? ( NMAP)
+* Phone number of User X? ( Metasploit/Parameter Tampering)
+* What is the hidden text in X.jpeg (STEGHIDE)
+* Password crack for VCRYPT
+* IP Address/ Version of Running windows Server.
 
-1. Which username was tampered? ( You need to solving by comparing Hash values)
-2. Wordpress Username Enumeration!
-3. Retrieve Database names ( SQLi)
-4. How many machines are there? ( NMAP)
-5. Phone number of User X? ( Metasploit/Parameter Tampering)
-6. What is the hidden text in X.jpeg (STEGHIDE)
-7. Password crack for VCRYPT
-8. IP Address/ Version of Running windows Server.
+### WireShark
 
+#### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
 
+* &#x20;tcpflagssyn - 1 , tcp.flags.syn 1 and tcp.flags.ack 0 To find passwords
 
-### Domande - tools
+#### To find psw, use this filter:
 
-4\) WireShark
+* http.request.method POST&#x20;
 
-I have perfomed DDos to practice Download from here : https://drive.google.com/drive/folders/10YvNHem8NgjLJCy1XvdYqU5cDJKlo To find DOS (SYN and ACK) : tcpflagssyn - 1 , tcp.flags.syn 1 and tcp.flags.ack 0 To find passwords : http.request.method POST&#x20;
+#### Identify IoT Message using capture.cap
 
-5\) SqlMap
+* filter message on wireshark with 'MQTT' filter
+* clicking on MQ Telemetry Transport Protocol -> Header Flags -> Message
 
-sqlmap -u "http://vmw.moviescope.com/viewprofile.aspx?id=l" —dbs \[ Copy the cookie from website, mysql -U qdpmadmin -h 192.168.1.8 -P passwod \[ If you have logins credentioals I&#x20;
+### Hashcat
 
-6\) OWASP ZAP
+* hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0: MD5 hash mode -a 0: Dictionary attack mode hash.txt txt file containing hash in a compliant format passwordlist.txt: dictionary file containing passwords in plain text
 
-&#x20;7\) Hashcat
+### John the Ripper
 
-hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0: MD5 hash mode -a 0: Dictionary attack mode hash.txt txt file containing hash in a compliant format passwordlist.txt: dictionary file containing passwords in plain text
+* john —format-raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt&#x20;
 
-&#x20;8\) John
+### Hydra
 
-john —format-raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt&#x20;
-
-9\) Hydra
-
-hydra -L /user.txt -P (password.txt ftp://172.0.16.21&#x20;
-
-10\) Veracrypt&#x20;
-
-11\) Crypttool&#x20;
-
-12\) Hash Calculator&#x20;
-
-13\) MD5 Calculator&#x20;
-
-14\) PhoneSploit&#x20;
-
-15\) MetaSploit
-
-If you get any questions related to netbios, SMB use metasploit.
-
-16\) BCTextEncoder
-
-
+* hydra -L /user.txt -P (password.txt ftp://172.0.16.21&#x20;
 
 ### **SQLMap**
 
-site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?= (for finding vulnerable site)
+#### **Finding vulnerable site**
+
+* site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?=&#x20;
 
 (for cookies- console->document.cookie)
 
-&#x20;
+* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  --dbs   (databases)
+* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart –tables   (tables)
+* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users --columns   (columns)
 
-sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  --dbs   (databases)
+#### Dump whole table
 
-sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart –tables   (tables)
-
-sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users --columns   (columns)
-
-(dump whole table)
-
-sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users  --dump  &#x20;
+* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users  --dump  &#x20;
 
 &#x20;                                                           OR                                                                                   &#x20;
 
 (dump individual  column data)
 
-sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C uname  --dump &#x20;
+* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C uname  --dump &#x20;
+* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C pass  --dump
+* sqlmap -u "http://vmw.moviescope.com/viewprofile.aspx?id=l" —dbs \[ Copy the cookie from website, mysql -U qdpmadmin -h 192.168.1.8 -P passwod \[ If you have logins credentioals I&#x20;
 
-sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C pass  --dump
+### Snow
 
-### Tools
+* snow.exe -C -p “password” stegfile.txt
 
-NMAP SQLMap Hydra Wireshark Veracrypt Hashcalc Dirb Steghide Searchsploit Hashcat John WPSCAN Metasploit&#x20;
+### CrypTool <a href="#effd" id="effd"></a>
 
-**Windows based Commands which will help you to find the answers.**\
-**1)** **net user** — For Domain Users Enumeration\
-**2)** **snow.exe** -C -p “password” stegfile.txt\
-**3)** **type** C:\path.txt — It displays the content of the path.txt file.\
-**4)** **dir**\
-**5)** **cd**\
-**6)** **hostname**\
-**7)** **whoami**\
-**8)** **PWd**
+#### Can you decrypt the file and provide the contents of "flag1.txt" as the answer? <a href="#effd" id="effd"></a>
 
-Tools Used da Technology Hacks (video):
+* Connect to ftp using cmd: ftp IP  get file1.txt, after this: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
 
-**in Parrot Box:**
+### WPSCAN
 
-netdiscover, nmap, hydra, john the ripper, wpscan, sqlmap, ADB\
-hashcat PhoneSploit Metasploit
+#### Identify psw associated with the User ID "sarah" and resolve the issue to allow her to access her account again. <a href="#effd" id="effd"></a>
 
-**In Windows Box:**
-
-Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego
-
-## Udemy <a href="#effd" id="effd"></a>
-
-Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account: opening cmd and using: net user command. (port 3389)
-
-
-
-Can you decrypt the file and provide the contents of "flag1.txt" as the answer?
-
-Connect to ftp using cmd: ftp IP  get file1.txt, after this: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
-
-
-
-Identify IoT Message using capture.cap
-
-* filter message on wireshark with 'MQTT' filter
-* clicking on MQ Telemetry Transport Protocol -> Header Flags -> Message
-
-
-
-If you get any questions related to netbios, SMB use metasploit.
-
-
-
-
-
-Identify psw associated with the User ID "sarah" and resolve the issue to allow her to access her account again.
-
-wpscan --url http://192.168.1.10:8080/CEH -u sarah -P passwdlist.txt
+* wpscan --url http://192.168.1.10:8080/CEH -u sarah -P passwdlist.txt
 
 or
 
@@ -204,13 +147,13 @@ set TARGETURI http://10.10.10.10:8080/
 set USERNAME admin
 ```
 
-
+### Hashes.com <a href="#effd" id="effd"></a>
 
 A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10:8080/DVWA. The file is located at the following path: C:\wamp64\www\DVWA\hackable\uploads\Secret-Hash.txt. Your task is to crack the MD5 hash present in the file and reveal the original message. You can access the file by logging into DVWA using the provided credentials: superuser::superman. Hint: you can decrypt the hash using the following link: https://hashes.com/en/decrypt/hash.
 
-Got to the site, login, go to the url uploads/Secret-hash.txt and decrypt the hash using hashes.com
+* Got to the site, login, go to the url uploads/Secret-hash.txt and decrypt the hash using hashes.com
 
-
+### RDP <a href="#effd" id="effd"></a>
 
 A file named "Secret.txt" that has been concealed within the Server 2019 machine is located at the following path: C:\Users\Dell\Documents\Confidential.
 
@@ -218,27 +161,49 @@ You will need to use a backdoor installed in the server to access the file. (it'
 
 Your objective is to find the secret number hidden inside the file and provide it as your answer.
 
-User credentials of RDP you find in the previous answer (of rdp) to login.
+* User credentials of RDP you find in the previous answer (of rdp) to login.
+* Browse to the mentioned path C:\Users\Dell\Documents\Confidential
+* Open "Secret.txt" file and copy the number inside.
 
-Browse to the mentioned path C:\Users\Dell\Documents\Confidential
+#### Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account (port 3389). <a href="#effd" id="effd"></a>
 
-Open "Secret.txt" file and copy the number inside.
+* Ppening cmd and use: net user command.&#x20;
 
-
-
-
-
-
+#### Check phone number of Maria <a href="#effd" id="effd"></a>
 
 A site has SQLi vulnerability, the cookie information is stored in a text file in the Documents folder of the EH-2 machine. Use the SQL DSSS attack method to capture the session link. Determine the contact number of Maria associated twith a website.
 
-We bypass auth, then use IDOR to find Maria's number
+* We bypass auth, then use IDOR to find Maria's number
 
+#### Netbios <a href="#effd" id="effd"></a>
 
+If you get any questions related to netbios, SMB use metasploit.
 
-BCTextEncoder
+### Other useful tools
 
+* Veracrypt
+* Crypttool&#x20;
+* Hash Calculator&#x20;
+* MD5 Calculator&#x20;
+* Hashcalc
+* Hashcat
+* John
+* BCTextEncoder
+* PhoneSploit&#x20;
+* NMAP
+* Dirb&#x20;
+* Steghide
+* Searchsploit &#x20;
 
+### Basic Windows cmd
+
+* net user -> For Domain Users Enumeration
+* type C:\path.txt -> It displays the content of the path.txt file.
+* dir
+* cd
+* hostname
+* whoami
+* pwd
 
 ## Others <a href="#effd" id="effd"></a>
 
@@ -275,5 +240,3 @@ Your exam computers won't have regular internet access. You need to use your web
 * Scan all ports on IPs because default scripts might not catch smart configurations.
 
 </details>
-
-### &#x20;<a href="#91e1" id="91e1"></a>
