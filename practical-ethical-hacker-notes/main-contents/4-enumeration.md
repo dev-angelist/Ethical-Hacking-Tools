@@ -1,6 +1,6 @@
 # 4 - Enumeration
 
-## Mod 04 - Enumeration
+#### <mark style="color:orange;">**Module 04 - Enumeration**</mark>
 
 <details>
 
@@ -26,7 +26,13 @@ Here are the key aspects of enumeration:
 
 ### Ping Sweep
 
+<details>
+
+<summary>What is <strong>Ping Sweep?</strong></summary>
+
 **Ping Sweep** is a network scanning technique used to determine which IP addresses in a range are active or responsive. It involves sending Internet Control Message Protocol (ICMP) echo requests (ping) to a range of IP addresses and then analyzing the responses. When a target IP address responds to the ping request, it indicates that a host is active and reachable.
+
+</details>
 
 #### Nmap
 

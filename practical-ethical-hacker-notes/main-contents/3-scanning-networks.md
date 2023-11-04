@@ -1,6 +1,6 @@
 # 3 - Scanning Networks
 
-## Module 03 - Scanning Networks
+#### <mark style="color:purple;">**Module 03 - Scanning Networks**</mark>
 
 <details>
 
@@ -205,10 +205,6 @@ Basically ping a machine from different operating systems and capture the packet
 
 ### Perform OS Discovery using Nmap Script Engine (NSE)
 
-
-
-
-
 * **nmap -A -v  \<Target IP>**
   * **-A:** Aggressive scan
 * **nmap -O -v \<Target IP>**
@@ -270,6 +266,4 @@ https://www.youtube.com/watch?v=MtyhOrBfG-E\
 \
 https://www.youtube.com/watch?v=sQ4TtFdaiRA\
 \
-https://www.youtube.com/watch?v=BTGP5sZfJKY\
-\
-](https://blog.clusterweb.com.br/?p=1297https://hackertarget.com/nikto-tutorial/https://geekflare.com/nikto-webserver-scanner/https://www.youtube.com/watch?v=K78YOmbuT48https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan\_wordpress\_vulnerabilities\_scan/https://www.youtube.com/watch?v=SS991k5Alp0https://www.youtube.com/watch?v=MtyhOrBfG-Ehttps://www.youtube.com/watch?v=sQ4TtFdaiRAhttps://www.exploit-db.com/docs/english/45556-wordpress-penetration-testing-using-wpscan-and-metasploit.pdf?rsshttps://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/https://www.youtube.com/watch?v=BTGP5sZfJKYhttps://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/)
+https://www.youtube.com/watch?v=BTGP5sZfJKY](https://blog.clusterweb.com.br/?p=1297https://hackertarget.com/nikto-tutorial/https://geekflare.com/nikto-webserver-scanner/https://www.youtube.com/watch?v=K78YOmbuT48https://blog.sucuri.net/2015/12/using-wpscan-finding-wordpress-vulnerabilities.htmlhttps://www.hackingtutorials.org/web-application-hacking/hack-a-wordpress-website-with-wpscan/https://linuxhint.com/wpscan\_wordpress\_vulnerabilities\_scan/https://www.youtube.com/watch?v=SS991k5Alp0https://www.youtube.com/watch?v=MtyhOrBfG-Ehttps://www.youtube.com/watch?v=sQ4TtFdaiRAhttps://www.exploit-db.com/docs/english/45556-wordpress-penetration-testing-using-wpscan-and-metasploit.pdf?rsshttps://www.wpwhitesecurity.com/strong-wordpress-passwords-wpscan/https://www.youtube.com/watch?v=BTGP5sZfJKYhttps://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-5-creating-custom-wordlist-with-cewl-0158855/https://medium.com/tech-zoom/dirb-a-web-content-scanner-bc9cba624c86https://www.hackingarticles.in/comprehensive-guide-on-dirb-tool/)

@@ -4,8 +4,6 @@ description: https://www.kali.org/tools/wpscan/
 
 # 🔍 WPScan
 
-####
-
 ```bash
 wpscan -h #List WPscan Parameters
 wpscan --update #Update WPscan
@@ -61,7 +59,7 @@ wpscan --url https://example/ --passwords wordlist.txt --usernames samson
 * run
 * Find the credential
 
-###
+{% embed url="https://www.kali.org/tools/wpscan/" %}
 
 ### Additional Resources
 

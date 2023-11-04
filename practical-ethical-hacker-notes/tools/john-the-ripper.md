@@ -56,7 +56,7 @@ john --wordlist=/usr/share/john/password.lst --format=raw-sha1 crack.txt (Crack.
 john crack.txt --wordlist=rockyou.txt --format=Raw-SHA256
 </code></pre>
 
-
+{% embed url="https://www.kali.org/tools/john/" %}
 
 ### Other References:
 
@@ -69,10 +69,3 @@ john crack.txt --wordlist=rockyou.txt --format=Raw-SHA256
 {% embed url="https://medium.com/@sc015020/how-to-crack-passwords-with-john-the-ripper-fdb98449ff1" %}
 
 {% embed url="https://www.varonis.com/blog/john-the-ripper/" %}
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 # 8 - Sniffing
 
-## Module 08 - Sniffing
+#### <mark style="color:blue;">**Module 08 - Sniffing**</mark>
 
 <details>
 
@@ -88,8 +88,8 @@ Protocols such as the tried and true TCP/IP were never designed with security in
 * Click Edit -> Preferences -> Protocols -> ARP/RARP -> **Detect ARP** request storms and Detect duplicate IP address configuration -> Start Capture.
 * Analyze -> Expert Information
 
-{% content-ref url="../wireshark-or-tcpdump.md" %}
-[wireshark-or-tcpdump.md](../wireshark-or-tcpdump.md)
+{% content-ref url="../tools/wireshark-or-tcpdump.md" %}
+[wireshark-or-tcpdump.md](../tools/wireshark-or-tcpdump.md)
 {% endcontent-ref %}
 
 ### Cain & Abel – MITM attack tool (via ARP Poisoning)&#x20;

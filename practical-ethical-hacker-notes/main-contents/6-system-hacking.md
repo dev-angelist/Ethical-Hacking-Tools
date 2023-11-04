@@ -1,6 +1,6 @@
 # 6 - System Hacking
 
-## Module 06 - System Hacking
+#### <mark style="color:yellow;">**Module 06 - System Hacking**</mark>
 
 ## Finding FQDN <a href="#effd" id="effd"></a>
 
@@ -299,8 +299,8 @@ The NTFS file system includes support for alternate data streams. A file stream 
 * Give the password
 * Click Extract Data
 
-{% content-ref url="../openstego.md" %}
-[openstego.md](../openstego.md)
+{% content-ref url="../tools/openstego.md" %}
+[openstego.md](../tools/openstego.md)
 {% endcontent-ref %}
 
 ### QuickStego
@@ -317,8 +317,8 @@ The NTFS file system includes support for alternate data streams. A file stream 
 * Select the open image option to open the modified image
 * Hidden text will be displayed in right side bar
 
-{% content-ref url="../quickstego.md" %}
-[quickstego.md](../quickstego.md)
+{% content-ref url="../tools/quickstego.md" %}
+[quickstego.md](../tools/quickstego.md)
 {% endcontent-ref %}
 
 ### Steganographic Decoder

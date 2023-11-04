@@ -568,7 +568,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 /blood                (Status: 301) [Size: 194] [--> http://10.10.162.67/blood/]
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 00-47-41.png" alt=""><figcaption><p><a href="http://10.10.162.67/blood/">http://10.10.162.67/blood/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 00-47-41.png" alt=""><figcaption><p><a href="http://10.10.162.67/blood/">http://10.10.162.67/blood/</a></p></figcaption></figure>
 
 {% hint style="info" %}
 blood
@@ -578,9 +578,9 @@ blood
 
 First, we need to identify the vulnerable POST request and save it. In order to save the request, Right Click on the request, select 'Copy to file', and save it to a directory into blood.txt:
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 00-50-41.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 00-50-41.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 00-51-50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 00-51-50.png" alt=""><figcaption></figcaption></figure>
 
 We have a POST parameter 'blood\_group' which could a vulnerable parameter.
 
@@ -590,7 +590,7 @@ Then, we can launch sqlmap in reading mode and searching current user:
 sqlmap -r blood.txt --current-user
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 01-01-18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 01-01-18.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 root
@@ -604,7 +604,7 @@ We can use flag --dump to watch all db:
 sqlmap -r blood.txt -p blood_group --dump
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 01-17-19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 01-17-19.png" alt=""><figcaption></figcaption></figure>
 
 <details>
 
@@ -722,9 +722,6 @@ SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
 * Get the OS Shell
 * TASKLIST
 
-\
-
-
 ### Other References
 
 {% embed url="https://book.hacktricks.xyz/pentesting-web/sql-injection/sqlmap" %}
@@ -748,10 +745,3 @@ SQL Shell = sqlmap -u 'url' --dbms=mysql --sql-shell
 {% embed url="https://www.1337pwn.com/use-sqlmap-to-bypass-cloudflare-waf-and-hack-website-with-sql-injection/" %}
 
 [https://www.exploit-db.com/docs/english/13701-easy-methodblind-sql-injection.pdf](https://hackertarget.com/sqlmap-tutorial/https://www.binarytides.com/sqlmap-hacking-tutorial/https://www.hackingarticles.in/database-penetration-testing-using-sqlmap-part-1/https://medium.com/@rafaelrenovaci/dvwa-solution-sql-injection-blind-sqlmap-cd1461ad336ehttps://medium.com/hacker-toolbelt/dvwa-1-9-viii-blind-sql-injection-with-sqlmap-ee8d59fbdea7https://www.exploit-db.com/docs/english/13701-easy-methodblind-sql-injection.pdfhttps://gracefulsecurity.com/sql-injection-filter-evasion-with-sqlmap/https://medium.com/@drag0n/sqlmap-tamper-scripts-sql-injection-and-waf-bypass-c5a3f5764cb3https://owasp.org/www-community/attacks/SQL\_Injection\_Bypassing\_WAFhttps:/www.1337pwn.com/use-sqlmap-to-bypass-cloudflare-waf-and-hack-website-with-sql-injection/)
-
-
-
-
-
-
-

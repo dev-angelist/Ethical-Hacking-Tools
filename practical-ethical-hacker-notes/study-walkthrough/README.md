@@ -1,10 +1,58 @@
-# Study Walkthrough
+# 👨🎓 Study Walkthrough
 
 If you have money, you can afford iLabs because the challenges are based on the iLab environment and you will get hands-on practice to clear this exam.
 
 If you can’t afford iLab, there are many platforms in which you can practice the listed tools. I personally prefer TryHackMe and HackTheBox. This Exam is all about how much knowledge you have on tools.
 
-## **Damn Vulnerable Web Application (DVWA)**
+You must need to understand problem and tools that can help you to solve it!
+
+<details>
+
+<summary>Tools 🛠️</summary>
+
+
+
+* [Adb tool](../tools/adb-tool.md)
+* [BCTextEncoder](../tools/bctextencoder.md)
+* [Burp Suite](../tools/burp-suite.md)
+* [Cewl](../tools/cewl.md)
+* [Crunch](../tools/crunch.md)
+* [Dirb](../tools/dirb.md)
+* [Enum4linux](../tools/enum4linux.md)
+* [Gobuster](../tools/gobuster.md)
+* [Hashcalc](../tools/hashcalc.md)
+* [Hashcat](../tools/hashcat.md)
+* [Hping3](../tools/hping3.md)
+* [Hydra](../tools/hydra.md)
+* [John the Ripper](../tools/john-the-ripper.md)
+* [Metasploit](../tools/metasploit.md)
+* [Md5 Calculator](../tools/md5-calculator.md)
+* [Nikto](../tools/nikto.md)
+* [Nmap](../tools/nmap.md)
+* [OpenStego](../tools/openstego.md)
+* [QuickStego](../tools/quickstego.md)
+* [RainbowCrack](../tools/rainbowcrack.md)
+* [Responder LLMNR](../tools/responder-llmnr.md)
+* [Searchsploit](../tools/searchsploit.md)
+* [Snow](../tools/snow.md)
+* [Stego](../tools/stego.md)
+* [Sqlmap](../tools/sqlmap.md)
+* [Steghide](../tools/steghide.md)
+* [Stegimage](../tools/stegimage.md)
+* [Veracrypt](../tools/veracrypt.md)
+* [Wireshark or Tcpdump](../tools/wireshark-or-tcpdump.md)
+* [Wpscan](../tools/wpscan.md)
+* [Zap](../tools/zap.md)
+
+</details>
+
+## Labs and Training
+
+{% content-ref url="labs-and-training.md" %}
+[labs-and-training.md](labs-and-training.md)
+{% endcontent-ref %}
+
+### **Damn Vulnerable Web Application (DVWA)**
 
 DVWA is a PHP/MYSQL vulnerable website that's made to be easy to hack. It's used to practice common web problems. It has different levels of difficulty. DVWA is important for the CEH (Practical) exam. It's a good idea to practice on DVWA because the exam might have similar challenges.
 
@@ -14,7 +62,7 @@ You can refer to the link [https://bughacking.com/dvwa-ultimate-guide-first-step
 * **Vulnhub** (Machines Easy to Medium) ([https://www.vulnhub.com/](https://www.vulnhub.com/))
 * **TryHackMe (**[**https://tryhackme.com/**](https://tryhackme.com/)**)**&#x20;
 
-## THM Materials
+### THM Materials
 
 * Windows Fundamentals Module 🏠 [THM Room](https://tryhackme.com/module/windows-fundamentals)
 * Linux Fundamentals Module 🏠 [THM Room](https://tryhackme.com/module/linux-fundamentals)

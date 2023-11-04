@@ -46,6 +46,8 @@ hashcat hash.txt -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 #hash -m [file]
 ```
 
+{% embed url="https://www.kali.org/tools/hashcat/" %}
+
 ## Other Resources
 
 [Password cracking with Kali Linux and HashCat](https://www.youtube.com/watch?v=z4\_oqTZJqCo)

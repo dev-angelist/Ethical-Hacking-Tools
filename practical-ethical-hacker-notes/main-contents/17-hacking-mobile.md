@@ -1,10 +1,6 @@
 # 17 - Hacking Mobile
 
-## **Module 17 - Hacking Mobile Platforms**
-
-###
-
-###
+#### <mark style="color:blue;">**Module 17 - Hacking Mobile Platforms**</mark>
 
 ### Download a file from Android using ADB Tool
 

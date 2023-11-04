@@ -4,10 +4,6 @@ description: https://www.kali.org/tools/rainbowcrack/
 
 # 🌈 RainbowCrack
 
-
-
-
-
 ### Rainbowcrack and QuickStego <a href="#04d9" id="04d9"></a>
 
 * Use Winrtgen to generate a rainbow table
@@ -24,3 +20,4 @@ description: https://www.kali.org/tools/rainbowcrack/
 * Select stego file
 * Hidden text shows up
 
+{% embed url="https://www.kali.org/tools/rainbowcrack/" %}

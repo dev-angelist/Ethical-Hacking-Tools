@@ -1,8 +1,10 @@
+---
+description: https://darkside.com.au/snow/
+---
+
 # ⛄ Snow
 
 **SNOW** is used to conceal messages in ASCII text by appending whitespace to the end of lines. Because spaces and tabs are generally not visible in text viewers, the message is effectively hidden from casual observers. And if the built-in encryption is used, the message cannot be read even if it is detected.
-
-
 
 > \-m is the message you want to hide
 >
@@ -24,8 +26,6 @@ To unhide the hidden text
 
 * ./snow -C -p "magic" output.txt
 * snow -C -m "Secret Text Goes Here!" -p "magic" readme.txt readme2.txt • -m → Set your message • -p → Set your password
-
-
 
 ### Additional Resources
 

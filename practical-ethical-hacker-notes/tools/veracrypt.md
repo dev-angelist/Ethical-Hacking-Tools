@@ -1,10 +1,10 @@
+---
+description: https://www.veracrypt.fr/en/Downloads.html
+---
+
 # 🔑 Veracrypt
 
-
-
 {% embed url="https://www.veracrypt.fr/en/Downloads.html" %}
-
-
 
 **Disk Encryption using VeraCrypt**
 
@@ -20,7 +20,5 @@
 * Input password
 * Dismount
 * Exit
-
-
 
 [https://www.youtube.com/watch?v=zXwTkp-aGxc](https://www.youtube.com/watch?v=zXwTkp-aGxc)

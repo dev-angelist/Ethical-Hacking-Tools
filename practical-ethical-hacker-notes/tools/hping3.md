@@ -1,3 +1,7 @@
+---
+description: https://www.kali.org/tools/hping3/
+---
+
 # 👉 Hping3
 
 **Attacker**
@@ -47,7 +51,4 @@ Other Hping3 flags
 * Quake Network Protocol UDP Port 26000
 * VoIP UDP Port 5060
 
-
-
-
-
+{% embed url="https://www.kali.org/tools/hping3/" %}

@@ -2,13 +2,13 @@
 
 ## Exam Details⏳📚 <a href="#ejpt-exam" id="ejpt-exam"></a>
 
-* Exam Title: Certified Ethical Hacker (Practical)
-* Number of Practical Challenges: 20
-* Exam Duration: 6 hours
-* Exam Infrastructure:  iLabs (browser-based)
-* Exam Format: iLabs Cyber Range
-* Passing Score: 70% (14 Questions out of 20)
-* Certificate validity: 3 years
+* **Exam Title**: Certified Ethical Hacker (Practical)
+* **Number of Practical Challenges**: 20
+* **Exam Duration**: 6 hours
+* **Exam Infrastructure**:  iLabs (browser-based)
+* **Exam Format**: iLabs Cyber Range
+* **Passing Score**: 70% (14 Questions out of 20)
+* **Certificate validity**: 3 years
 
 ### Course Content 📄🖊️ <a href="#ember40" id="ember40"></a>
 
@@ -35,41 +35,41 @@
 
 ## Tools 🛠️
 
-* [Adb tool](practical-ethical-hacker-notes/adb-tool.md)
-* [BCTextEncoder](practical-ethical-hacker-notes/bctextencoder.md)
-* [Burp Suite](practical-ethical-hacker-notes/burp-suite.md)
-* [Cewl](practical-ethical-hacker-notes/cewl.md)
-* [Crunch](practical-ethical-hacker-notes/crunch.md)
-* [Dirb](practical-ethical-hacker-notes/dirb.md)
-* [Enum4linux](practical-ethical-hacker-notes/enum4linux.md)
-* [Gobuster](practical-ethical-hacker-notes/gobuster.md)
-* [Hashcalc](practical-ethical-hacker-notes/hashcalc.md)
-* [Hashcat](practical-ethical-hacker-notes/hashcat.md)
-* [Hping3](practical-ethical-hacker-notes/hping3.md)
-* [Hydra](practical-ethical-hacker-notes/hydra.md)
-* [John the Ripper](practical-ethical-hacker-notes/john-the-ripper.md)
-* [Metasploit](practical-ethical-hacker-notes/metasploit.md)
-* [Md5 Calculator](practical-ethical-hacker-notes/md5-calculator.md)
-* [Nikto](practical-ethical-hacker-notes/nikto.md)
-* [Nmap](practical-ethical-hacker-notes/nmap.md)
-* [OpenStego](practical-ethical-hacker-notes/openstego.md)
-* [QuickStego](practical-ethical-hacker-notes/quickstego.md)
-* [RainbowCrack](practical-ethical-hacker-notes/rainbowcrack.md)
-* [Responder LLMNR](practical-ethical-hacker-notes/responder-llmnr.md)
-* [Searchsploit](practical-ethical-hacker-notes/searchsploit.md)
-* [Snow](practical-ethical-hacker-notes/snow.md)
-* [Stego](practical-ethical-hacker-notes/stego.md)
-* [Sqlmap](practical-ethical-hacker-notes/sqlmap.md)
-* [Steghide](practical-ethical-hacker-notes/steghide.md)
-* [Stegimage](practical-ethical-hacker-notes/stegimage.md)
-* [Veracrypt](practical-ethical-hacker-notes/veracrypt.md)
-* [Wireshark or Tcpdump](practical-ethical-hacker-notes/wireshark-or-tcpdump.md)
-* [Wpscan](practical-ethical-hacker-notes/wpscan.md)
-* [Zap](practical-ethical-hacker-notes/zap.md)
+* [Adb tool](practical-ethical-hacker-notes/tools/adb-tool.md)
+* [BCTextEncoder](practical-ethical-hacker-notes/tools/bctextencoder.md)
+* [Burp Suite](practical-ethical-hacker-notes/tools/burp-suite.md)
+* [Cewl](practical-ethical-hacker-notes/tools/cewl.md)
+* [Crunch](practical-ethical-hacker-notes/tools/crunch.md)
+* [Dirb](practical-ethical-hacker-notes/tools/dirb.md)
+* [Enum4linux](practical-ethical-hacker-notes/tools/enum4linux.md)
+* [Gobuster](practical-ethical-hacker-notes/tools/gobuster.md)
+* [Hashcalc](practical-ethical-hacker-notes/tools/hashcalc.md)
+* [Hashcat](practical-ethical-hacker-notes/tools/hashcat.md)
+* [Hping3](practical-ethical-hacker-notes/tools/hping3.md)
+* [Hydra](practical-ethical-hacker-notes/tools/hydra.md)
+* [John the Ripper](practical-ethical-hacker-notes/tools/john-the-ripper.md)
+* [Metasploit](practical-ethical-hacker-notes/tools/metasploit.md)
+* [Md5 Calculator](practical-ethical-hacker-notes/tools/md5-calculator.md)
+* [Nikto](practical-ethical-hacker-notes/tools/nikto.md)
+* [Nmap](practical-ethical-hacker-notes/tools/nmap.md)
+* [OpenStego](practical-ethical-hacker-notes/tools/openstego.md)
+* [QuickStego](practical-ethical-hacker-notes/tools/quickstego.md)
+* [RainbowCrack](practical-ethical-hacker-notes/tools/rainbowcrack.md)
+* [Responder LLMNR](practical-ethical-hacker-notes/tools/responder-llmnr.md)
+* [Searchsploit](practical-ethical-hacker-notes/tools/searchsploit.md)
+* [Snow](practical-ethical-hacker-notes/tools/snow.md)
+* [Stego](practical-ethical-hacker-notes/tools/stego.md)
+* [Sqlmap](practical-ethical-hacker-notes/tools/sqlmap.md)
+* [Steghide](practical-ethical-hacker-notes/tools/steghide.md)
+* [Stegimage](practical-ethical-hacker-notes/tools/stegimage.md)
+* [Veracrypt](practical-ethical-hacker-notes/tools/veracrypt.md)
+* [Wireshark or Tcpdump](practical-ethical-hacker-notes/tools/wireshark-or-tcpdump.md)
+* [Wpscan](practical-ethical-hacker-notes/tools/wpscan.md)
+* [Zap](practical-ethical-hacker-notes/tools/zap.md)
 
 ### **How to enroll for CEH Practical?** 🔗📔
 
-&#x20;Go to the EC-Council official website and read through everything you need to know [https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/](https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/)&#x20;
+Go to the EC-Council official website and read through everything you need to know [https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/](https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh-practical/)&#x20;
 
 Create Account: Create an account on EC-Council's Aspen portal.
 
@@ -83,8 +83,8 @@ Schedule Exam: Log in to Aspen, select an exam date, and schedule the exam.
 
 ## Preparation RoadMap 🛣️
 
-* [Study Walkthrough](practical-ethical-hacker-notes/study-walkthrough/)
-* [Examples Questions](practical-ethical-hacker-notes/study-walkthrough/example-questions.md)
+* [Study Walkthrough](practical-ethical-hacker-notes/study-walkthrough/) 📜
+* [Labs - Exercises](practical-ethical-hacker-notes/study-walkthrough/labs-and-training.md) 🧪
 
 ## [Cheat Sheet ](http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/ejpt-cheat-sheet)📔
 

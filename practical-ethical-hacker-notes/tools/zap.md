@@ -17,6 +17,8 @@ While, clicking on the Alerts sections we ca see the vulnerabilities that're fou
 * Absence of Anti-CSRF;
 * SQL Injection.
 
+{% embed url="https://www.zaproxy.org/docs/" %}
+
 ### Additional References:
 
 {% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/10-Session-Hijacking/1-Using-ZAP.md" %}

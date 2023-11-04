@@ -1,3 +1,7 @@
+---
+description: https://www.kali.org/tools/enum4linux/
+---
+
 # 🐧 Enum4linux
 
 ```bash
@@ -24,7 +28,4 @@ smbclient \\\\<TARGET_IP>\\c$ -N -U ""
 smb: \> get file_shared.txt
 ```
 
-
-
-
-
+{% embed url="https://www.kali.org/tools/enum4linux/" %}

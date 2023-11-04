@@ -1,5 +1,5 @@
 ---
-description: https://www.kali.org/tools/gobuster/ https://github.com/OJ/gobuster
+description: https://www.kali.org/tools/gobuster/
 ---
 
 # 🔗 Gobuster
@@ -9,6 +9,8 @@ description: https://www.kali.org/tools/gobuster/ https://github.com/OJ/gobuster
 * `gobuster dir -u http://<TARGET_IP> -w /usr/share/wordlists/dirb/common.txt -b 403,404`
 * `gobuster dir -u http://<TARGET_IP> -w /usr/share/wordlists/dirb/common.txt -b 403,404 -x .php,.xml,.txt -r`
 * `gobuster dir -u http://<TARGET_IP>/data -w /usr/share/wordlists/dirb/common.txt -b 403,404 -x .php,.xml,.txt -r`
+
+{% embed url="https://www.kali.org/tools/gobuster/" %}
 
 ## **Alternative tool**
 
@@ -34,6 +36,12 @@ ffuf -w wordlist.txt -u http://example.com/FUZZ -maxtime 60
 
 ffuf -w wordlist.txt -u http://example.com/FUZZ -t 64
 
+{% embed url="https://github.com/ffuf/ffuf" %}
+
 ### **Dirbuster**
 
 * `dirb` [`http://`](http://192.168.1.224/)`10.10.10.10 wordlist.txt`
+
+{% content-ref url="dirb.md" %}
+[dirb.md](dirb.md)
+{% endcontent-ref %}

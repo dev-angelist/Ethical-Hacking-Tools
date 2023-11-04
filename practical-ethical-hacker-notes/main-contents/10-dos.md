@@ -1,22 +1,35 @@
 # 10 - DoS
 
-## Module 10 - Denial-of-Service
+#### <mark style="color:purple;">**Module 10 - Denial-of-Service**</mark>
 
 <details>
 
-<summary>EMPTY</summary>
+<summary>DOS</summary>
 
+A **Denial of Service** (DoS) attack is a malicious attempt to disrupt the normal functioning of a network, service, website, or computer system by overwhelming it with an excessive amount of traffic, requests, or other forms of malicious activity. The primary goal of a DoS attack is to make the target system or network unavailable to its intended users.
 
+Here are some key characteristics of a Denial of Service attack:
+
+1. **Overload**: Attackers flood the target with a massive volume of traffic, which can be in the form of network requests, data packets, or other resource-consuming actions. The target system becomes overwhelmed and is unable to handle the volume of incoming requests.
+2. **Resource Depletion**: DoS attacks may aim to exhaust system resources such as bandwidth, processing power, memory, or network connections. This can result in the target system slowing down or becoming completely unavailable.
+3. **Temporary Disruption**: DoS attacks typically result in a temporary disruption of services. Once the attack ceases, the affected system can often recover and resume normal operation.
+4. **Distributed DoS (DDoS)**: In more advanced attacks, multiple compromised computers or devices are used to launch a Distributed Denial of Service (DDoS) attack. This makes it much more challenging to mitigate the attack because it comes from multiple sources simultaneously.
+5. **Motivation**: DoS attacks can be carried out for various reasons, including financial gain, ideological reasons, revenge, or simply for the thrill of causing disruption.
+6. **Legality**: DoS attacks are illegal in many jurisdictions and can result in criminal charges if the attackers are identified and apprehended.
 
 </details>
 
-####
+<details>
 
-## **SYN Flooding**
+<summary>SYN Flooding</summary>
 
 **SYN flooding** is a type of cyberattack that targets a server by overwhelming it with a flood of fake or incomplete connection requests (SYN packets). These requests are part of the 3-way handshake process used to establish a connection between a client and a server. In a SYN flood attack, the attacker sends a large number of SYN packets without completing the handshake, tying up the server's resources and preventing it from servicing legitimate connections.
 
 This can lead to a denial of service (DoS) or distributed denial of service (DDoS) attack, causing the server to become unresponsive. Mitigation strategies include rate limiting, SYN cookies, and deploying intrusion detection and prevention systems.
+
+</details>
+
+## **SYN Flooding**
 
 ### **Perform a SYN Flooding on a Target Host using hping3**
 
@@ -34,7 +47,7 @@ This can lead to a denial of service (DoS) or distributed denial of service (DDo
 
 #### **Target**
 
-* Check wireshark
+* Check Wireshark
 
 #### **Attacker (Perform PoD)**
 
@@ -66,9 +79,17 @@ tcp.port=21
 
 ## HTTP Flooding Attack
 
+
+
+<details>
+
+<summary><strong>HTTP flood attack</strong></summary>
+
 **HTTP flood attack**, is a type of cyberattack aimed at overwhelming a web server by sending a massive volume of HTTP requests. These requests often mimic legitimate user interactions with a website, such as GET or POST requests for web pages or resources. The intent is to consume the server's resources, exhaust its processing capacity, and cause it to become slow or unresponsive, resulting in a denial of service (DoS) situation.
 
 Attackers may employ botnets or distributed networks of compromised devices to intensify the attack. Defenses against HTTP flooding include rate limiting, traffic analysis, and content delivery networks (CDNs) to absorb excess traffic and protect the target server.
+
+</details>
 
 ### HTTP Flooding Attack using HOIC (High Orbit Ion Cannon)
 
@@ -115,8 +136,8 @@ get the statistics of ipv4 -> we can see that Packets B -> A are null, because t
 
 {% embed url="https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/9-Denial-of-Service/3-Detecting-DoS-Traffic.md" %}
 
-{% content-ref url="../wireshark-or-tcpdump.md" %}
-[wireshark-or-tcpdump.md](../wireshark-or-tcpdump.md)
+{% content-ref url="../tools/wireshark-or-tcpdump.md" %}
+[wireshark-or-tcpdump.md](../tools/wireshark-or-tcpdump.md)
 {% endcontent-ref %}
 
 #### **Other UDP-based applications and their ports**

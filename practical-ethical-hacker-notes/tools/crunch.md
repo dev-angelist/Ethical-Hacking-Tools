@@ -43,7 +43,7 @@ crunch 1 2 0123456789 > wordlist.txt
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 17-49-15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 17-49-15.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -62,7 +62,7 @@ Here we have 4 characters to represent some group of characters which are as fol
 * **%** for all numeric characters
 * **^** for all special characters
 
-{% file src="../.gitbook/assets/crunch 9 9 -t juve^%%%%.webm" %}
+{% file src="../../.gitbook/assets/crunch 9 9 -t juve^%%%%.webm" %}
 
 So the above command will output all the words starting with “**juve**” and then after that a special character and then 4 digit number.&#x20;
 
@@ -91,7 +91,7 @@ In the case of -p, the minimum size and the maximum size values are ignored by t
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 18-44-38.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 18-44-38.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

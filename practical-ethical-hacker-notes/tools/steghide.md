@@ -4,10 +4,6 @@ description: https://www.kali.org/tools/steghide/
 
 # ⚙ Steghide
 
-
-
-
-
 #### **Hide**
 
 * steghide  embed  -ef  \<filename>  -cf  \<image>  -p  \<passphrase>
@@ -23,6 +19,8 @@ or
 * steghide info 1.jpg
 * steghide extract -sf 1.jpg
 * Enter password if it does exist
+
+{% embed url="https://www.kali.org/tools/steghide/" %}
 
 ### Additional Resources
 

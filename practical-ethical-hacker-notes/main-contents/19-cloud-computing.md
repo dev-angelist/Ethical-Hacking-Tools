@@ -1,6 +1,6 @@
 # 19 - Cloud Computing
 
-## **Module 19 - Cloud Computing**
+#### <mark style="color:purple;">**Module 19 - Cloud Computing**</mark>
 
 <details>
 
@@ -9,8 +9,6 @@
 
 
 </details>
-
-
 
 ## Owncloud&#x20;
 
@@ -34,7 +32,13 @@ Cloud is currently protected by ClamAV so no malicious file is uploaded.
 
 ## S3 Buckets Enumeration
 
+<details>
+
+<summary>S3 Buckets</summary>
+
 **S3 Buckets** are open cloud storage containers designed for storing items within the Simple Storage Service (S3). These S3 containers can be associated with directories and the storage of objects. Each item kept within these containers comprises three primary elements: the item's content (data), its metadata (encompassing details such as size, name, last modification date, and URL), and a distinct identifier for the item. Numerous websites utilize S3 containers for cloud-based file storage. **S3 bucket enumeration** refers to the procedure of discovering these S3 containers and subsequently cataloging the objects contained within them.
+
+</details>
 
 ### Lazys3
 
@@ -62,9 +66,15 @@ S3BucketList is a browser extension to enumerate S3 Buckets
 
 ## Exploiting S3 Unauthenticated
 
+<details>
+
+<summary><strong>Amazon S3 bucket</strong></summary>
+
 **Amazon S3 bucket** is a user-friendly object repository, that is used for storing and recovering various data from anywhere on the web. Misconfigurations in S3 result in exposing private data or even complete compromise of websites in some cases
 
 A potential misconfiguration can allow write/ delete access instead of read-only access. A private bucket that should have been configured to allow only authenticated access may have been misconfigured to allow public unauthenticated access
+
+</details>
 
 ### AWS CLI
 

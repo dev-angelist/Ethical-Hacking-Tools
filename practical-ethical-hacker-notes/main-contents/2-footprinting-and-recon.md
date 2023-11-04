@@ -1,6 +1,6 @@
 # 2 - Footprinting & Recon
 
-## Module 02 - Footprinting and Reconnaissance
+#### <mark style="color:blue;">**Module 02 - Footprinting and Reconnaissance**</mark>
 
 <details>
 

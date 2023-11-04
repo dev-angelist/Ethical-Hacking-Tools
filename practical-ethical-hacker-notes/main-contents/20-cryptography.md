@@ -1,16 +1,26 @@
 # 20 - Cryptography
 
-## **Module 20 - Cryptography**
+#### <mark style="color:orange;">**Module 20 - Cryptography**</mark>
 
 <details>
 
-<summary>EMPTY</summary>
+<summary>What is Cryptography?</summary>
 
+**Cryptography** is the science and practice of securing communication and information by encoding it in a way that only authorized parties can access and understand. It involves the use of mathematical algorithms to transform plaintext (unencrypted information) into ciphertext (encrypted information) and vice versa. Cryptography plays a crucial role in ensuring the confidentiality, integrity, authenticity, and non-repudiation of data in various applications, including communication, data storage, and digital transactions.
 
+Here are some key concepts and components of cryptography:
+
+1. **Encryption**: Encryption is the process of converting plaintext into ciphertext using a specific algorithm and a secret key. The encrypted data can only be deciphered (decrypted) by someone who possesses the corresponding decryption key.
+2. **Decryption**: Decryption is the reverse process of encryption, where ciphertext is transformed back into plaintext using the decryption key. Only authorized parties with the correct key can perform this operation.
+3. **Key**: A key is a secret or unique piece of information used to control the encryption and decryption processes. The strength of a cryptographic system often depends on the security of the key.
+4. **Symmetric Cryptography**: In symmetric-key cryptography, the same key is used for both encryption and decryption. Both the sender and the receiver must have access to this shared key.
+5. **Asymmetric Cryptography**: Asymmetric-key cryptography, also known as public-key cryptography, uses a pair of keys: a public key for encryption and a private key for decryption. Anyone can use the public key to encrypt data, but only the holder of the private key can decrypt it.
+6. **Cryptographic Algorithms**: These are mathematical procedures and formulas used to perform encryption and decryption. Examples include Advanced Encryption Standard (AES), RSA, and Elliptic Curve Cryptography (ECC).
+7. **Hash Functions**: Cryptographic hash functions take an input (message or data) and produce a fixed-size output called a hash value or digest. Hash functions are used for data integrity and digital signatures.
+8. **Digital Signatures**: Digital signatures use asymmetric cryptography to verify the authenticity and integrity of digital messages or documents. They provide a means of confirming that a message was sent by a specific person or entity.
+9. **Cryptanalysis**: Cryptanalysis is the science of studying and attempting to break cryptographic systems. It involves analyzing encrypted data to discover weaknesses and vulnerabilities in cryptographic algorithms.
 
 </details>
-
-####
 
 ## Creating Self-Signed Certificate with Inetmgr
 
@@ -49,14 +59,14 @@
 
 ### Calculate Hash of text/File by HashCalc
 
-{% content-ref url="../hashcalc.md" %}
-[hashcalc.md](../hashcalc.md)
+{% content-ref url="../tools/hashcalc.md" %}
+[hashcalc.md](../tools/hashcalc.md)
 {% endcontent-ref %}
 
 ### **Calculate MD5 Hashes using MD5 Calculator**
 
-{% content-ref url="../md5-calculator.md" %}
-[md5-calculator.md](../md5-calculator.md)
+{% content-ref url="../tools/md5-calculator.md" %}
+[md5-calculator.md](../tools/md5-calculator.md)
 {% endcontent-ref %}
 
 ### Encode and Decode Text using BCTextEncoder
@@ -67,8 +77,8 @@
 
 </div>
 
-{% content-ref url="../bctextencoder.md" %}
-[bctextencoder.md](../bctextencoder.md)
+{% content-ref url="../tools/bctextencoder.md" %}
+[bctextencoder.md](../tools/bctextencoder.md)
 {% endcontent-ref %}
 
 ### Encode/Decode Text (File Extension is .hex) using CrypTool
@@ -106,8 +116,8 @@ hashcat -h
  hashcat -a 3 -m 900 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
-{% content-ref url="../hashcat.md" %}
-[hashcat.md](../hashcat.md)
+{% content-ref url="../tools/hashcat.md" %}
+[hashcat.md](../tools/hashcat.md)
 {% endcontent-ref %}
 
 ### **Decrypt Hash using John the Ripper**
@@ -116,8 +126,8 @@ hashcat -h
 * Then crack hash -> `john hashfile.hash --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA1`
 * Show the cracked password -> `john --show --format=Raw-SHA1 hashfile.hash` OR \`john --show hashfile.hash
 
-{% content-ref url="../john-the-ripper.md" %}
-[john-the-ripper.md](../john-the-ripper.md)
+{% content-ref url="../tools/john-the-ripper.md" %}
+[john-the-ripper.md](../tools/john-the-ripper.md)
 {% endcontent-ref %}
 
 ### **Perform Disk Encryption using VeraCrypt**
@@ -146,8 +156,8 @@ Create Encrypted containers which can be mounted as Virtual Disks.
 VeraCrypt Step by step tutorial
 {% endembed %}
 
-{% content-ref url="../veracrypt.md" %}
-[veracrypt.md](../veracrypt.md)
+{% content-ref url="../tools/veracrypt.md" %}
+[veracrypt.md](../tools/veracrypt.md)
 {% endcontent-ref %}
 
 ## Check if file is modified

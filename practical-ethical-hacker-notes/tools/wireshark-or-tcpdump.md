@@ -33,9 +33,11 @@ eth.dst == ff:ff:ff:ff:ff:ff
 
 ### Filters CheatSheet
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+{% embed url="https://www.kali.org/tools/wireshark/" %}
 
 ### TShark
 
@@ -121,6 +123,8 @@ https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 #To find DOS (SYN and ACK) : tcp.flags.syn == 1  , tcp.flags.syn == 1 and tcp.flags.ack == 0
 #To find passwords : http.request.method == POST
 ```
+
+{% embed url="https://www.kali.org/tools/tcpdump/" %}
 
 ## **Password sniffing using Wireshark** <a href="#734c" id="734c"></a>
 

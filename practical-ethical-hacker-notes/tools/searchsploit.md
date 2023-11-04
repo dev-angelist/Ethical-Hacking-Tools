@@ -106,7 +106,7 @@ You can add any number of search terms you wish to look for. In the below image,
 searchsploit windows oracle
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 18-56-00.png" alt=""><figcaption><p>basic search in searchsploit</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 18-56-00.png" alt=""><figcaption><p>basic search in searchsploit</p></figcaption></figure>
 
 ### **Title Searching in SearchSploit**
 
@@ -116,7 +116,7 @@ If you are performing Basic Search, searchsploit will check for both the path an
 searchsploit -t windows oracle
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 18-57-54.png" alt=""><figcaption><p>Title Searching in SearchSploit</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 18-57-54.png" alt=""><figcaption><p>Title Searching in SearchSploit</p></figcaption></figure>
 
 In the above search, we are looking for the exploits related to Oracle based on Windows OS.&#x20;
 
@@ -128,7 +128,7 @@ If you want to copy the exploit to clipboard use ‘-p’. For example – ” s
 searchsploit -m 44553
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 18-59-02.png" alt=""><figcaption><p>Copying Exploit to Clipboard and Directory</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 18-59-02.png" alt=""><figcaption><p>Copying Exploit to Clipboard and Directory</p></figcaption></figure>
 
 ### **Examine an Exploit**
 
@@ -138,7 +138,7 @@ If you want to examine an exploit or want to study an exploit, use ‘–examine
 searchsploit 44553 -examine
 ```
 
-<figure><img src="../.gitbook/assets/Schermata del 2023-07-09 19-05-16.png" alt=""><figcaption><p>Examine an Exploit</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Schermata del 2023-07-09 19-05-16.png" alt=""><figcaption><p>Examine an Exploit</p></figcaption></figure>
 
 ### **Eliminate Unwanted Results**
 
@@ -147,3 +147,5 @@ If you want to eliminate unwanted results from your search simply use ‘–excl
 ### Other Resource
 
 {% embed url="https://www.offensive-security.com/offsec/edb-searchsploit-update-2020/" %}
+
+{% embed url="https://www.kali.org/tools/exploitdb/#searchsploit" %}
