@@ -60,9 +60,9 @@ python3 sherlock.py Mario Rossi
 
 ## Perform Website Footprinting
 
-### Gather information about target website using Ping command line utility
+### Gather info about target website using Ping command line utility
 
-### Ping
+#### Ping
 
 ```bash
 ping <Target_IP> -f -l 1500 # -f switch sets the Do Not Fragment bit on the ping packet - l buffer size
@@ -75,7 +75,7 @@ Analyzing the output, if there're packets lost, we adjust the size or length of 
 ping <Target_IP> -f -l 1472
 ```
 
-### Gather information about website using Photon
+### Gather info about website using Photon
 
 Photon is a Python script used to crawl a given target URL to obtain information such as URLs (email, social media, file, secret key and subdom). The extracted info can further be exported in JSON format.
 
@@ -88,7 +88,7 @@ python3 photon.py -u <http://Target_IP> -l 3 -t 200 --wayback
 
 {% embed url="https://github.com/s0md3v/Photon" %}
 
-### Gather information about a target website using Central Ops
+### Gather info about a target website using Central Ops
 
 CentralOps is a free online network scanner that investigates domain and IP addresses, DNS records, traceroute, nslookup, whois searches, etc.
 
@@ -104,7 +104,7 @@ After downloading all, we can press Browse Mirrored Website to see website dumpe
 
 ## Perform Email Footprinting
 
-### Gather information about a target by tracing emails using eMailTrackerPro
+### Gather info about a target by tracing emails using eMailTrackerPro
 
 [https://emailtrackerpro.software.informer.com/download/](https://emailtrackerpro.software.informer.com/download/)
 
@@ -117,7 +117,7 @@ After downloading all, we can press Browse Mirrored Website to see website dumpe
 
 ## Perform Whois Footprinting
 
-### Perform Whois Lookup using DomainTools
+### DomainTools
 
 DomainTools website permits to perform Whois lookup on a website URL.
 
@@ -130,7 +130,7 @@ DomainTools website permits to perform Whois lookup on a website URL.
 
 ## Perform DNS Footprinting
 
-### Gather DNS information using nslookup command line utility and online tool
+### Gather DNS infor using nslookup command line utility and online tool
 
 **Nslookup** is a network administration command-line utility, generally used for querying the DNS to obtain a domain name or IP address mapping or for any other specific DNS record. The utility is available both as a command-line utility and web app.
 
@@ -194,7 +194,7 @@ Stop or wait finish, and see report, synopsis log stats and others output.
 
 If we want, there's an option to export result in .csv file format.
 
-### Perform Footprinting using Various Footprinting Tools
+## Perform Footprinting using Various Footprinting Tools
 
 ### Footprinting a target using Recon-ng
 

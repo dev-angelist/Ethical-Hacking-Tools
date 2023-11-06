@@ -243,13 +243,13 @@ By default, the tool does not come with Kali linux and you may need to install i
 2. **Use the following official website from hashcat developers to convert the file to proper format(.hc2200)**: [https://hashcat.net/cap2hashcat/](https://hashcat.net/cap2hashcat/)
 3. **Download the converted file**
 
-## Cracking Handshakes with Hashcat
+### Cracking Handshakes with Hashcat
 
 {% content-ref url="../tools/hashcat.md" %}
 [hashcat.md](../tools/hashcat.md)
 {% endcontent-ref %}
 
-### Cracking handshakes on Windows with Powerful graphics card
+### Cracking Handshakes on Windows with Powerful graphics card
 
 1. **Install the Hashcat from official website** https://hashcat.net/hashcat/
 2. **Copy the handshake file to hashcat directory**
@@ -266,7 +266,7 @@ By default, the tool does not come with Kali linux and you may need to install i
 >
 > Rockyou.txt is the dictionary file
 
-### Cracking handshakes in cloud with Google collab
+### Cracking Handshakes in cloud with Google collab
 
 Google Collab is a free service offered by google to students to train their ML models.
 
@@ -287,7 +287,7 @@ There are a few jupyter notebooks already created by experts which can be utiliz
 
 * `!hashcat ‐‐status ‐m 22000 ‐a 0 ‐o cracked.txt hash.hc22000 /content/wordlists/rockyou.txt`
 
-### Cracking handshakes in cloud with Gradient
+### Cracking Handshakes in cloud with Gradient
 
 1. **Sign up for a gradient account**
 

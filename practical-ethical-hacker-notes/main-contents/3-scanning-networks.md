@@ -20,7 +20,7 @@ Here are the key components and objectives of network scanning:
 
 ## Perform Host Discovery
 
-### Perform Host Discovery using Netdiscover
+### Netdiscover
 
 **Netdiscover** is a tool used to inspect your network ARP traffic, or find network addresses using auto scan mode, which will scan for common local networks.
 
@@ -33,7 +33,7 @@ Here are the key components and objectives of network scanning:
 >
 > \-r : Range (192.168.1.0/24)
 
-### Perform Host Discovery using Nmap
+### Nmap
 
 #### **Scanning entire Network**
 
@@ -65,7 +65,7 @@ Here are the key components and objectives of network scanning:
 
 xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 
-### Perform Host Discovery using Angry IP Scanner
+### Angry IP Scanner
 
 {% embed url="https://angryip.org/download/#windows" %}
 
@@ -121,7 +121,7 @@ xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 
 * [TCPView](https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview) tool from Microsoft Sysinternals shows detailed listings of all TCP and UDP connections.
 
-### Explore Various Network Scanning Techniques using Nmap
+### Nmap
 
 * **nmap -sT -v \<Target IP>**
   * **-sT:** TCP connect/full open scan
@@ -163,7 +163,7 @@ xsltproc \<nmap-output.xml> -o \<nmap-output.html>
 * \-D RND: generates random & non-reserved IPs
 * \-d: increase debugging level
 
-### Explore Various Network Scanning Techniques using Hping3
+### Hping3
 
 `hping3 --scan 1-3000 -S 10.10.10.10`\
 \--scan parameter defines the port range to scan and –S represents SYN flag.
@@ -203,7 +203,7 @@ Basically ping a machine from different operating systems and capture the packet
 | Android/iOS      | 64                             |
 | FreeBSD          | 64                             |
 
-### Perform OS Discovery using Nmap Script Engine (NSE)
+### OS Discovery using Nmap Script Engine (NSE)
 
 * **nmap -A -v  \<Target IP>**
   * **-A:** Aggressive scan
@@ -215,7 +215,7 @@ Basically ping a machine from different operating systems and capture the packet
 
 ## Perform Network Scanning using Various Scanning Tools
 
-### Scan a target Network using Metasploit
+### Metasploit
 
 ```bash
 service postgresql start && msfconsole -q #start postgresql service and msfconsole

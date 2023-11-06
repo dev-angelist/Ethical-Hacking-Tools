@@ -69,6 +69,8 @@ Here are some key concepts and components of cryptography:
 [md5-calculator.md](../tools/md5-calculator.md)
 {% endcontent-ref %}
 
+## Encode and Decode Text
+
 ### Encode and Decode Text using BCTextEncoder
 
 <div align="left">
@@ -120,7 +122,7 @@ hashcat -h
 [hashcat.md](../tools/hashcat.md)
 {% endcontent-ref %}
 
-### **Decrypt Hash using John the Ripper**
+## **Decrypt Hash using John the Ripper**
 
 * First analyze hash type -> `john hashfile.hash`
 * Then crack hash -> `john hashfile.hash --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA1`
@@ -160,7 +162,7 @@ VeraCrypt Step by step tutorial
 [veracrypt.md](../tools/veracrypt.md)
 {% endcontent-ref %}
 
-## Check if file is modified
+## Integrity Checking of file
 
 **Hashing** is used for **integrity** checking. You can check if some file has been modified by **comparing** the hash values
 

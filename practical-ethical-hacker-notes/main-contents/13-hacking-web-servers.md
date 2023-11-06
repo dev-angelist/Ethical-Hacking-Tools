@@ -44,7 +44,7 @@ Here are some key characteristics and functions of web servers:
 
 {% embed url="https://www.kali.org/tools/uniscan/" %}
 
-### **Bruteforce Credentials using a Dictionary Attack**
+## **Bruteforce Credentials using a Dictionary Attack**
 
 * `nmap -p 21 <Target IP>`
 * `hydra -L usernames.txt -P passwords.txt ftp://10.10.10.10`

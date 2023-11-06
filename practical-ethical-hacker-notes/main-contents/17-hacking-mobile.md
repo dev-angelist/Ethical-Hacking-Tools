@@ -2,7 +2,9 @@
 
 #### <mark style="color:blue;">**Module 17 - Hacking Mobile Platforms**</mark>
 
-### Download a file from Android using ADB Tool
+## Download a file from Android device
+
+### ADB Tool
 
 ```bash
 adb devices -l
@@ -17,7 +19,7 @@ adb pull /sdcard/log.txt C:\Users\admin\Desktop\log.txt
 adb pull sdcard/log.txt /home/mmurphy/Desktop
 ```
 
-### Download a file from Android using PhoneSploit
+### PhoneSploit
 
 ```bash
 git clone https://github.com/aerosol-can/PhoneSploit
@@ -44,7 +46,7 @@ cd Download
 sdcard/Download/secret.txt
 ```
 
-### Check entropy and hash of elf file using ADB Tool
+## Check entropy and hash of elf file using ADB Tool
 
 <pre class="language-bash"><code class="lang-bash">#Perform deep scan of the elf files and obtain the last 4 digits of SHA 384 hash of the file with highest entropy value
 <strong>
@@ -87,7 +89,7 @@ sha384sum first_file.elf
 * Download APK using es file downloader.
 * Install and run.
 
-### **Exploit the Android Platform through ADB using PhoneSploit**
+## **Exploit the Android Platform through ADB using PhoneSploit**
 
 * cd Phonesploit
 * python3 -m pip install colorama

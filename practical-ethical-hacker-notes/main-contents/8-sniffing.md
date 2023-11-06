@@ -46,7 +46,7 @@ Protocols such as the tried and true TCP/IP were never designed with security in
   * Username & password > Start
 * We can see credentials in clear going to HTML Form URL Econded.
 
-### **Lab2 - Task1: Password Sniffing using Wireshark**
+### **Password Sniffing using Wireshark**
 
 #### **Attacker**
 

@@ -374,6 +374,38 @@ cc ‐o covert_tcp covert_tcp.c
 
 ## Additional Resources
 
+### Start Python webserver
+
+`python3 -m http.server 4443`
+
+### Perform HTTP Request
+
+curl http://\<Target\_IP>:4443/?foo=bar
+
+Useful curl options:
+
+> \-k: Accept untrusted certificates
+>
+> \-d “foo=bar”: HTTP POST data
+>
+> \-H: “Foo: Bar”: HTTP header
+>
+> \-I: Perform HEAD request
+>
+> \-L: Follow redirects
+>
+> \-o foobar.html: Write output file
+>
+> \--proxy http://127.0.0.1:8080: Set proxy
+
+### Download file from FTP
+
+* `wget -m ftp://anonymous:anonymous@`
+
+or
+
+* `wget -m --no-passive ftp://anonymous:anonymous@`
+
 ### System Hacking
 
 {% embed url="https://www.notsosecure.com/pwning-with-responder-a-pentesters-guide/" %}

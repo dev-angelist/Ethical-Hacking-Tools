@@ -24,7 +24,7 @@ Here are the key aspects of enumeration:
 * `ping www.moviescope.com –f –l 1500` -> Frame size
 * `tracert www.moviescope.com` -> Determining hop count
 
-### Ping Sweep
+## Ping Sweep
 
 <details>
 
@@ -82,7 +82,7 @@ chmod +x pingweep.sh
 cat ping-results.txt
 ```
 
-### **SNMP Enumeration (161)**&#x20;
+## **SNMP Enumeration (161)**&#x20;
 
 SNMP enumeration is the process of enumerating the users accounts and devices on a SNMP enabled computer.
 
@@ -103,7 +103,7 @@ set RHOSTS and exploit
 * nmap -sU -p 161 \<Target IP>
 * snmp-check \<Target IP> -> Enumerates SNMP devices, displaying the output in a simple and reader-friendly format.
 
-### **NetBIOS Enumeration (139) :**&#x20;
+## **NetBIOS Enumeration (139)**
 
 * nbtstat –a \<Target\_IP> -> Displays the NetBIOS name table of a remote machine
 * nbtstat –c \<Target\_IP> -> Lists the contents of the NetBIOS name cache of the remote machine
@@ -111,13 +111,13 @@ set RHOSTS and exploit
 * net use \10.10.10.16\e ““\user:””
 * net use \10.10.10.16\e ““/user:””
 
-#### NetBIOS Enumerator
+### NetBIOS Enumerator
 
 {% embed url="https://nbtenum.sourceforge.net/" %}
 
-### **Enum4Linux Wins Enumeration**&#x20;
+## **Enum4Linux Win Enumeration**&#x20;
 
-Enum4linux is a tool for gathering information from Windows and Samba systems. Security professionals use it to identify vulnerabilities and potential attack vectors. During assessments, they establish connections with the target system to discover weaknesses and enhance system security.
+**Enum4linux** is a tool for gathering information from Windows and Samba systems. Security professionals use it to identify vulnerabilities and potential attack vectors. During assessments, they establish connections with the target system to discover weaknesses and enhance system security.
 
 * enum4linux -u martin -p apple -U \<Target\_IP> -> Users Enumeration
 * enum4linux -u martin -p apple -o \<Target\_IP> -> OS Enumeration
@@ -125,7 +125,7 @@ Enum4linux is a tool for gathering information from Windows and Samba systems. S
 * enum4linux -u martin -p apple -G \<Target\_IP> -> Groups Information
 * enum4linux -u martin -p apple -S \<Target\_IP> -> Share Policy Information (SMB Shares Enumeration
 
-### **Enumeration using Metasploit :**
+## **Enumeration using Metasploit**
 
 * msfdb init
 * service postgresql start
@@ -136,6 +136,8 @@ Enum4linux is a tool for gathering information from Windows and Samba systems. S
 * hosts -> To show all available hosts in the subnet
 * db\_nmap -sS -A \<Target\_IP>-> To extract services of particular machine
 * services -> to get all available services in a subnet
+
+## SMB Enumeration
 
 ### **SMB Version Enumeration using MSF**
 

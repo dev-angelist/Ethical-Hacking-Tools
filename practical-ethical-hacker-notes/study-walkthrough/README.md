@@ -52,15 +52,24 @@ You must need to understand problem and tools that can help you to solve it!
 [labs-and-training.md](labs-and-training.md)
 {% endcontent-ref %}
 
-### **Damn Vulnerable Web Application (DVWA)**
+* **Hack The Box** (Academy, Challenges Steganography and Web) ([https://www.hackthebox.eu/](https://www.hackthebox.eu/))
+* **Vulnhub** (Machines Easy to Medium) ([https://www.vulnhub.com/](https://www.vulnhub.com/))
+* **TryHackMe** (Machines Easy to Medium)  ([https://tryhackme.com/](https://tryhackme.com/))&#x20;
+* **HackMyVM** (Machines Easy to Medium)  ([https://hackmyvm.eu/](https://hackmyvm.eu/))
 
-DVWA is a PHP/MYSQL vulnerable website that's made to be easy to hack. It's used to practice common web problems. It has different levels of difficulty. DVWA is important for the CEH (Practical) exam. It's a good idea to practice on DVWA because the exam might have similar challenges.
+Here below my writeups and walkthroughs on these platforms 👇
+
+{% content-ref url="http://127.0.0.1:5000/o/s2H3MdEB0Qp2IbE58Gxw/s/rRWtuMw6xkkeDjZfkcWC/" %}
+[WRITEUPS AND WALKTHROUGHS](http://127.0.0.1:5000/o/s2H3MdEB0Qp2IbE58Gxw/s/rRWtuMw6xkkeDjZfkcWC/)
+{% endcontent-ref %}
+
+### Web Labs
+
+#### **Damn Vulnerable Web Application (DVWA)**
+
+**DVWA** is a PHP/MYSQL vulnerable website that's made to be easy to hack. It's used to practice common web problems. It has different levels of difficulty. DVWA is important for the CEH (Practical) exam. It's a good idea to practice on DVWA because the exam might have similar challenges.
 
 You can refer to the link [https://bughacking.com/dvwa-ultimate-guide-first-steps-and-walkthrough/](https://bughacking.com/dvwa-ultimate-guide-first-steps-and-walkthrough/) for a full guide on the setup and use of DVWA.
-
-* **Hack The Box** (Challenges Steganography and Web) ([https://www.hackthebox.eu/](https://www.hackthebox.eu/))
-* **Vulnhub** (Machines Easy to Medium) ([https://www.vulnhub.com/](https://www.vulnhub.com/))
-* **TryHackMe (**[**https://tryhackme.com/**](https://tryhackme.com/)**)**&#x20;
 
 ### THM Materials
 
@@ -86,7 +95,7 @@ You can refer to the link [https://bughacking.com/dvwa-ultimate-guide-first-step
 * Tmux 🏠 [THM Room](https://tryhackme.com/room/rptmux)&#x20;
 * TShark 🏠 [THM Room](https://tryhackme.com/room/tshark)
 * Brooklyn Nine Nine 🚩 [THM CTF](https://tryhackme.com/room/brooklynninenine) 🟢 - [My Writeup](http://127.0.0.1:5000/s/rRWtuMw6xkkeDjZfkcWC/brooklyn-nine-nine)
-* Lianyu 🚩 [THM CTF ](https://tryhackme.com/room/lianyu)🟢 - My Writeup
+* Lianyu 🚩 [THM CTF ](https://tryhackme.com/room/lianyu)🟢 - [My Writeup](http://127.0.0.1:5000/s/rRWtuMw6xkkeDjZfkcWC/lian\_yu)
 * StartUp 🚩 [THM CTF](https://tryhackme.com/room/startup) 🟢 - [My Writeup](http://127.0.0.1:5000/s/rRWtuMw6xkkeDjZfkcWC/startup)
 * Ice  🚩 [THM CTF ](https://tryhackme.com/room/ice)🟢 - [My Writeup](http://127.0.0.1:5000/s/rRWtuMw6xkkeDjZfkcWC/ice)
 * DVWA 🏠 [THM Room](https://medium.com/techiepedia/certified-ethical-hacker-practical-exam-guide-dce1f4f216c9)
