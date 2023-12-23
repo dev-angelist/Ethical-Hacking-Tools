@@ -104,17 +104,17 @@ Attackers may employ botnets or distributed networks of compromised devices to i
 KFSensor Free Trial: [http://www.keyfocus.net/kfsensor/](http://www.keyfocus.net/kfsensor/)\
 Wireshark: [https://www.wireshark.org/](https://www.wireshark.org/)
 
-To find DOS (SYN and ACK) :&#x20;
+**To find DOS (SYN and ACK) :**&#x20;
 
 `tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0`
 
-To find passwords :&#x20;
+**To find passwords :**&#x20;
 
 `http.request.method == POST`
 
 To find DOS -> Look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port if need.
 
-To find Wireshark DOS attack:
+#### To determine the number of machines that were involved in DDOS attack
 
 * statistic -> IPv4 statistic -> source and destination address&#x20;
 
@@ -122,7 +122,7 @@ Or
 
 * View Flood attack on victim via Wireshark | use filter tcp.port=21
 
-#### Another method
+Or&#x20;
 
 Find the dos attacker ip using Wireshark
 

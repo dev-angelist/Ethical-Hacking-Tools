@@ -28,7 +28,7 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 * Find the attacker IP address who has launched the DOS attack?
 * Identify FQDN of Domain Controller
 * Find the username/password from the pcap file, which is in plain text?
-* Find the number of machines that were used to iniate the DDOS attack?
+* Find the number of machines that were used to initiate the DDOS attack?
 * Find the file name which is tampered by comparing the hashes which is given in the /hashes folder?
 * Decrypt the volume file using veracrypt?
 * Decode the file which is encoded in DES(ECB) format?
@@ -67,20 +67,60 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 * Password crack for VCRYPT
 * IP Address/ Version of Running windows Server.
 
+### Nmap
+
+#### Identify the OS of the machine hosting a DB
+
+To check target with open DB port (3306 or 1433): `nmap -sV IP/subnet` or `nmap -A IP/subnet` or `nmap -p3306,1433 IP/subnet` and check relative info about OS.
+
+#### Locate IP address of the machine with RDP open port
+
+`nmap -Pn -p -sV 3389 IP`
+
 ### WireShark
 
 #### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
 
-* &#x20;tcpflagssyn - 1 , tcp.flags.syn 1 and tcp.flags.ack 0 To find passwords
+**To find DOS (SYN and ACK) :**&#x20;
 
-#### To find psw, use this filter:
+* statistic -> IPv4 statistics -> source and destination address
+* filter using: `tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0`
 
-* http.request.method POST&#x20;
+#### Analyze the pcap file and determine the number of machines that were involved in DDOS attack
 
-#### Identify IoT Message using capture.cap
+* statistic -> IPv4 statistic -> source and destination address&#x20;
 
-* filter message on wireshark with 'MQTT' filter
-* clicking on MQ Telemetry Transport Protocol -> Header Flags -> Message
+Or
+
+* View Flood attack on victim via Wireshark | use filter tcp.port=21
+
+Or&#x20;
+
+Find the dos attacker ip using Wireshark
+
+Statistic -> conversion
+
+identified ip , which has flooding server with SYN request.
+
+Or&#x20;
+
+get the statistics of ipv4 -> we can see that Packets B -> A are null, because the're not reply pack.
+
+**To find passwords :**&#x20;
+
+`http.request.method == POST`
+
+To find DOS -> Look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port if need.
+
+#### Identify IoT Message and its Length using capture.cap
+
+* Filter .cap file on wireshark with 'MQTT' filter
+* Select packet related to Publish Message
+* Click on MQ Telemetry Transport Protocol -> Header Flags -> Message Msg Len
+
+or
+
+* Click on MQ Telemetry Transport Protocol -> Publish Message -> Msg Len
 
 ### Hashcat
 
@@ -130,7 +170,9 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 #### Can you decrypt the file and provide the contents of "flag1.txt" as the answer? <a href="#effd" id="effd"></a>
 
-* Connect to ftp using cmd: ftp IP  get file1.txt, after this: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
+* Connect to ftp using cmd: `ftp IP` &#x20;
+* After connect with FTP go to the file: `get file.txt` `get file1.txt`
+* Decrypt file: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
 
 ### WPSCAN
 
@@ -153,11 +195,16 @@ set USERNAME admin
 
 ### Hashes.com <a href="#effd" id="effd"></a>
 
-A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10:8080/DVWA. The file is located at the following path: C:\wamp64\www\DVWA\hackable\uploads\Secret-Hash.txt. Your task is to crack the MD5 hash present in the file and reveal the original message. You can access the file by logging into DVWA using the provided credentials: superuser::superman. Hint: you can decrypt the hash using the following link: https://hashes.com/en/decrypt/hash.
+#### Decrypt/Crack the MD5 hash present into a website <a href="#effd" id="effd"></a>
 
-* Got to the site, login, go to the url uploads/Secret-hash.txt and decrypt the hash using hashes.com
+A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10:8080/DVWA. The file is located at the following path: C:\wamp64\www\DVWA\hackable\uploads\Secret-Hash.txt. Your task is to crack the MD5 hash present in the file and reveal the original message. You can access the file by logging into DVWA using the provided credentials: superuser::superman.&#x20;
+
+* Got to the site, login, go to the url uploads/Secret-hash.txt
+* Decrypt file using this web tool: https://hashes.com/en/decrypt/hash
 
 ### RDP <a href="#effd" id="effd"></a>
+
+#### Find secret number hidden inside the file located in a directory (accessible using RDP) <a href="#effd" id="effd"></a>
 
 A file named "Secret.txt" that has been concealed within the Server 2019 machine is located at the following path: C:\Users\Dell\Documents\Confidential.
 
@@ -171,7 +218,7 @@ Your objective is to find the secret number hidden inside the file and provide i
 
 #### Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account (port 3389). <a href="#effd" id="effd"></a>
 
-* Ppening cmd and use: net user command.&#x20;
+* Opening cmd and use: `net user` command.&#x20;
 
 #### Check phone number of Maria <a href="#effd" id="effd"></a>
 
