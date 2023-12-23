@@ -77,6 +77,27 @@ To check target with open DB port (3306 or 1433): `nmap -sV IP/subnet` or `nmap 
 
 `nmap -Pn -p -sV 3389 IP`
 
+#### Find FQDN of domain controller <a href="#effd" id="effd"></a>
+
+FQDN (**FQDN = Hostname + Domain**) an example can be: mail.example.com mail (hostname), example.com (domain).
+
+Scan subnet or target filtering for LDAP port (389):
+
+* `nmap -p389 -sV -iL <target_list>` -> if we've more targets IP
+
+or
+
+* `nmap -p389 -sV IP`
+
+Running nmap command we'll retrieve info about Domain and Host name:
+
+* Domain: <mark style="color:orange;">pentester.team</mark> Service Info: Host: <mark style="color:blue;">DC</mark>;
+* then FQDN = <mark style="color:blue;">DC</mark>.<mark style="color:orange;">pentester.team</mark>
+
+#### Indetify the number of hosts that are alive
+
+to checks hosts up: `nmap -sn IP/Subnet`
+
 ### WireShark
 
 #### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
@@ -136,7 +157,12 @@ or
 
 ### Hydra
 
-* `hydra -L /user.txt -P (password.txt ftp://172.0.16.21`&#x20;
+#### Crack the FTP credentials to obtain file stored into FTP server an enter the content as the answer
+
+* Find IP with FTP open port: nmap -p 21 IP/Subnet
+* if we know username: `hydra -l user -P passlist.txt ftp://IP`
+* if we don't know username and psw: `hydra -L /user.txt -P password.txt ftp://IP` or `hydra -L /home/attacker/Desktop/CEH_TOOLS/Wordlists/Username.txt -P /home/attacker/Desktop/CEH_TOOLS/Wordlists/Password.txt ftp://IP` &#x20;
+* Login using FTP credentials obtained, get flag and cat it.
 
 ### **SQLMap**
 
@@ -229,6 +255,14 @@ A site has SQLi vulnerability, the cookie information is stored in a text file i
 #### Netbios <a href="#effd" id="effd"></a>
 
 If you get any questions related to netbios, SMB use metasploit.
+
+### Veracrypt
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+
+
+
 
 ### Other useful tools
 
