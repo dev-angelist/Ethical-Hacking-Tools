@@ -250,6 +250,8 @@ To check target with open DB port (3306 or 1433): `nmap -sV IP/subnet` or `nmap 
 
 `nmap -Pn -p -sV 3389 <target_IP>`
 
+#### prim <a href="#effd" id="effd"></a>
+
 ### Find FQDN of domain controller <a href="#effd" id="effd"></a>
 
 FQDN (**FQDN = Hostname + Domain**) an example can be: mail.example.com mail (hostname), example.com (domain).
@@ -465,6 +467,8 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 ## Snow
 
 * `snow.exe -C -p “password” stegfile.txt`
+
+#### di matera
 
 ## OpenStego
 
