@@ -1,6 +1,6 @@
-# 10 - Session Hijacking
+# 11 - Session Hijacking
 
-#### <mark style="color:orange;">**Module 10 - Session Hijacking**</mark>
+#### <mark style="color:orange;">**Module 11 - Session Hijacking**</mark>
 
 <details>
 

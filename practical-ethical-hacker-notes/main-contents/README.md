@@ -7,13 +7,16 @@
 * [4 - Enumeration](4-enumeration.md)
 * [5 - Vulnerability Analysis](5-vulnerability-analysis.md)
 * [6 - System Hacking](6-system-hacking.md)
+* [7 - Malware Threat](7-malware.md)
 * [8 - Sniffing](8-sniffing.md)
 * [10 - DoS](10-dos.md)
+* [11 -  Session Hijacking](11-session-hijacking.md)
 * [13 - Hacking Web Servers](13-hacking-web-servers.md)
 * [14 - Hacking Web Applications](14-hacking-web-apps.md)
 * [15 - SQL Injection](15-sql-injection.md)
 * [16 - Hacking Wireless](16-hacking-wireless.md)
 * [17 - Hacking Mobile Platform](17-hacking-mobile.md)
+* [18 - IoT and OT Hacking](18-iot-and-ot-hacking.md)
 * [19 - Cloud Computing](19-cloud-computing.md)
 * [20 - Cryptography](20-cryptography.md)
 
@@ -21,6 +24,12 @@
 
 {% content-ref url="../study-walkthrough/" %}
 [study-walkthrough](../study-walkthrough/)
+{% endcontent-ref %}
+
+## Labs and Training 👇
+
+{% content-ref url="../study-walkthrough/labs-and-training.md" %}
+[labs-and-training.md](../study-walkthrough/labs-and-training.md)
 {% endcontent-ref %}
 
 ## Tools 🛠️

