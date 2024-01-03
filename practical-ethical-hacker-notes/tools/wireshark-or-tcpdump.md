@@ -33,9 +33,9 @@ eth.dst == ff:ff:ff:ff:ff:ff
 
 ### Filters CheatSheet
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://www.kali.org/tools/wireshark/" %}
 
@@ -126,7 +126,7 @@ https://www.comparitech.com/net-admin/wireshark-cheat-sheet/
 
 {% embed url="https://www.kali.org/tools/tcpdump/" %}
 
-## **Password sniffing using Wireshark** <a href="#734c" id="734c"></a>
+## **Password sniffing using Wireshark** <a href="#id-734c" id="id-734c"></a>
 
 **Attacker**
 

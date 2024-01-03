@@ -75,7 +75,7 @@ Here are some key concepts and components of cryptography:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

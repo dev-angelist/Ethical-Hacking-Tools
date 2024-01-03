@@ -8,7 +8,7 @@
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Encoding</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Encoding</p></figcaption></figure>
 
 </div>
 
@@ -18,6 +18,6 @@ Paste the encrypted text. Give it a password and click to decode
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Decoding</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Decoding</p></figcaption></figure>
 
 </div>

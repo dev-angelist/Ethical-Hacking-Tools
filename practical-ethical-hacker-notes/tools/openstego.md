@@ -12,13 +12,13 @@ description: https://www.openstego.com/
 
 Select message file and cover file to hide data and click on hide
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 #### Extract hidden data
 
 To see the hidden message, click on extract data, select the image file and click extract
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Additional Resources
 

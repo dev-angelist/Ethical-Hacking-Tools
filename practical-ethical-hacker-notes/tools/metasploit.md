@@ -15,10 +15,10 @@ description: https://www.kali.org/tools/metasploit-framework/
 
 {% embed url="https://www.kali.org/tools/metasploit-framework/" %}
 
-{% content-ref url="http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/msf-introduction" %}
-[MSF Introduction](http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/msf-introduction)
+{% content-ref url="https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/msf-introduction" %}
+[MSF Introduction](https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/msf-introduction)
 {% endcontent-ref %}
 
-{% content-ref url="http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf" %}
-[2.3 The Metasploit Framework (MSF)](http://127.0.0.1:5000/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf)
+{% content-ref url="https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf" %}
+[2.3 The Metasploit Framework (MSF)](https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf)
 {% endcontent-ref %}
