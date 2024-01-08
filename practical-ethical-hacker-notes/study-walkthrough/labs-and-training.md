@@ -268,6 +268,12 @@ or
 
 * `nmap -p 389 --script ldap-rootdse <target_IP>`
 
+If LDAP port is filtered or closed, we should try to scan host using following parameters:
+
+* `nmap -Pn -A <target_IP>`
+
+In alternative we can find following ports opened: 88 (Kerberos), 636 (LDAPS), 3268 (LDAP Global).
+
 Running nmap command we'll retrieve info about Domain and Host name:
 
 * Domain: <mark style="color:orange;">pentester.team</mark> Service Info: Host: <mark style="color:blue;">DC</mark>;
@@ -288,7 +294,7 @@ to checks hosts up: `nmap -sn IP/Subnet`
 **To find DOS (SYN and ACK) :**&#x20;
 
 * statistic -> IPv4 statistics -> source and destination address
-* filter using: `tcp.flags.syn == 1 , tcp.flags.syn == 1 and tcp.flags.ack == 0`
+* filter using: `tcp.flags.syn == 1` or `tcp.flags.syn == 1 and tcp.flags.ack == 0` or filter to highest number of request
 
 ### Analyze the pcap file and determine the number of machines that were involved in DDOS attack
 
@@ -422,10 +428,24 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 * Scan adb port: `nmap ip -sV -p 5555`
 * Connect adb: `adb connect IP:5555`
 * Access mobile device: `adb shell`
-* `pwd` --> `ls` --> `cd sdcard/scan` --> `ls` --> `cat secret.txt` (If you can't find it there then go to Downloads folder using: `cd downloads`)
-* Download files: `adb pull /sdcard/scan` (if it doesn't work we need to elevate privilege using `sudo -i`)
+* Elevate privilege using: `sudo -i` (if it is possile)
+* `pwd` --> `ls` --> `cd sdcard/Notifications/Scan` --> `ls` --> `cat secret.txt` (If you can't find, check in others folders)
+* Download files: `adb pull /sdcard/Notifications/Scan` **Do it in another shell, without adb connection!**
 * We've three elf files, now we need to calcolate entropy for each of them using this command: `ent file.elf`
 * After selecting file.elf with highest entropy, we need to calculate hash of SHA 384: `sha384sum file.elf` and consider only the last 4 digits of the hash result.
+
+## **FTP**
+
+To download resources from FTP service we can use following commands:
+
+```bash
+ftp <target_IP> #connect to FTP service
+# if you've not credentials, first try anonymous login writing as user: anonymous and leave blank psw, or brute force credentials using hydra (see section).
+Prompt OFF #deactive prompt mode
+binary #active binary mode
+mget * #dump all file
+bye #exit
+```
 
 ## **SQLMap**
 
@@ -434,6 +454,10 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 * site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?=&#x20;
 
 (for cookies- console->document.cookie)
+
+{% hint style="info" %}
+Have cookie value is better, because reduce time to elaborate results!
+{% endhint %}
 
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `--dbs   (databases)`
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart –tables   (tables)`
@@ -468,13 +492,12 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 
 * `snow.exe -C -p “password” stegfile.txt`
 
-#### di matera
-
 ## OpenStego
 
 ### Analyze the image file and extract the sensitive data hidden in the file
 
-* Use OpenStego on Windows
+* [Download](https://github.com/syvaidya/openstego/releases/download/openstego-0.8.6/Setup-OpenStego-0.8.6.exe) OpenStego for Windows OS -> [https://github.com/syvaidya/openstego/releases/download/openstego-0.8.6/Setup-OpenStego-0.8.6.exe](https://github.com/syvaidya/openstego/releases/download/openstego-0.8.6/Setup-OpenStego-0.8.6.exe)
+* Run OpenStego
 * Select Extract Data
 * Upload file and select path of destination
 * Insert how psw a potential keyword present into question
@@ -485,7 +508,7 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 ### Can you decrypt the file and provide the contents of "flag1.txt" as the answer? <a href="#effd" id="effd"></a>
 
 * Connect to ftp using cmd: `ftp IP` &#x20;
-* After connect with FTP go to the file: `get file.txt` `get file1.txt`
+* After connect with FTP go to the file and download them using get or mget commands: `get file.txt` `get file1.txt`
 * Decrypt file: open CrypTool program -> Encrypt/Decrypt -> Symmetric (modern) -> DES (ECB)
 
 ## WPSCAN
@@ -649,14 +672,28 @@ get <filename>
 
 ### Identify malware entry point address
 
-#### Detect it easy
+#### [PEiD](https://softfamous.com/peid/) (suggested)
+
+* Download PEiF tool -> [https://softfamous.com/peid/](https://softfamous.com/peid/)
+* Execute PEiD tool
+* Upload malware executable
+* See entry point address
+
+**PEView**
+
+* Download PEView tool
+* Execute tool
+* Upload malware executable
+* Look for the "Optional Header" section within the PEView interface. In this section, you should find the "AddressOfEntryPoint" field, which represents the entry point of the executable. Note the hexadecimal value displayed in the "AddressOfEntryPoint" field. This is the entry point address of the executable.
+
+**Detect it easy**
 
 * Execute Detect it easy client tool
 * Upload malware executable
 * Click to File info
 * See entry point address
 
-or using PEiD or PE Explorer tools
+or we can use: **PE Explorer** tools
 
 ### Retrieve file connecting to RAT installed into victim machine
 
