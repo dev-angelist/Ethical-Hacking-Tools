@@ -485,6 +485,12 @@ mget * #dump all file
 bye #exit
 ```
 
+## **GoBuster**
+
+```bash
+gobuster dir -u http://IP:Port -w wordlist.txt
+```
+
 ## **SQLMap**
 
 ### **Finding vulnerable site**
@@ -735,6 +741,11 @@ or we can use: **PE Explorer** tools
 
 ### Retrieve file connecting to RAT installed into victim machine
 
+> * Theef default port: 9871, 6703, FTP 2968
+> * NJRAT default port: 5552
+> * MoSucker default port: 200005
+> * ProRat default port: 5110
+
 #### ProRat
 
 * Execute ProRat
@@ -752,10 +763,6 @@ NjRat
 * Execute NjRat
 * Insert IP and Port
 * Click on manager and open directory
-
-{% hint style="info" %}
-Others possible ports can be: 5552, 9871, 6703.
-{% endhint %}
 
 {% content-ref url="../main-contents/7-malware.md" %}
 [7-malware.md](../main-contents/7-malware.md)
